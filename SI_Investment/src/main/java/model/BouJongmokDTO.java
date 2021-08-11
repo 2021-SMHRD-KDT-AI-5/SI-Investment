@@ -8,7 +8,7 @@ public class BouJongmokDTO {//회원별 보유 종목
 	private int stockC_Price; //체결가격
 	private int purchasePrice; //매입 금액 
 	private String stockC_Date; //체결날짜 시각
-	private double profitLossRate; //손익율
+
 	
 	//생성자메소드
 	public BouJongmokDTO(String id, int jongmokCode, String bouJu, int stockC_Price, int purchasePrice,
@@ -19,7 +19,6 @@ public class BouJongmokDTO {//회원별 보유 종목
 		this.stockC_Price = stockC_Price;
 		this.purchasePrice = purchasePrice;
 		this.stockC_Date = stockC_Date;
-		this.profitLossRate = profitLossRate;
 	}
 	public String getId() {//아이디
 		return id;
@@ -57,13 +56,7 @@ public class BouJongmokDTO {//회원별 보유 종목
 	public void setStockC_Date(String stockC_Date) {
 		this.stockC_Date = stockC_Date;
 	}
-	public double getProfitLossRate() {//손익율
-		return profitLossRate;
-	}
-	public void setProfitLossRate(double profitLossRate) {
-		this.profitLossRate = profitLossRate;
-	}
-	
+
 	
 	
 	
