@@ -33,9 +33,19 @@ public class frontcontroller extends HttpServlet {
 		
 		Command command = null; //Command타입의 변수 선언 
 		
-		if(resultURI.equals("joinCon.do")) {//로그인 
+		if(resultURI.equals("joinCon.do")) {//회원가입
 			
-		}else if(resultURI.equals("loginCon.do")){//회원가입
+		}else if(resultURI.equals("loginCon.do")){//로그인 
+			
+		}else if(resultURI.equals("JugaData.do")) {//주가데이터
+			
+		}else if(resultURI.equals("TermDicCon.do")) {//주식용어사전
+			
+		}else if(resultURI.equals("snsDataCon.do")) {//sns데이터
+			
+		}else if(resultURI.equals("statDataCon.do")) {//종목별 통계데이터
+			
+		}else if(resultURI.equals("coustomCon.do")) {//사용자 커스텀
 			
 		}
 		
