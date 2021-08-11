@@ -28,13 +28,13 @@ public class loginCon implements Command{//로그인 콘트롤러
 			HttpSession session = request.getSession();
 			session.setAttribute("member", member);
 			
-			System.out.println("로그인 성공");
+			System.out.println("주가데이터 전송성공");
 			
 			moveURL= "main.jsp";
 			
 			
 		}else {
-			System.out.println("로그인 실패");
+			System.out.println("주가데이터 전송실패");
 			moveURL = "main.jsp";
 		}
 		
