@@ -1,20 +1,16 @@
 package model;
 
-public class MemberDTO {
+public class MemberDTO {//회원
 	
 	private String id; //아이디
 	private String pw; //비밀번호
-	private String bankName; //은행명
-	private String accountNumber;// 계좌번호
-	private int yesugeum;//예수금
+
 	
 	//메소드 생성
 	public MemberDTO(String id, String pw, String bankName, String accountNumber, int yesugeum) {
 		this.id = id;
 		this.pw = pw;
-		this.bankName = bankName;
-		this.accountNumber = accountNumber;
-		this.yesugeum = yesugeum;
+
 	}
 
 
@@ -34,29 +30,6 @@ public class MemberDTO {
 		this.pw = pw;
 	}
 
-	public String getBankName() {//은행명
-		return bankName;
-	}
-
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
-	}
-
-	public String getAccountNumber() {//계좌번호
-		return accountNumber;
-	}
-
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-
-	public int getYesugeum() {//예수금
-		return yesugeum;
-	}
-
-	public void setYesugeum(int yesugeum) {
-		this.yesugeum = yesugeum;
-	}
 	
 	
 	
