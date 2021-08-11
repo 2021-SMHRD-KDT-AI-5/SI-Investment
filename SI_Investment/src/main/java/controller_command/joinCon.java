@@ -26,10 +26,10 @@ public class joinCon implements Command{//회원가입 컨트롤러
 		int cnt = dao.join(member);
 		
 		if(cnt>0) {
-			System.out.println("메시지 전송 성공");
+			System.out.println("회원가입 성공");
 			moveURL = "main.jsp";
 		}else {
-			System.out.println("메시지 전송 실패");
+			System.out.println("회원가입 실패");
 			moveURL = "main.jsp";
 		}
 		return moveURL;
