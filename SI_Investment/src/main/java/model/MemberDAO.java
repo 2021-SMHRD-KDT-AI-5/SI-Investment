@@ -1,6 +1,6 @@
 package model;
 
-public class MemberDAO {
+public class MemberDAO {//회원
 	
 	public void connection() {//데이터베이스 연결
 		
