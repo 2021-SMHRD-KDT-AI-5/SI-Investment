@@ -30,12 +30,12 @@ public class loginCon implements Command{//로그인 콘트롤러
 			
 			System.out.println("로그인 성공");
 			
-			moveURL= "main.jsp";
+			moveURL= "Main.jsp";
 			
 			
 		}else {
 			System.out.println("로그인 전송실패");
-			moveURL = "main.jsp";
+			moveURL = "Main.jsp";
 		}
 		
 		return moveURL;
