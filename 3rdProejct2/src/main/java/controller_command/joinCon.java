@@ -14,13 +14,14 @@ public class joinCon implements Command{//회원가입 컨트롤러
 		
 		String moveURL = null; //어디로 이동할 건지 저장하는 변수 선언
 		
-		//아이디, 비밀번호, 은행명, 계좌번호, 예수금 
-		String id = request.getParameter("id");
+		//이름,아이디, 비밀번호, 전화번호
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		String tel = request.getParameter("tel");
 		
 		MemberDAO dao = new MemberDAO(); //DAO생성 
-		MemberDTO member = new MemberDTO(id,pw,tel);
+		MemberDTO member = new MemberDTO(name,email,pw,tel);
 		int cnt = dao.join(member);
 		
 		if(cnt>0) {
