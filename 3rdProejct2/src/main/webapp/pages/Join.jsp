@@ -34,21 +34,21 @@
               <div class="card-header"><h4>회원가입</h4></div>
 
               <div class="card-body">
-                <form method="POST">
+                <form method="POST" action="joinCon.do">
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="first_name">이름</label>
-                      <input id="first_name" type="text" class="form-control" name="first_name" autofocus>
+                      <input id="first_name" type="text" class="form-control" name="name"  autofocus>
                     </div>
                     <div class="form-group col-6">
                       <label for="last_name">전화번호</label>
-                      <input id="last_name" type="text" class="form-control" name="last_name">
+                      <input id="last_name" type="text" class="form-control" name="tel" >
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="email">이메일</label>
-                    <input id="email" type="email" class="form-control" name="email">
+                    <input id="email" type="email" class="form-control" name="email" >
                     <div class="invalid-feedback">
                     </div>
                   </div>
@@ -56,7 +56,7 @@
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="password" class="d-block">비밀번호</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
+                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="pw" >
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group col-6">
                       <label for="password2" class="d-block">비밀번호 확인</label>
-                      <input id="password2" type="password" class="form-control" name="password-confirm">
+                      <input id="password2" type="password" class="form-control" name="password-confirm" >
                     </div>
                   </div>
 
@@ -109,7 +109,7 @@
                   </div> -->
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="pwCheck()">
                       회원가입
                     </button>
                   </div>
@@ -143,6 +143,21 @@
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/auth-register.js"></script>
+  
+  <!-- 비밀번호 일치 불일치 판별 -->
+  <script type="text/javascript">
+    function pwCheck(){
+    	var p1 = document.getElementById('password').value;
+    	var p2 = document.getElementById('password2').value;
+    	if( p1 != p2){
+    		alert("비밀번호가 일치 하지 않습니다");
+    		return false;
+    	}else{
+    		alert("비밀번호가 일치 합니다");
+    		return true;
+    	}
+    }
+  </script>
 
 </body>
 </html>
