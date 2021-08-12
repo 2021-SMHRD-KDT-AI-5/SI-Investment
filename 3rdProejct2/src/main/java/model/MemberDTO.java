@@ -2,24 +2,25 @@ package model;
 
 public class MemberDTO {//회원
 	
-	private String id; //아이디
+	private String email; //이메일
 	private String pw; //비밀번호
+	private String tel; //전화번호
 
 	
 	//메소드 생성
-	public MemberDTO(String id, String pw, String bankName, String accountNumber, int yesugeum) {
-		this.id = id;
+	public MemberDTO(String email, String pw, String tel) {
+		this.email = email;
 		this.pw = pw;
 
 	}
 
 
-	public String getId() {//아이디
-		return id;
+	public String getEmail() {//이메일
+		return email;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setEmail(String emali) {
+		this.email = email;
 	}
 
 	public String getPw() {//비밀번호
@@ -28,6 +29,16 @@ public class MemberDTO {//회원
 
 	public void setPw(String pw) {
 		this.pw = pw;
+	}
+
+
+	public String getTel() {
+		return tel;
+	}
+
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	
