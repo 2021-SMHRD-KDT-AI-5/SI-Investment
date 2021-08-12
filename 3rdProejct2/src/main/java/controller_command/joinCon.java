@@ -17,12 +17,10 @@ public class joinCon implements Command{//회원가입 컨트롤러
 		//아이디, 비밀번호, 은행명, 계좌번호, 예수금 
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String bankName = request.getParameter("bankName");
-		String accountNumber = request.getParameter("accountNumber");
-		int yesugeum = Integer.parseInt(request.getParameter("yesugeum"));
+		String tel = request.getParameter("tel");
 		
 		MemberDAO dao = new MemberDAO(); //DAO생성 
-		MemberDTO member = new MemberDTO(id,pw,bankName,accountNumber,yesugeum);
+		MemberDTO member = new MemberDTO(id,pw,tel);
 		int cnt = dao.join(member);
 		
 		if(cnt>0) {
