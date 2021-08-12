@@ -35,10 +35,10 @@
               <div class="card-header"><h4>로그인</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <form method="POST" action="loginCon.do" class="needs-validation" novalidate="">
                   <div class="form-group">
                     <label for="id">ID</label>
-                    <input id="id" type="email" class="form-control" name="id" tabindex="1" required autofocus>
+                    <input id="id" type="email" class="form-control" name="email" tabindex="1" required autofocus>
                     <div class="invalid-feedback">
                       Please fill in your email
                     </div>
@@ -67,7 +67,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="submit"  class="btn btn-primary btn-lg btn-block" tabindex="4">
                       로그인
                     </button>
                   </div>
