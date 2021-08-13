@@ -1,6 +1,9 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!-- member불러오기 -->
+<% MemberDTO member = (MemberDTO)session.getAttribute("member"); %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -236,9 +239,17 @@
               <a href="features-settings.html" class="dropdown-item has-icon">
                 <i class="fas fa-cog"></i> Settings
               </a>
+              <!-- 로그인/로그아웃 -->
+             <%if(member != null){ %>  
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
+              <a href="Logout.jsp" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
+                <%}else{ %> 
+                  <div class="dropdown-divider"></div>
+              <a href="Login.jsp" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Login
+                 <%} %>  
+                
               </a>
             </div>
           </li>
