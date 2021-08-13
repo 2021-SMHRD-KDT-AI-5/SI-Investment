@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,23 +31,23 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>ȸ������</h4></div>
+              <div class="card-header"><h4>회원가입</h4></div>
 
               <div class="card-body">
                 <form method="POST" action="joinCon.do" id="MForm">
                   <div class="row">
                     <div class="form-group col-6">
-                      <label for="first_name">�̸�</label>
+                      <label for="first_name">이름</label>
                       <input id="first_name" type="text" class="form-control" name="name"  autofocus>
                     </div>
                     <div class="form-group col-6">
-                      <label for="last_name">��ȭ��ȣ</label>
+                      <label for="last_name">전화번호</label>
                       <input id="last_name" type="text" class="form-control" name="tel" >
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="email">�̸���</label>
+                    <label for="email">이메일</label>
                     <input id="email" type="email" class="form-control" name="email" >
                     <div class="invalid-feedback">
                     </div>
@@ -55,7 +55,7 @@
 
                   <div class="row">
                     <div class="form-group col-6">
-                      <label for="password" class="d-block">��й�ȣ</label>
+                      <label for="password" class="d-block">비밀번호</label>
                       <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="pw" >
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
@@ -63,7 +63,7 @@
                       </div>
                     </div>
                     <div class="form-group col-6">
-                      <label for="password2" class="d-block">��й�ȣ Ȯ��</label>
+                      <label for="password2" class="d-block">비밀번호 확인</label>
                       <input id="password2" type="password" class="form-control" name="password-confirm" >
                     </div>
                   </div>
@@ -110,7 +110,7 @@
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">
-                      ȸ������
+                      회원가입
                     </button>
                   </div>
                 </form>
@@ -144,25 +144,25 @@
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/auth-register.js"></script>
   
-  <!-- ��й�ȣ ��ġ ����ġ �Ǻ� -->
+  <!-- 비밀번호 일치 불일치 판별 -->
    <script type="text/javascript">
    
-   $(function(){// �� ������ �ε尡 �� �Ǹ� �ڹٽ�ũ��Ʈ�� ��������ִ� �̺�Ʈ�Լ� 
-	            //�ڹٽ�ũ��Ʈ�� ���������� ���۽�Ű�� ���ؼ� 
+   $(function(){// 웹 페이지 로드가 다 되면 자바스크립트를 실행시켜주는 이벤트함수 
+	            //자바스크립트를 안정적으로 동작시키기 위해서 
 
 		    $('#MForm').submit(function(event){
 			   
-			   //submit ó�� �Ǵ� ���� ���ƾ��� 
+			   //submit 처리 되는 것을 막아야함 
 			   
 			   
-			   var pw1 = $('#password').val(); //��й�ȣ
-			   var pw2 = $('#password2').val(); //��й�ȣ Ȯ��
+			   var pw1 = $('#password').val(); //비밀번호
+			   var pw2 = $('#password2').val(); //비밀번호 확인
 			   
 
-			   	if( pw1 != pw2){ //��й�ȣ�� ��ġ���� ������
-			   		alert("��й�ȣ�� ��ġ ���� �ʽ��ϴ�");
+			   	if( pw1 != pw2){ //비밀번호가 일치하지 않을때
+			   		alert("비밀번호가 일치 하지 않습니다");
 			   		event.preventDefault(); 
-			   		return; //$('#MForm').submit() ��� ����
+			   		return; //$('#MForm').submit() 기능 종료
 			   	}
 
 			   	$('form').submit();
@@ -180,10 +180,10 @@
     	var p2 = document.getElementById('password2').value;
     	
     	if( p1 != p2){
-    		alert("��й�ȣ�� ��ġ ���� �ʽ��ϴ�");
+    		alert("비밀번호가 일치 하지 않습니다");
     		return false;
     	}else{
-    		alert("��й�ȣ�� ��ġ �մϴ�");
+    		alert("비밀번호가 일치 합니다");
     		return true;
     	}
     } */
