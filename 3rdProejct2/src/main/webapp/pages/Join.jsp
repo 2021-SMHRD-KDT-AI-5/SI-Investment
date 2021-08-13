@@ -34,7 +34,7 @@
               <div class="card-header"><h4>회원가입</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="joinCon.do">
+                <form method="POST" action="joinCon.do" id="MForm">
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="first_name">이름</label>
@@ -109,7 +109,7 @@
                   </div> -->
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="pwCheck()">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
                       회원가입
                     </button>
                   </div>
@@ -145,10 +145,40 @@
   <script src="../assets/js/page/auth-register.js"></script>
   
   <!-- 비밀번호 일치 불일치 판별 -->
-  <script type="text/javascript">
-    function pwCheck(){
+   <script type="text/javascript">
+   
+   $(function(){// 웹 페이지 로드가 다 되면 자바스크립트를 실행시켜주는 이벤트함수 
+	            //자바스크립트를 안정적으로 동작시키기 위해서 
+
+		    $('#MForm').submit(function(event){
+			   
+			   //submit 처리 되는 것을 막아야함 
+			   
+			   
+			   var pw1 = $('#password').val(); //비밀번호
+			   var pw2 = $('#password2').val(); //비밀번호 확인
+			   
+
+			   	if( pw1 != pw2){ //비밀번호가 일치하지 않을때
+			   		alert("비밀번호가 일치 하지 않습니다");
+			   		event.preventDefault(); 
+			   		return; //$('#MForm').submit() 기능 종료
+			   	}
+
+			   	$('form').submit();
+		    }); 
+		    
+		  
+   });
+   
+   
+
+   /*  function pwCheck{
+    
+    	
     	var p1 = document.getElementById('password').value;
     	var p2 = document.getElementById('password2').value;
+    	
     	if( p1 != p2){
     		alert("비밀번호가 일치 하지 않습니다");
     		return false;
@@ -156,8 +186,8 @@
     		alert("비밀번호가 일치 합니다");
     		return true;
     	}
-    }
-  </script>
+    } */
+  </script> 
 
 </body>
 </html>
