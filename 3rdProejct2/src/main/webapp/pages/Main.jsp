@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Ecommerce Dashboard &mdash; Stisla</title>
 
@@ -27,7 +28,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id="app">
+  <div id="app">
     <div class="main-wrapper">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
@@ -64,7 +65,7 @@
                   <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
                   oPhone S9 Limited Edition
                 </a>
-              </div> :
+              </div>
               <div class="search-item">
                 <a href="#">
                   <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
@@ -239,17 +240,9 @@
               <a href="features-settings.html" class="dropdown-item has-icon">
                 <i class="fas fa-cog"></i> Settings
               </a>
-              <!-- 로그인/로그아웃 -->
-             <%if(member != null){ %>  
               <div class="dropdown-divider"></div>
-              <a href="Logout.jsp" class="dropdown-item has-icon text-danger">
+              <a href="#" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
-                <%}else{ %> 
-                  <div class="dropdown-divider"></div>
-              <a href="Login.jsp" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Login
-                 <%} %>  
-                
               </a>
             </div>
           </li>
@@ -422,7 +415,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
                 <div class="card-stats">
-                  <div class="card-stats-title">사용자 정보
+                  <div class="card-stats-title">AI추천 종목
                   </div>
                   <div class="card-icon shadow-primary bg-primary">
                     <i class="fas fa-dollar-sign"></i>
@@ -466,7 +459,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
                 <div class="card-stats">
-                  <div class="card-stats-title">매매 추천
+                  <div class="card-stats-title">사용자 최근 예측 종목
                   </div>
                   <div class="card-icon shadow-primary bg-primary">
                     <i class="fas fa-dollar-sign"></i>
@@ -498,15 +491,14 @@
             <div class="col-lg-4">
               <div class="card gradient-bottom">
                 <div class="card-header">
-                  <h4>주가 예측 정중 종목 TOP5</h4>
+                  <h4>주가 예측 TOP5</h4>
                   <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
+                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">급등률</a>
                     <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                      <li class="dropdown-title">Select Period</li>
-                      <li><a href="#" class="dropdown-item">Today</a></li>
-                      <li><a href="#" class="dropdown-item">Week</a></li>
-                      <li><a href="#" class="dropdown-item active">Month</a></li>
-                      <li><a href="#" class="dropdown-item">This Year</a></li>
+                      <li class="dropdown-title">????</li>
+                      <li><a href="#" class="dropdown-item">수익률</a></li>
+                      <li><a href="#" class="dropdown-item">최근거래량</a></li>
+                      <li><a href="#" class="dropdown-item active">급등률</a></li>
                     </ul>
                   </div>
                 </div>
@@ -613,122 +605,63 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div id="best" class="col-md-6">
               <div class="card">
                 <div class="card-header">
-                  <h4>Top 6</h4>
-                  <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">급등률</a>
-                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                      <li class="dropdown-title">????</li>
-                      <li><a href="#" class="dropdown-item">최근거래량</a></li>
-                      <li><a href="#" class="dropdown-item">수익률</a></li>
-                      <li><a href="#" class="dropdown-item active">급등률</a></li>
-                    </ul>
-                  </div>
+                  <h4>국내 종목 실시간 Best</h4>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- <div class="text-title mb-2">July</div> -->
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Malaysia</div>
-                            <div class="text-small text-muted">2,976 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">United States</div>
-                            <div class="text-small text-muted">1,576 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-6 mt-sm-0 mt-4">
-                      <!-- <div class="text-title mb-2">August</div> -->
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,486 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Palestine</div>
-                            <div class="text-small text-muted">3,182 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Germany</div>
-                            <div class="text-small text-muted">2,317 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            
-            <div class="col-md-4">
-              <div class="card card-hero">
-                <div class="card-header">
-                  <div class="card-icon">
-                    <i class="far fa-question-circle"></i>
-                  </div>
-                  <h4>Stock News</h4>
-                  <div class="card-description">Customers need help</div>
+                <div id="test" class="card-body">
+                  <table class="table">
+                    <!-- <thead>
+                      <tr>
+                        <th scope="col">순위</th>
+                        <th scope="col">종목명</th>
+                        <th scope="col">현재가</th>
+                        <th scope="col">등락</th>
+                        <th scope="col">등락률</th>
+                      </tr>
+                    </thead> -->
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
+                        <td>1.91%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
+                        <td>1.91%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
+                        <td>1.91%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
+                        <td>1.91%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
+                        <td>1.91%</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="card-body p-0">
                   <div class="tickets-list">
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>My order hasn't arrived yet</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Laila Tazkiah</div>
-                        <div class="bullet"></div>
-                        <div class="text-primary">1 min ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Please cancel my order</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Rizal Fakhri</div>
-                        <div class="bullet"></div>
-                        <div>2 hours ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Do you see my mother?</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Syahdan Ubaidillah</div>
-                        <div class="bullet"></div>
-                        <div>6 hours ago</div>
-                      </div>
-                    </a>
                     <a href="features-tickets.html" class="ticket-item ticket-more">
                       View All <i class="fas fa-chevron-right"></i>
                     </a>
@@ -736,6 +669,7 @@
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </section>
       </div>
@@ -775,6 +709,5 @@
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index.js"></script>
-
 </body>
 </html>
