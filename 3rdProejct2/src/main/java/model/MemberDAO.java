@@ -10,7 +10,7 @@ public class MemberDAO {//회원
 		
 	}
 	
-	public MemberDTO login(String id , String pw) {//로그인
+	public MemberDTO login(String email , String pw) {//로그인
 		
 		MemberDTO member = null;
 		return member;
@@ -24,15 +24,17 @@ public class MemberDAO {//회원
 		
 	}
 
-    public boolean idCheck(String id) {//중복아이디 체크
-    	boolean check = false;
-    	return check;
-    }
 
     public int update(MemberDTO member) {//회원정보수정
     	int cnt = 0;
     	
     	return cnt;
     	
+    }
+    
+    public int delete(String email) {//회원탈퇴
+    	int cnt=0;
+    	
+    	return cnt;
     }
 }
