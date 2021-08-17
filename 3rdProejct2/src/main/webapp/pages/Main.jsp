@@ -418,37 +418,25 @@
                   <div class="card-stats-title">AI추천 종목
                   </div>
                   <div class="card-icon shadow-primary bg-primary">
-                    <i class="fas fa-dollar-sign"></i>
+                    <img src="/assets/img/kakao.png" width="60px" height="60px">
+                    <!-- <i class="fas fa-dollar-sign"></i> -->
                   </div>
                   <div class="card-wrap">
                     <div class="card-header">
-                      <h4>사용자 자산</h4>
+                      <h4>KOSPI 035720</h4>
                     </div>
                     <div class="card-body">
-                      $187,13
+                      카카오
                     </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <!-- <div class="card-stats-item">
-                      <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">Pending</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">Shipping</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">Completed</div>
-                    </div> -->
                   </div>
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
+                  <img id ="img" src="/assets/img/samsung.png" width="60px" height="60px">
+                  <!-- <i class="fas fa-archive"></i> -->
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>최근 예측 종목</h4>
+                    <h4>KOSPI 005930</h4>
                   </div>
                   <div class="card-body">
                     삼성전자
@@ -472,8 +460,8 @@
                       $187,13
                     </div>
                   </div>
-                  <div class="card-stats-items">
-                  </div>
+                  <!-- <div class="card-stats-items">
+                  </div> -->
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
                   <i class="fas fa-archive"></i>
@@ -626,43 +614,53 @@
                         <th scope="row">1</th>
                         <td>Mark</td>
                         <td>Otto</td>
-                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                        <td>1.91%</td>
+                        <td>
+                          1.91%
+                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
-                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                        <td>1.91%</td>
+                        <td>
+                          1.91%
+                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">3</th>
                         <td>Larry</td>
                         <td>the Bird</td>
-                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                        <td>1.91%</td>
+                        <td>
+                          1.91%
+                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">4</th>
                         <td>Larry</td>
                         <td>the Bird</td>
-                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                        <td>1.91%</td>
+                        <td>
+                          1.91%
+                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">5</th>
                         <td>Larry</td>
                         <td>the Bird</td>
-                        <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                        <td>1.91%</td>
+                        <td>
+                          1.91%
+                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <div class="card-body p-0">
                   <div class="tickets-list">
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
+                    <a href="StockBest.jsp" class="ticket-item ticket-more">
                       View All <i class="fas fa-chevron-right"></i>
                     </a>
                   </div>
