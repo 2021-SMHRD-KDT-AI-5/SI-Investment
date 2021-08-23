@@ -608,9 +608,6 @@ select.form-control:not([size]):not([multiple]) {
   .card .card-header, .card .card-body, .card .card-footer {
     background-color: transparent;
     padding: 20px 25px; }
-    div#best{
-      padding: 20px 0px;
-    }
   .card .navbar {
     position: static; }
   .card .card-body {
@@ -834,8 +831,7 @@ select.form-control:not([size]):not([multiple]) {
     .card .card-stats .card-stats-title {
       padding: 15px 25px;
       background-color: #fff;
-      /* font-size: 13px; */
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 600;
       letter-spacing: .3px; }
     .card .card-stats .card-stats-items {
@@ -868,8 +864,21 @@ select.form-control:not([size]):not([multiple]) {
       flex-shrink: 0;
       width: 150px;
       border-radius: 3px 0 0 3px; }
+      /* pre 추가 */
+      .card.card-large-icons .card-iconPre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 150px;
+        border-radius: 3px 0 0 3px; 
+        margin-top: 20px;
+        margin-left: 20px;}
+
       .card.card-large-icons .card-icon .ion, .card.card-large-icons .card-icon .fas, .card.card-large-icons .card-icon .far, .card.card-large-icons .card-icon .fab, .card.card-large-icons .card-icon .fal {
         font-size: 60px; }
+        .card.card-large-icons .card-iconPre .ion, .card.card-large-icons .card-iconPre .fas, .card.card-large-icons .card-icon .far, .card.card-large-icons .card-icon .fab, .card.card-large-icons .card-icon .fal {
+          font-size: 60px; }
     .card.card-large-icons .card-body {
       padding: 25px 30px; }
       .card.card-large-icons .card-body h4 {
@@ -893,6 +902,10 @@ select.form-control:not([size]):not([multiple]) {
     .card.card-large-icons .card-icon {
       width: 100%;
       height: 200px; } }
+    .card.card-large-icons .card-iconPre {
+        width: 20%;
+        height: 70px; } 
+      /* } */
 
 @media (max-width: 767.98px) {
   .card .card-header {
@@ -938,9 +951,7 @@ select.form-control:not([size]):not([multiple]) {
   .table.table-bordered td,
   .table.table-bordered th {
     border-color: #f6f6f6; }
-div#test{
-  padding: 20px 0px;
-}
+
 .table-links {
   color: #34395e;
   font-size: 12px;
@@ -1963,15 +1974,9 @@ body, html {
 body {
   background-color: #f4f6f9;
   font-size: 14px;
-  font-weight: 600;
-  /* font-family: "Nunito", "Segoe UI", arial; */
-  /* 숫자 폰트 -> "Noto Sans KR", sans-serif */
-  font-family: "나눔스퀘어 Light", sans-serif; 
+  font-weight: 400;
+  font-family: "Nunito", "Segoe UI", arial;
   color: #6c757d; }
-
-  tr.best_font{
-    font-size: 13px;
-  }
 
 a.bb {
   text-decoration: none;
