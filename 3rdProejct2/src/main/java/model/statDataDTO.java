@@ -35,7 +35,16 @@ public class statDataDTO {//종목별 통계 데이터
 		this.date = date;//날짜
 	}
 
-    
+   //예측급등률 생성자 메소드
+	public statDataDTO(int jongmokCode, String jongmokName, double soaringRate) {
+		
+		this.jongmokCode = jongmokCode;
+		this.jongmokName = jongmokName;
+		this.soaringRate = soaringRate;
+	}
+	
+	
+
 
 	public String getDate() {//날짜
 		return date;
