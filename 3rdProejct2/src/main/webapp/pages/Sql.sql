@@ -80,9 +80,39 @@ insert into StockTerms values('테마주','정치적 사회적 이슈나 산업 트렌드를 따라�
 insert into StockTerms values('BPS','주당순자산을 말하는데요. 기업이 모든 활동을 중단하고 기업의 자산을 주주들에게 나눠줄 경우, 한 주당 얼마씩 돌아가는지 나타내는 지표에요. ');
 insert into StockTerms values('변동성','변동성이란 말 그대로 바뀌는걸 의미해요. 주가가 일정하지 않고 10% 올랐다 10% 떨어졌다 이거를 짧은 시간에 반복한다면 변동성이 심하다고 볼 수 있겠죠? 일반적으론 대형주보다는 소형주가 변동성이 심해요.');
 
-
-
-
 select * from StockTerms;
- 
- 
+
+//국내 실시간 종목 Best생성 
+drop table StockBest_table;
+
+create table StockBest_table
+(JongMokName varchar2(20) NOT NULL,
+NowPrice number(20) NOT NULL,
+UpDown number(20) NOT NULL,
+UpDownRate number(20),
+constraint StockBest_table_JongMokName_pk primary key(JongMokName)
+);
+
+//투자별 거래량 생성
+
+drop table volume_table;
+
+//날짜,개인거래량,외국인거래량,기관거래량
+create table volume_table
+(Naljja varchar2(50) NOT NULL,  
+personalVolume number(20) NOT NULL,
+foreignerVolume number(20) NOT NULL,
+agencyVolume number(20) NOT NULL
+);
+
+//사용자 최근 예측 종목 테이블 생성
+
+drop table predictJongMok_table;
+
+//종목코드,코스피/코스닥,종목명
+create table UserPredict
+(jongMokCode number(20) NOT NULL,
+kos varchar2(20) NOT NULL,
+JongMokName varchar2(30) NOT NULL,
+constraint JongMokCode_pk primary key(JongMokCode)
+);
