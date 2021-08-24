@@ -119,7 +119,35 @@ public class MemberDAO {//회원
 
 
     public int update(MemberDTO member) {//회원정보수정
-int cnt = 0;
+    	
+       int cnt = 0;
+       
+		try {
+			//DB연결
+			connection();
+			String sql = "update member_table set name=?, email=?, pw=? tel=? where email=?";
+			
+			//자바 와 DB에 sql문을 실행시켜주는 역할
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, member.getName());
+            psmt.setString(2, member.getEmail());
+            psmt.setString(3, member.getPw());
+            psmt.setString(4, member.getTel());
+			cnt = psmt.executeUpdate();
+			
+			
+		} catch( SQLException e) {
+		
+			System.out.println("sql문 오류다.");
+			e.printStackTrace();
+		} finally {
+			//무조건 실행하는 구문
+			//데이터베이스 종료기능 구현
+			
+			close();
+				
+	
+		}
 	
 	
 		return cnt;
