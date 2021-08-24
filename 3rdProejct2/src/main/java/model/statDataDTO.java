@@ -10,6 +10,7 @@ public class statDataDTO {//종목별 통계 데이터
 	private int personalVolume; // 개인 거래량
 	private int agencyVolume; //기관 거래량
 	private int foreignerVolume; //외국인 거래량
+	private String date;//날짜
 	
 	//생성자 메소드 
 	public statDataDTO(int jongmokCode, String jongmokName, int totalVolume, double profitRate, double soaringRate,
@@ -23,6 +24,28 @@ public class statDataDTO {//종목별 통계 데이터
 		this.agencyVolume = agencyVolume;
 		this.foreignerVolume = foreignerVolume;
 	}
+	
+	
+  //투자별 거래량 생성자 메소드
+	public statDataDTO(int personalVolume, int agencyVolume, int foreignerVolume, String date) {
+		super();
+		this.personalVolume = personalVolume;//개인 거래량
+		this.agencyVolume = agencyVolume; //기관 거래량
+		this.foreignerVolume = foreignerVolume;//외국인 거래량
+		this.date = date;//날짜
+	}
+
+    
+
+	public String getDate() {//날짜
+		return date;
+	}
+
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 
 	public int getJongmokCode() {//종목코드
 		return jongmokCode;
