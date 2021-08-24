@@ -13,6 +13,7 @@ import controller_command.StockTermsCon;
 import controller_command.UpdateCon;
 import controller_command.joinCon;
 import controller_command.loginCon;
+import controller_command.statDataCon;
 
 @WebServlet("*.do")//*가 붙으면 어떤이름이든 .do로끝나면 오게된다.
 public class frontcontroller extends HttpServlet {
@@ -58,8 +59,8 @@ public class frontcontroller extends HttpServlet {
 			command = new StockTermsCon();
 		}else if(resultURI.equals("snsDataCon.do")) {//sns데이터
 			
-		}else if(resultURI.equals("statDataCon.do")) {//종목별 통계데이터
-			
+		}else if(resultURI.equals("statDataCon.do")) {//투자별 거래량
+			command = new statDataCon();
 		}else if(resultURI.equals("coustomCon.do")) {//사용자 커스텀
 			
 		}else if(resultURI.equals("UpdateCon.do")) {//회원정보수정
