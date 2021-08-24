@@ -55,7 +55,7 @@ public class StockTermsDAO {//주식용어 사전
 			//DB연결 가능
 		    connection();
 			//쿼리 실행
-			String sql = "select * from StockTerms ";//임시 SQL문
+			String sql = "select * from StockTerms ";
 			
 			//자바 와 DB에 sql문을 실행시켜주는 역할
 			psmt = conn.prepareStatement(sql);
@@ -73,7 +73,7 @@ public class StockTermsDAO {//주식용어 사전
 				String getCommentary = rs.getString(2);
 				
 				termDic = new StockTermsDTO(getTerm,getCommentary);
-				//list안에 각각의 회원들의 정보가 담겨있는 member를 추가
+				//list안에 각각의 주식용어의 정보가 담겨있는 termDic을 추가
 				list.add(termDic);
 
 				//세션에 저장하고 이동하는 건 controller에 하는 것
