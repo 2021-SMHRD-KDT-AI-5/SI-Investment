@@ -152,7 +152,7 @@
 
 		    $('#MForm').submit(function(event){
 			   
-			   //submit 처리 되는 것을 막아야함 
+			  
 			   
 			   
 			   var pw1 = $('#password').val(); //비밀번호
@@ -161,6 +161,7 @@
 
 			   	if( pw1 != pw2){ //비밀번호가 일치하지 않을때
 			   		alert("비밀번호가 일치 하지 않습니다");
+			   	    //submit 처리 되는 것을 막아야함 
 			   		event.preventDefault(); 
 			   		return; //$('#MForm').submit() 기능 종료
 			   	}
