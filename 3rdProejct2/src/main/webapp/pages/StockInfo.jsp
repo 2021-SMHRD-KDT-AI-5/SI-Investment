@@ -1,6 +1,17 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.statDataDAO"%>
+<%@page import="model.statDataDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
+<%
+statDataDTO volume = (statDataDTO)application.getAttribute("stat");
+statDataDAO dao = new statDataDAO();
+ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
+list=dao.select();
+%>
+
 <html>
 <head>
 
@@ -221,14 +232,18 @@
                         <th>외국인</th>
                         <th>기관계</th>
                       </tr>
+                      <!-- 투자별 거래량 조회 -->
+                       
+                      <%for(int i=0;i<list.size();i++){ %>
                       <tr>
-                        <td>1</td>
-                        <td>2021-08-10</td>
-                        <td>+21321</td>
-                        <td>-20123</td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                        <td><%=i+1 %></td>
+                        <td><%=list.get(i).getDate() %></td>
+                        <td><%=list.get(i).getPersonalVolume()%></td>
+                        <td><%=list.get(i).getForeignerVolume() %><</td>
+                        <td><a href="#" class="btn btn-secondary"><%=list.get(i).getAgencyVolume() %></a></td>
                       </tr>
-                      <tr>
+                      <%} %>
+                      <!-- <tr>
                         <td>2</td>
                         <td>2021-08-09</td>
                         <td></td>
@@ -248,7 +263,7 @@
                         <td>2017-01-11</td>
                         <td><div class="badge badge-success">Active</div></td>
                         <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                      </tr>
+                      </tr> -->
                     </table>
                   </div>
                 </div>
@@ -310,6 +325,21 @@
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index-0.js"></script>
+  
+  <!-- 투자별 거래량 API데이터를 Ajax로 가져오기-->
+  <script type="text/javascript">
+  function (){
+ 	 $.ajax({
+ 		 type: "post",
+ 		 data: 
+ 		 url: 
+ 		 dataType:
+ 	     sucess:
+ 	     error:
+ 	 })
+  }
+  
+  </script>
   
   
 </body>
