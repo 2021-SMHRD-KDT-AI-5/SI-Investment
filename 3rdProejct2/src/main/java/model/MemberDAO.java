@@ -1,8 +1,17 @@
 package model;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class MemberDAO {//회원
+	private Connection conn = null;
+	private PreparedStatement psmt = null;
+	private ResultSet rs = null;
 	
 	public void connection() {//데이터베이스 연결
+		
 		
 	}
 	
@@ -26,9 +35,11 @@ public class MemberDAO {//회원
 
 
     public int update(MemberDTO member) {//회원정보수정
-    	int cnt = 0;
-    	
-    	return cnt;
+int cnt = 0;
+	
+	
+		return cnt;
+		
     	
     }
     
