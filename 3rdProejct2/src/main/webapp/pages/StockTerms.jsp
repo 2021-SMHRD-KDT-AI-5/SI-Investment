@@ -5,9 +5,10 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-StockTermsDTO term = (StockTermsDTO)session.getAttribute("term");//용어사전 DTO 
+StockTermsDTO term = (StockTermsDTO)application.getAttribute("termdic");//용어사전 DTO 
 StockTermsDAO dao = new StockTermsDAO(); //용어사전 DAO
 ArrayList<StockTermsDTO> list = new ArrayList<StockTermsDTO>(); //ArrayList생성
+list=dao.select();
 %>
 <html>
 <head>
@@ -66,7 +67,6 @@ ArrayList<StockTermsDTO> list = new ArrayList<StockTermsDTO>(); //ArrayList생�
 
             <div class="row">
 
-
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
@@ -99,12 +99,13 @@ ArrayList<StockTermsDTO> list = new ArrayList<StockTermsDTO>(); //ArrayList생�
                         </div>
                       </div> -->
                       <!-- 주식용어정리 -->
+                      <%System.out.print(list.size()); %>
                       <%for(int i=0 ; i<list.size();i++){ %>
                       <div class="accordion">
-                        <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-3">
+                        <div class="accordion-header" role="button" data-toggle="collapse" data-target="'#panel-body-"+<%=i+1 %>>
                           <h4><%=list.get(i).getTerm() %></h4> <!-- 주식용어제목 -->
                         </div>
-                        <div class="accordion-body collapse" id="panel-body-3" data-parent="#accordion">
+                        <div class="accordion-body collapse" id="panel-body-"+<%=i+1%> data-parent="#accordion">
                           <pre class="mb-0"><%=list.get(i).getCommentary() %></pre> <!-- 주식용어 해설 -->
                         </div>
                       </div>
