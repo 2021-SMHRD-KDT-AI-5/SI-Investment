@@ -18,7 +18,7 @@ public class statDataCon implements Command {//종목별 통계데이터
 		String moveURL = null; //어디로 이동할 건지 저장하는 변수 선언
 		 
 		//종목코드, 종목명 변수에 저장
-		int jongmokCode = Integer.parseInt(request.getParameter("jongmokCode"));
+//		int jongmokCode = Integer.parseInt(request.getParameter("jongmokCode"));
 		String jongmokName = request.getParameter("jongmokName");
 		
 		//DAO,DTO생성
@@ -31,10 +31,10 @@ public class statDataCon implements Command {//종목별 통계데이터
 			application.setAttribute("stat", stat);
 			
 			System.out.println("통계 데이터 성공 ");
-			moveURL = "statData.jsp";//임시로 쓴 경로
+			moveURL = "Stockinfo.jsp";//임시로 쓴 경로
 		}else {
 			System.out.println("통계 데이터 실패");
-			moveURL = "statData.jsp";//임시로 쓴 경로
+			moveURL = "Stockinfo.jsp";//임시로 쓴 경로
 		}
 		
 		
