@@ -33,10 +33,10 @@ public class StockBestCon implements Command{//국내종목 실시간BEST 컨트롤러
 			application.setAttribute("juga", juga);
 			
 			System.out.println("국내종목 실시간 BEST 성공");
-			moveURL="jugaPrediction.jsp";//임시로 쓴 경로
+			moveURL="StockBest.jsp";//임시로 쓴 경로
 		}else {
 			System.out.println("국내종목 실시간 BEST");
-			moveURL="jugaPrediction.jsp";//임시로 쓴 경로
+			moveURL="StockBest.jsp";//임시로 쓴 경로
 			
 		}
 		
