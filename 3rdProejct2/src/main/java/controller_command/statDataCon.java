@@ -31,10 +31,10 @@ public class statDataCon implements Command {//종목별 통계데이터
 			application.setAttribute("stat", stat);
 			
 			System.out.println("통계 데이터 성공 ");
-			moveURL = "Stockinfo.jsp";//임시로 쓴 경로
+			moveURL = "Stockinfo.jsp";
 		}else {
 			System.out.println("통계 데이터 실패");
-			moveURL = "Stockinfo.jsp";//임시로 쓴 경로
+			moveURL = "Stockinfo.jsp";
 		}
 		
 		
