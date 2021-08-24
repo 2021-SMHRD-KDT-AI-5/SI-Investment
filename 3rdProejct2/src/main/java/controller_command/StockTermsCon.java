@@ -30,9 +30,9 @@ public class StockTermsCon implements Command{//주식용어 사전 컨트롤러
 			ServletContext application = request.getServletContext();
 			application.setAttribute("termdic", termdic);
 			
-			moveURL="TermDictionary.jsp";//임시로 쓴 경로
+			moveURL="StockTerms.jsp";
 		}else {
-			moveURL="TermDictionary.jsp";//임시로 쓴 경로 
+			moveURL="StockTerms.jsp";
 		}
 		
 		return moveURL;
