@@ -1,9 +1,15 @@
+<%@page import="model.StockBestDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.StockBestDAO"%>
 <%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- member불러오기 -->
-<% MemberDTO member = (MemberDTO)session.getAttribute("member"); %>
+<% MemberDTO member = (MemberDTO)session.getAttribute("member");
+StockBestDAO dao = new StockBestDAO();
+ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -241,52 +247,54 @@
                       </tr>
                     </thead> -->
                     <tbody>
+                    <%for(int i=0;i<5;i++){ %>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
+                        <th scope="row"><%=i+1 %></th>
+                        <td><%=list.get(i).getJongMokName() %></td>
+                        <td><%=list.get(i).getNowPrice() %></td>
                         <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <%=list.get(i).getUpDown() %>
+                          <div class="text-small text-muted"><%=list.get(i).getUpDownRate()+'%'%> <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
                       </tr>
-                      <tr>
+                      <%} %>
+                      <%-- <tr>
                         <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
+                        <td><%= %></td>
+                        <td><%= %></td>
                         <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <%= %>
+                          <div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
                       </tr>
                       <tr>
                         <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
+                        <td><%= %></td>
+                        <td><%= %></td>
                         <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <%= %>
+                          <div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
                       </tr>
                       <tr>
                         <th scope="row">4</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
+                        <td><%= %></td>
+                        <td><%= %></td>
                         <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <%= %>
+                          <div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
                       </tr>
                       <tr>
                         <th scope="row">5</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
+                        <td><%= %></td>
+                        <td><%= %></td>
                         <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <%= %>
+                          <div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
                       </tr>
-                    </tbody>
+   --%>                  </tbody>
                   </table>
                 </div>
                 <div class="card-body p-0">
@@ -330,5 +338,18 @@
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index.js"></script>
+  
+    <!-- ajax로 실시간 주가 API데이터 요청 -->
+  <script type="text/javascript">
+     function (){
+    	 $.ajax({
+    		 type:
+    		 data: 
+    		 url: 
+    		 dataType:
+    	     sucess:
+    	     error:
+    	 })
+     }
 </body>
 </html>
