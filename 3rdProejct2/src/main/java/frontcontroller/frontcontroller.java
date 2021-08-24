@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import command.Command;
+import controller_command.StockBestCon;
+import controller_command.StockTermsCon;
+import controller_command.UpdateCon;
 import controller_command.joinCon;
 import controller_command.loginCon;
 
@@ -49,16 +52,18 @@ public class frontcontroller extends HttpServlet {
 		}else if(resultURI.equals("loginCon.do")){//로그인 
 			command = new loginCon();
 			
-		}else if(resultURI.equals("JugaData.do")) {//주가데이터
-			
-		}else if(resultURI.equals("TermDicCon.do")) {//주식용어사전
-			
+		}else if(resultURI.equals("StockBestCon.do")) {//국내종목 실시간BEST
+			command = new StockBestCon();
+		}else if(resultURI.equals("StockTermsCon.do")) {//주식용어사전
+			command = new StockTermsCon();
 		}else if(resultURI.equals("snsDataCon.do")) {//sns데이터
 			
 		}else if(resultURI.equals("statDataCon.do")) {//종목별 통계데이터
 			
 		}else if(resultURI.equals("coustomCon.do")) {//사용자 커스텀
 			
+		}else if(resultURI.equals("UpdateCon.do")) {//회원정보수정
+			command = new UpdateCon();
 		}
 		
 		//어떠한 조건이든 moveURL로 이동하겠끔 
