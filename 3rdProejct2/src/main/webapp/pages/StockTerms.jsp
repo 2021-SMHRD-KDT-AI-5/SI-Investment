@@ -1,6 +1,14 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.StockTermsDAO"%>
+<%@page import="model.StockTermsDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+StockTermsDTO term = (StockTermsDTO)session.getAttribute("term");//용어사전 DTO 
+StockTermsDAO dao = new StockTermsDAO(); //용어사전 DAO
+ArrayList<StockTermsDTO> list = new ArrayList<StockTermsDTO>(); //ArrayList생성
+%>
 <html>
 <head>
 
@@ -66,7 +74,7 @@
                   </div>
                   <div class="card-body">
                     <div id="accordion">
-                      <div class="accordion">
+                <!--       <div class="accordion">
                         <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-1" aria-expanded="true">
                           <h4>코스피와 코스닥</h4>
                         </div>
@@ -89,18 +97,18 @@
                             <br>매수:주식을 사는 것을 말해요 
                             <br>매도:주식을 파는 것을 말해요</p>
                         </div>
-                      </div>
+                      </div> -->
+                      <!-- 주식용어정리 -->
+                      <%for(int i=0 ; i<list.size();i++){ %>
                       <div class="accordion">
                         <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-3">
-                          <h4>시가,종가,고가,저가 </h4>
+                          <h4><%=list.get(i).getTerm() %></h4> <!-- 주식용어제목 -->
                         </div>
                         <div class="accordion-body collapse" id="panel-body-3" data-parent="#accordion">
-                          <p class="mb-0">시가: 아침에 증권시장에서 문을 열 때의 첫 번째 거래가격을 말해요
-                            <br>종가: 증권시장이 문을 닫을 때의 마지막 거래가격을 말해요.
-                            <br>저가: 하루 중 가장 낮게 팔린 가격을 말해요
-                            <br>고가: 하루 중 가장 높게 팔린 가격을 말해요</p>
+                          <pre class="mb-0"><%=list.get(i).getCommentary() %></pre> <!-- 주식용어 해설 -->
                         </div>
                       </div>
+                      <%} %>
                     </div>
                   </div>
                 </div>
