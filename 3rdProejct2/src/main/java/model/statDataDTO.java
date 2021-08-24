@@ -13,22 +13,22 @@ public class statDataDTO {//종목별 통계 데이터
 	private String date;//날짜
 	
 	//생성자 메소드 
-	public statDataDTO(int jongmokCode, String jongmokName, int totalVolume, double profitRate, double soaringRate,
-			int personalVolume, int agencyVolume, int foreignerVolume) {
-		this.jongmokCode = jongmokCode;
-		this.jongmokName = jongmokName;
-		this.totalVolume = totalVolume;
-		this.profitRate = profitRate;
-		this.soaringRate = soaringRate;
-		this.personalVolume = personalVolume;
-		this.agencyVolume = agencyVolume;
-		this.foreignerVolume = foreignerVolume;
-	}
+//	public statDataDTO(int jongmokCode, String jongmokName, int totalVolume, double profitRate, double soaringRate,
+//			int personalVolume, int agencyVolume, int foreignerVolume) {
+//		this.jongmokCode = jongmokCode;
+//		this.jongmokName = jongmokName;
+//		this.totalVolume = totalVolume;
+//		this.profitRate = profitRate;
+//		this.soaringRate = soaringRate;
+//		this.personalVolume = personalVolume;
+//		this.agencyVolume = agencyVolume;
+//		this.foreignerVolume = foreignerVolume;
+//	}
 	
 	
   //투자별 거래량 생성자 메소드
-	public statDataDTO(int personalVolume, int agencyVolume, int foreignerVolume, String date) {
-		super();
+	public statDataDTO(String date,int personalVolume,int foreignerVolume, int agencyVolume) {
+		
 		this.personalVolume = personalVolume;//개인 거래량
 		this.agencyVolume = agencyVolume; //기관 거래량
 		this.foreignerVolume = foreignerVolume;//외국인 거래량
