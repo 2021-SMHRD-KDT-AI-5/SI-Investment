@@ -1,6 +1,15 @@
+<%@page import="model.StockBestDAO"%>
+<%@page import="model.StockBestDTO"%>
+<%@page import="model.StockTermsDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+StockBestDTO best = (StockBestDTO)application.getAttribute("juga");
+StockBestDAO dao = new StockBestDAO(); // 국내종목 실시간 BEST DAO
+ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>(); //ArrayList생성
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -56,6 +65,7 @@
                   <div class="card-header">
                     <h4>국내 종목 실시간Best</h4>
                   </div>
+                  <form action="" method="POST">
                   <div id="best" class="card-body">
                     <table class="table">
                       <thead>
@@ -68,44 +78,49 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <%
+                         for(int i=0; i<list.size();i++){
+                      %>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td>1.91%</td>
+                          <th scope="row"><%=i+1 %></th>
+                          <td><%=list.get(i).getJongMokName() %></td>
+                          <td><%=list.get(i).getNowPrice() %></td>
+                          <td><div class="text-small text-muted"><%=list.get(i).getUpDown() %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%=list.get(i).getUpDownRate()+'%' %></td>
                         </tr>
-                        <tr>
+                        <%} %>
+<%--                         <tr>
                           <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td>1.91%</td>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td>1.91%</td>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %><i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
                         </tr>
                         <tr>
                           <th scope="row">4</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td>1.91%</td>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
                         </tr>
                         <tr>
                           <th scope="row">5</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td><div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td>1.91%</td>
-                        </tr>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
+                        </tr> --%>
                       </tbody>
                     </table>
                   </div> 
+                  </form>
                 </div>
               </div>
             </div>
@@ -135,7 +150,19 @@
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
 
-  <!-- Page Specific JS File -->
-
+  <!-- ajax로 실시간 주가 API데이터 요청 -->
+  <script type="text/javascript">
+     function (){
+    	 $.ajax({
+    		 type: "post",
+    		 data: 
+    		 url: 
+    		 dataType:
+    	     sucess:
+    	     error:
+    	 })
+     }
+  
+  </script>
 </body>
 </html>
