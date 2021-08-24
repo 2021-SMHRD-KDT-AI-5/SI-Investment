@@ -6,7 +6,8 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- member불러오기 -->
-<% MemberDTO member = (MemberDTO)session.getAttribute("member");
+<% 
+StockBestDTO best = (StockBestDTO)application.getAttribute("juga");
 StockBestDAO dao = new StockBestDAO();
 ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
 %>
