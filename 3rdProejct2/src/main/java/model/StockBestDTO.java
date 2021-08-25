@@ -1,6 +1,6 @@
 package model;
 
-public class StockBestDTO {//국내종목 실시간 BEST 
+public class StockBestDTO {//국내종목 실시간 BEST,사용자예측종목, 
 	
 	private int jongmokCode; //종목코드
 //	private String date; //날짜
@@ -11,9 +11,9 @@ public class StockBestDTO {//국내종목 실시간 BEST
 	
 	
 	private String JongMokName; //종목명
-	private int NowPrice; //현재가
-	private int UpDown; //등락
-	private double UpDownRate; //등락률
+	private String NowPrice; //현재가
+	private String UpDown; //등락
+	private String UpDownRate; //등락률
 	
 	
 	
@@ -30,7 +30,7 @@ public class StockBestDTO {//국내종목 실시간 BEST
 	
 
 	//국내 종목 실시간 BEST 생성자매소드
-	public StockBestDTO(String jongMokName, int nowPrice, int upDown, double upDownRate) {
+	public StockBestDTO(String jongMokName, String nowPrice, String upDown, String upDownRate) {
 		this.JongMokName = jongMokName;
 		this.NowPrice = nowPrice;
 		this.UpDown = upDown;
@@ -43,6 +43,8 @@ public class StockBestDTO {//국내종목 실시간 BEST
 	this.kos = kos; //코스피,코스닥
 	this.JongMokName = jongMokName; //종목명
 }
+	
+	
 
 	public String getJongMokName() {//종목명
 		return JongMokName;
@@ -52,27 +54,27 @@ public class StockBestDTO {//국내종목 실시간 BEST
 		JongMokName = jongMokName;
 	}
 
-	public int getNowPrice() {//현재가
+	public String getNowPrice() {//현재가
 		return NowPrice;
 	}
 
-	public void setNowPrice(int nowPrice) {
+	public void setNowPrice(String nowPrice) {
 		NowPrice = nowPrice;
 	}
 
-	public int getUpDown() {//등락
+	public String getUpDown() {//등락
 		return UpDown;
 	}
 
-	public void setUpDown(int upDown) {
+	public void setUpDown(String upDown) {
 		UpDown = upDown;
 	}
 
-	public double getUpDownRate() {//등락률
+	public String getUpDownRate() {//등락률
 		return UpDownRate;
 	}
 
-	public void setUpDownRate(double upDownRate) {
+	public void setUpDownRate(String upDownRate) {
 		UpDownRate = upDownRate;
 	}
 
