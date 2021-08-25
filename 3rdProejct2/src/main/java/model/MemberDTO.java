@@ -18,8 +18,11 @@ public class MemberDTO {//회원
 		this.tel = tel;
 
 	}
-
 	
+
+
+
+
 
 	public String getName() {//이름 
 		return name;
@@ -37,7 +40,7 @@ public class MemberDTO {//회원
 		return email;
 	}
 
-	public void setEmail(String emali) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
