@@ -21,7 +21,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id="app">
+	
+  <div id="app">
     <section class="section">
       <div class="container mt-5">
         <div class="row">
@@ -31,24 +32,22 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>회원수정</h4></div>
+              <div class="card-header"><h4>회원정보수정</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="UpdateCon.do" id="MForm">
-                  <div class="row">
-                    <div class="form-group col-6">
-                      <label for="first_name">이름</label>
-                      <input id="first_name" type="text" class="form-control" name="name"  autofocus>
-                    </div>
-                    <div class="form-group col-6">
-                      <label for="last_name">전화번호</label>
-                      <input id="last_name" type="text" class="form-control" name="tel" >
+                <form method="POST">
+
+                  <div class="form-group">
+                    <label for="email">이메일</label>
+                    <!-- 사용자 이메일 고정 -->
+                    <input id="email" type="email" class="form-control" name="email"  readonly="">
+                    <div class="invalid-feedback">
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="email">이메일</label>
-                    <input id="email" type="email" class="form-control" name="email" >
+                    <label for="phone">전화번호</label>
+                    <input id="phone" type="text" class="form-control" name="phone">
                     <div class="invalid-feedback">
                     </div>
                   </div>
@@ -56,7 +55,7 @@
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="password" class="d-block">비밀번호</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="pw" >
+                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
@@ -64,13 +63,13 @@
                     </div>
                     <div class="form-group col-6">
                       <label for="password2" class="d-block">비밀번호 확인</label>
-                      <input id="password2" type="password" class="form-control" name="password-confirm" >
+                      <input id="password2" type="password" class="form-control" name="password-confirm">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">
-                      회원수정
+                      수정하기
                     </button>
                   </div>
                 </form>
@@ -84,6 +83,8 @@
       </div>
     </section>
   </div>
+  
+  
  
 
   <!-- General JS Scripts -->
