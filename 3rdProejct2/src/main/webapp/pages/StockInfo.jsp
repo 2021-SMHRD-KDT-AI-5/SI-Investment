@@ -66,26 +66,31 @@ list=dao.select();
                 </p>
     
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6" >
                     <div class="card card-large-icons">
                       <!-- card-icon bg-primary text-white 태그 수정
                           card-iconPre bg-primary text-white 로 수정-->
-                      <div class="card-iconPre bg-primary text-white">
-                        <!-- 종목의 로고 같은거 img태그로 들어가면 됨 -->
-                        <i class="fas fa-cog"></i>
+
+                      <!-- 기업 로고 -->
+                      <div >
+                        <img src="../assets/img/avatar/avatar-1.png" 
+                        style="height: 100px; height: 100px; margin: 20px;">
                       </div>
+
                       <div class="card-body">
                         <h4>Netflix</h4>
                         <h4>123,456</h4> <span>▼ 2.3%</span>
                         <p>General settings such as, site title, site description, address and so on.</p>
-                        <a href="Predict.jsp" class="card-cta">
+                        <a href="features-setting-detail.html" class="card-cta">
                           <!-- <a href="2Predict.html" class="card-cta"></a> -->
-                          예측결과 더보기 <i class="fas fa-chevron-right"></i></a>
+                          예측결과 더보기 <i class="fas fa-chevron-right"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
-    
                 </div>
+                
+                
                 
           <!-- End 주식 종목 정보 -->
 
@@ -104,29 +109,8 @@ list=dao.select();
                   </div>
                 </div>
                 <div class="card-body">
-                  <canvas id="myChart" height="182"></canvas>
-                  <div class="statistic-details mt-sm-4">
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
-                      <div class="detail-value">$243</div>
-                      <div class="detail-name">Today's Sales</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 23%</span>
-                      <div class="detail-value">$2,902</div>
-                      <div class="detail-name">This Week's Sales</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
-                      <div class="detail-value">$12,821</div>
-                      <div class="detail-name">This Month's Sales</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
-                      <div class="detail-value">$92,142</div>
-                      <div class="detail-name">This Year's Sales</div>
-                    </div>
-                  </div>
+                <!-- 이 안에 차트 들어오면 돼요 -->
+                  <canvas id="myChart" height="182"></canvas>                  
                 </div>
               </div>
             </div>
@@ -134,7 +118,6 @@ list=dao.select();
 
             <!-- End 차트부분 끝 -->
 
-          <!-- 클릭하면 커스텀 하는 부분 쫙 펼쳐지는 기능 뭔지 찾아보기 -->
           <!-- Start 사용자 커스텀 -->
           <!-- <class class="section-body"> -->
             
@@ -143,6 +126,10 @@ list=dao.select();
                 <div class="card">
                   <div class="card-header">
                     <h4>사용자 커스텀하는 공간</h4>
+                    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
+                      data-content="사용자 커스텀에 대한 설명 작성">
+                        ?
+                      </button>
                   </div>
 
                   <div class="card-body">
@@ -206,13 +193,109 @@ list=dao.select();
                     </div>
 
                       <div style="text-align: center;">
-                        <a href="2Predict.html" class="btn btn-primary mt-4">예측결과보기</a><br><br>
+                        <a href="Predict.jsp" class="btn btn-primary mt-4">예측결과보기</a><br><br>
                         <a href="#" class="mt-4 bb">Need Help?</a>
                       </div>
                   </div>
 
                 </div>
           <!-- End 사용자 커스텀 -->
+
+
+            <!-- Start 최대손실예상금액 -->
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>최대손실예상금액</h4>
+                    <div>
+                      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
+                      data-content="최대손실예상금액에 대한 설명을 짤막하게 써두면 좋을듯">
+                        ?
+                      </button>
+                    </div>
+
+                  </div>
+                  <div class="card-body">
+
+                  <!-- Start 결과값 -->
+                  <div class="card-footer card-footer-grey pt-0">
+                    <div class="statistic-details mt-4 align-items-center justify-content-center" style="margin-top: 0px;">
+                      <div class="statistic-details-item col-sm-4 col-12">
+                        <div class="detail-value">00,000</div>
+                        <div class="detail-name">종목A이름</div>
+                      </div>
+                      <div class="statistic-details-item col-sm-4 col-12">
+                        <div class="detail-chart">
+                          <div class="sparkline-line-chart"></div>
+                        </div>
+                        <div class="detail-value">00,000</div>
+                        <div class="detail-name">종목 3개 포트폴리오</div>
+                      </div> 
+                    </div>
+                  </div>
+                  <!-- End 결과값 -->
+
+
+                    <!-- <div class="alert alert-info">
+                      <b>최대손실예상금액</b> :  3개의 종목의 ~를 입력했을 때 최대 손실 금액을 알려줍니다.(알림)
+                    </div> -->
+
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label > 종목A 이름</label>
+                        <input type="text" class="form-control" placeholder="예시 : 삼성전자" >
+                      </div>
+                      <div class="form-group col-6">
+                        <label>종목A 비율</label>
+                        <input type="text" class="form-control" placeholder="예시 : 0.35" >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label> 종목B 이름</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group col-6">
+                        <label>종목B 비율</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label > 종목C 이름</label>
+                        <input type="text" class="form-control" >
+                      </div>
+                      <div class="form-group col-6">
+                        <label>종목C 비율</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>가격</label>
+                      <input type="text" class="form-control" placeholder="총 투자금액을 입력하세요.">
+                    </div>
+
+                    <div class="form-group">
+                      <label>보유기간</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+
+                  <!-- 제출버튼 -->
+                  <div class="card-footer text-right">
+                  	<!-- 종목 A, 종목 3개 포트폴리오 결과 수정되게 하면 돼요 -->
+                    <button class="btn btn-primary mr-1" type="submit">결과보기</button>
+                    <!-- <button class="btn btn-secondary" type="reset">Reset</button> -->
+                  </div>
+
+                </div>
+              </div>
+             </div>
+              <!-- End 최대손실예상금액 -->
+
 
           <!-- Start 거래량 -->
 
@@ -267,6 +350,7 @@ list=dao.select();
                     </table>
                   </div>
                 </div>
+                
                 <div class="card-footer text-right">
                   <nav class="d-inline-block">
                     <ul class="pagination mb-0">
