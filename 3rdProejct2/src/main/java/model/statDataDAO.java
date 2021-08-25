@@ -87,9 +87,9 @@ public ArrayList<statDataDTO> select(){//투자별 거래량
 			while(rs.next()) {
 				//컬럼인덱스는 1부터 시작
 				String getDate = rs.getString(1);
-				int getPersonalVolume = rs.getInt(2);
-				int getforeignerVolum = rs.getInt(3);
-				int getAgencyVolum = rs.getInt(4);
+				String getPersonalVolume = rs.getString(2);
+				String getforeignerVolum = rs.getString(3);
+				String getAgencyVolum = rs.getString(4);
 				
 				
 				volume = new statDataDTO(getDate,getPersonalVolume,getforeignerVolum,getAgencyVolum);
