@@ -7,9 +7,9 @@ public class statDataDTO {//종목별 통계 데이터
 	private int totalVolume; //종 거래량
 	private double profitRate; //수익율
 	private double soaringRate; //급등률
-	private int personalVolume; // 개인 거래량
-	private int agencyVolume; //기관 거래량
-	private int foreignerVolume; //외국인 거래량
+	private String personalVolume; // 개인 거래량
+	private String agencyVolume; //기관 거래량
+	private String foreignerVolume; //외국인 거래량
 	private String date;//날짜
 	
 	//생성자 메소드 
@@ -27,7 +27,7 @@ public class statDataDTO {//종목별 통계 데이터
 	
 	
   //투자별 거래량 생성자 메소드
-	public statDataDTO(String date,int personalVolume,int foreignerVolume, int agencyVolume) {
+	public statDataDTO(String date,String personalVolume,String foreignerVolume, String agencyVolume) {
 		
 		this.personalVolume = personalVolume;//개인 거래량
 		this.agencyVolume = agencyVolume; //기관 거래량
@@ -96,27 +96,27 @@ public class statDataDTO {//종목별 통계 데이터
 		this.soaringRate = soaringRate;
 	}
 
-	public int getPersonalVolume() {//개인거래량
+	public String getPersonalVolume() {//개인거래량
 		return personalVolume;
 	}
 
-	public void setPersonalVolume(int personalVolume) {
+	public void setPersonalVolume(String personalVolume) {
 		this.personalVolume = personalVolume;
 	}
 
-	public int getAgencyVolume() {//기관거래량
+	public String getAgencyVolume() {//기관거래량
 		return agencyVolume;
 	}
 
-	public void setAgencyVolume(int agencyVolume) {
+	public void setAgencyVolume(String agencyVolume) {
 		this.agencyVolume = agencyVolume;
 	}
 
-	public int getForeignerVolume() {//외국인거래량
+	public String getForeignerVolume() {//외국인거래량
 		return foreignerVolume;
 	}
 
-	public void setForeignerVolume(int foreignerVolume) {
+	public void setForeignerVolume(String foreignerVolume) {
 		this.foreignerVolume = foreignerVolume;
 	}
 	
