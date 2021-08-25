@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
 <%
-statDataDTO volume = (statDataDTO)application.getAttribute("stat");
+
 statDataDAO dao = new statDataDAO();
 ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
 list=dao.select();
@@ -321,7 +321,7 @@ list=dao.select();
                         <td><%=list.get(i).getDate() %></td>
                         <td><%=list.get(i).getPersonalVolume()%></td>
                         <td><%=list.get(i).getForeignerVolume() %><</td>
-                        <td><a href="#" class="btn btn-secondary"><%=list.get(i).getAgencyVolume() %></a></td>
+                        <td><%=list.get(i).getAgencyVolume() %></td>
                       </tr>
                       <%} %>
                       <!-- <tr>
