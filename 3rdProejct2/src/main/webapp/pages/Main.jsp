@@ -195,16 +195,20 @@ predictList = dao.predictJongMok_select();
                   <div id="test" class="card-body">
                     <table class="table">
                       <tbody>
+                      <%
+                        for(int i=0; i<list.size();i++){
+                      %>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>
-                            1.91%
-                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
+                          <th id=best scope="row"><%=i+1 %></th>
+                          <td id=best><%=list.get(i).getJongMokName() %></td>
+                          <td id=best><%=list.get(i).getNowPrice() %></td>
+                          <td id=best>
+                            <%=list.get(i).getUpDownRate()%>%
+                            <div class="text-small text-muted"><%=list.get(i).getUpDown() %> <i class="fas fa-caret-down text-danger"></i></div>
                           </td>
                         </tr>
-                        <tr>
+                        <%} %>
+                <!--          <tr>
                           <th scope="row">2</th>
                           <td>Jacob</td>
                           <td>Thornton</td>
@@ -230,8 +234,8 @@ predictList = dao.predictJongMok_select();
                             1.91%
                             <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
                           </td>
-                        </tr>
-                        <tr>
+                        </tr> -->
+                       <!--  <tr>
                           <th scope="row">5</th>
                           <td>Larry</td>
                           <td>the Bird</td>
@@ -239,13 +243,13 @@ predictList = dao.predictJongMok_select();
                             1.91%
                             <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
                           </td>
-                        </tr>
+                        </tr>  -->
                       </tbody>
                     </table>
                   </div>
                   <div class="card-body p-0">
                     <div class="tickets-list">
-                      <a href="종목 best.html" class="ticket-item ticket-more">
+                      <a href="StockBest.jsp" class="ticket-item ticket-more">
                         View All <i class="fas fa-chevron-right"></i>
                       </a>
                     </div>
@@ -298,5 +302,8 @@ predictList = dao.predictJongMok_select();
     	     error:
     	 })
      }
+     
+    
+     </script>
 </body>
 </html>
