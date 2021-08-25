@@ -87,11 +87,17 @@ drop table StockBest_table;
 
 create table StockBest_table
 (JongMokName varchar2(20) NOT NULL,
-NowPrice number(20) NOT NULL,
-UpDown number(20) NOT NULL,
-UpDownRate number(20),
+NowPrice varchar2(20) NOT NULL,
+UpDown varchar2(20) NOT NULL,
+UpDownRate varchar2(20) NOT NULL,
 constraint StockBest_table_JongMokName_pk primary key(JongMokName)
 );
+
+//test하기 위한 임시로 데이터 저장 
+insert into StockBest_table values('삼성','80,000','3,000','1.98');
+insert into StockBest_table values('카카오','39,000','1,020','2.45');
+
+select * from StockBest_table;
 
 //투자별 거래량 생성
 
@@ -100,11 +106,13 @@ drop table volume_table;
 //날짜,개인거래량,외국인거래량,기관거래량
 create table volume_table
 (Naljja varchar2(50) NOT NULL,  
-personalVolume number(20) NOT NULL,
-foreignerVolume number(20) NOT NULL,
-agencyVolume number(20) NOT NULL
+personalVolume varchar2(20) NOT NULL,
+foreignerVolume varchar2(20) NOT NULL,
+agencyVolume varchar2(20) NOT NULL
 );
+insert into volume_table values('2021-08-25','3,000','4,000','5,000');
 
+insert into vol
 //사용자 최근 예측 종목 테이블 생성
 
 drop table predictJongMok_table;
@@ -116,3 +124,14 @@ kos varchar2(20) NOT NULL,
 JongMokName varchar2(30) NOT NULL,
 constraint JongMokCode_pk primary key(JongMokCode)
 );
+
+//예측 급등률 테이블 생성 
+drop table soaring_table;
+
+//종목코드,종목명,급등률
+create table soaring_table
+(jongmokCode number(20) NOT NULL,
+jongmokName varchar2(20) NOT NULL,
+soaringRate number(20) NOT NULL,
+constraint soaring_pk primary key(JongMokCode)
+)
