@@ -222,19 +222,18 @@ list=dao.select();
                   <div class="card-footer card-footer-grey pt-0">
                     <div class="statistic-details mt-4 align-items-center justify-content-center" style="margin-top: 0px;">
                       <div class="statistic-details-item col-sm-4 col-12">
-                        <div class="detail-value">00,000</div>
+                        <div class="detail-value"><h3>00,000</h3></div>
                         <div class="detail-name">종목A이름</div>
                       </div>
                       <div class="statistic-details-item col-sm-4 col-12">
                         <div class="detail-chart">
                           <div class="sparkline-line-chart"></div>
                         </div>
-                        <div class="detail-value">00,000</div>
+                        <div class="detail-value"><h3>00,000</h3></div>
                         <div class="detail-name">종목 3개 포트폴리오</div>
                       </div> 
                     </div>
                   </div>
-                  <!-- End 결과값 -->
 
 
                     <!-- <div class="alert alert-info">
@@ -285,8 +284,7 @@ list=dao.select();
                   </div>
 
                   <!-- 제출버튼 -->
-                  <div class="card-footer text-right">
-                  	<!-- 종목 A, 종목 3개 포트폴리오 결과 수정되게 하면 돼요 -->
+                  <div  style="text-align: center; padding-bottom: 30px;">
                     <button class="btn btn-primary mr-1" type="submit">결과보기</button>
                     <!-- <button class="btn btn-secondary" type="reset">Reset</button> -->
                   </div>
