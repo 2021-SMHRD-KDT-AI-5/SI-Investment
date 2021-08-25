@@ -74,7 +74,7 @@ list=dao.select();
                   </div>
                   <div class="card-body">
                     <div id="accordion">
-                         <div class="accordion">
+                         <!-- <div class="accordion">
                         <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-1" aria-expanded="true">
                           <h4>코스피와 코스닥</h4>
                         </div>
@@ -87,7 +87,7 @@ list=dao.select();
                             <br>
                             *우량주: 타 기업에 비해 수익성,안전성,성장성 등이 좋은 기업</p>
                         </div>
-                      </div>
+                      </div> -->
                      <!-- <div class="accordion">
                         <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-2">
                           <h4>매수와 매도</h4>
@@ -109,6 +109,7 @@ list=dao.select();
                           <pre class="mb-0"><%=list.get(i).getCommentary() %>
                           
                           </pre> <!-- 주식용어 해설 -->
+                          
                         </div>
                       </div>
                       <%} %>
