@@ -58,15 +58,15 @@ public class MemberDAO {//회원
 		
 	}
 	
-	public MemberDTO login(String id , String pw) {//로그인
+	public MemberDTO login(String email , String pw) {//로그인
 		
 		MemberDTO member = null;
 		// 로그인 캐치문
 		try {
 			connection();
-			String sql1 = "select * from member_table where id = ? and pw = ?";
+			String sql1 = "select * from member_table where email = ? and pw = ?";
 			psmt = conn.prepareStatement(sql1);//테이블 이름 확인
-			psmt.setString(1, id);
+			psmt.setString(1, email);
 			psmt.setString(2, pw);
 			rs = psmt.executeQuery();
 			System.out.println(sql1);
@@ -118,21 +118,21 @@ public class MemberDAO {//회원
 	}// 조인메소드ed
 
 
-    public int update(MemberDTO member) {//회원정보수정
+    public int update(MemberDTO member2) {//회원정보수정
     	
        int cnt = 0;
        
 		try {
 			//DB연결
 			connection();
-			String sql = "update member_table set name=?, email=?, pw=? tel=? where email=?";
+			String sql = "update member_table set  pw=?, tel=? where email=?";
 			
 			//자바 와 DB에 sql문을 실행시켜주는 역할
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, member.getName());
-            psmt.setString(2, member.getEmail());
-            psmt.setString(3, member.getPw());
-            psmt.setString(4, member.getTel());
+			psmt.setString(1, member2.getPw());
+            psmt.setString(2, member2.getTel());
+            psmt.setString(3, member2.getEmail());
+            
 			cnt = psmt.executeUpdate();
 			
 			
