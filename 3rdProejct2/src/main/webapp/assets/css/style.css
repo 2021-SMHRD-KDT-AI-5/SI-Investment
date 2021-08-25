@@ -61,12 +61,22 @@
 .form-control:focus {
   box-shadow: none !important;
   outline: none; }
+/* StockTerms.jsp pre태그 */
 .mb-0{
 	font-family:"나눔스퀘어 Light",sans-serif;
 	color:#6c757d;
 	line-height:28px;
 	font-weight:500;
 	font-size:14px;
+	white-space:pre-line;
+}
+/* main.jsp 실시간 국내 종목 best */
+#best{
+	font-size:14px;
+	color:#6c757d;
+	font-family:"나눔스퀘어 Light",sans-serif;
+	color:#6c757d;
+	
 }
 a {
   color: #6777ef;
