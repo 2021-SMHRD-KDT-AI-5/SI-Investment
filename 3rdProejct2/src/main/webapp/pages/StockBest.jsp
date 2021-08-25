@@ -6,9 +6,10 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-StockBestDTO best = (StockBestDTO)application.getAttribute("juga");
+
 StockBestDAO dao = new StockBestDAO(); // 국내종목 실시간 BEST DAO
 ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>(); //ArrayList생성
+list=dao.select();
 %>
 <html>
 <head>
@@ -86,17 +87,17 @@ ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>(); //ArrayList생성
                           <td><%=list.get(i).getJongMokName() %></td>
                           <td><%=list.get(i).getNowPrice() %></td>
                           <td><div class="text-small text-muted"><%=list.get(i).getUpDown() %> <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td><%=list.get(i).getUpDownRate()+'%' %></td>
+                          <td><%=list.get(i).getUpDownRate()%>%</td>
                         </tr>
                         <%} %>
-<%--                         <tr>
+                     <!--     <tr>
                           <th scope="row">2</th>
-                          <td><%= %></td>
-                          <td><%= %></td>
-                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
-                          <td><%= %></td>
-                        </tr>
-                        <tr>
+                          <td>aaa</td>
+                          <td>aaa</td>
+                          <td><div class="text-small text-muted">11 <i class="fas fa-caret-up text-danger"></i></div></td>
+                          <td>123</td>
+                        </tr> -->
+                        <%-- <tr>
                           <th scope="row">3</th>
                           <td><%= %></td>
                           <td><%= %></td>
@@ -116,7 +117,7 @@ ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>(); //ArrayList생성
                           <td><%= %></td>
                           <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
                           <td><%= %></td>
-                        </tr> --%>
+                        </tr>  --%>
                       </tbody>
                     </table>
                   </div> 
@@ -154,11 +155,13 @@ ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>(); //ArrayList생성
   <script type="text/javascript">
      function (){
     	 $.ajax({
-    		 type: "post",
-    		 data: 
+    		 type: "get",
+    		 data: {}
     		 url: 
     		 dataType:
-    	     sucess:
+    	     sucess:function(response){
+    	    	 consol.log(response)
+    	     }
     	     error:
     	 })
      }
