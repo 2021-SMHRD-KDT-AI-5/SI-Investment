@@ -69,7 +69,7 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 		//DB연결 가능
 	    connection();
 		//쿼리 실행
-		String sql = "select * from StockBest ";//임시 SQL문
+		String sql = "select * from StockBest_table ";//임시 SQL문
 		
 		//자바 와 DB에 sql문을 실행시켜주는 역할
 		psmt = conn.prepareStatement(sql);
@@ -84,9 +84,9 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 		while(rs.next()) {
 			//컬럼인덱스는 1부터 시작
 			String getJongMokName = rs.getString(1);
-			int getNowPrice = rs.getInt(2);
-			int getUpDown = rs.getInt(3);
-			double getUpDownRate = rs.getDouble(4);
+			String getNowPrice = rs.getString(2);
+			String getUpDown = rs.getString(3);
+			String getUpDownRate = rs.getString(4);
 			
 			
 		    juga = new StockBestDTO(getJongMokName,getNowPrice,getUpDown,getUpDownRate);
@@ -117,7 +117,7 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
     		//DB연결 가능
     	    connection();
     		//쿼리 실행
-    		String sql = "select * from StockBest ";//임시 SQL문
+    		String sql = "select * from StockBest ";//임시로 만든 sql문
     		
     		//자바 와 DB에 sql문을 실행시켜주는 역할
     		psmt = conn.prepareStatement(sql);
