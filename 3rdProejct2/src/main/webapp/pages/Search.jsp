@@ -7,10 +7,10 @@
 <!DOCTYPE html>
 <!-- member불러오기 -->
 <% 
-//String searchtext = (String)application.getAttribute("searchtext");
-String searchtext = "은행";
+ArrayList<StockSearchListDTO> list = (ArrayList<StockSearchListDTO>)session.getAttribute("selectList");
+//String searchtext = "은행";
 StockSearchListDAO dao = new StockSearchListDAO();
-ArrayList<StockSearchListDTO> list = dao.select(searchtext);
+// = dao.select(searchtext);
 %>
 <html>
 <head>
@@ -72,8 +72,8 @@ ArrayList<StockSearchListDTO> list = dao.select(searchtext);
 							System.out.println("listNO : "+i+1);%>   
                         <tr>
                           <th scope="row"><%=i%></th>
-                          <td><%=list.get(i).getJongmokCode()%></td>
                           <td><%=list.get(i).getJongmokName()%></td>
+                          <td><%=list.get(i).getJongmokCode()%></td>
                           <td>
                             현재가표시
                           </td>
