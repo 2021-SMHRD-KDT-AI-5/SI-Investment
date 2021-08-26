@@ -78,6 +78,10 @@
 	color:#6c757d;
 	
 }
+/* password검은 콩 보이게 */
+input[type=password]{
+	font-family: emoji;
+}
 a {
   color: #6777ef;
   font-weight: 500;
