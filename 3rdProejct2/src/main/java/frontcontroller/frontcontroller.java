@@ -67,7 +67,9 @@ public class frontcontroller extends HttpServlet {
 		}else if(resultURI.equals("UpdateCon.do")) {//회원정보수정
 			command = new UpdateCon();
 		}else if(resultURI.equals("StockSearchListCon.do")) {//검색
-			command= new StockSearchListCon();
+
+			command = new StockSearchListCon();
+
 		}
 		
 		//어떠한 조건이든 moveURL로 이동하겠끔 
