@@ -1,6 +1,19 @@
+<%@page import="model.StockBestDTO"%>
+<%@page import="model.StockBestDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+//사용자 최근 예측 종목 불러오기
+StockBestDAO dao = new StockBestDAO();
+ArrayList<StockBestDTO> predictList = new ArrayList<StockBestDTO>();
+predictList = dao.predictJongMok_select();
+
+
+%>
+
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -133,21 +146,23 @@
                 <div class="card card-statistic-2">
                   <div class="card-stats">
                     <!-- <div class="card-stats-title">사용자 최근 예측 종목</div> -->
+                    <%for(int i=0;i<predictList.size();i++){ %>
                     <div class="card-icon shadow-primary bg-primary">
-                      <img src="../assets/img/Kakao.png" width="60px" height="60px">
+                      <img src="../assets/img/<%=predictList.get(i).getJongMokName() %>.png" width="60px" height="60px">
                     </div>
                     <div class="card-wrap">
                       <div class="card-header">
-                        <h4>KOSPI 035720</h4>
+                        <h4><%=predictList.get(i).getKos()%> <%=predictList.get(i).getJongmokCode() %></h4>
                       </div>
                       <div class="card-body">
-                        카카오
+                        <%=predictList.get(i).getJongMokName() %>
                       </div>
                     </div>
                     <div class="card-wrap">
                     </div>
                   </div>
-                  <div class="card-icon shadow-primary bg-primary">
+                  <%} %>
+<!--                   <div class="card-icon shadow-primary bg-primary">
                     <img id ="img" src="../assets/img/samsung.png" width="60px" height="60px">
                   </div>
                   <div class="card-wrap">
@@ -157,7 +172,7 @@
                     <div class="card-body">
                       삼성전자
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
