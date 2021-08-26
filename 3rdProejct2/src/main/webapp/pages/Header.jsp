@@ -100,159 +100,121 @@
             </div>
           </div>
         </form>
-        <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Messages
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Dedik Sugiharto</b>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Agung Ardiansyah</b>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Ardian Rahardiansyah</b>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                    <div class="time">16 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Alfa Zulkarnain</b>
-                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
+        
+        <!-- 오른쪽 상단바 : 알림 / 유저 -->
+   
+   
+           <ul class="navbar-nav navbar-right">
+
+          <!-- 종 알림 : 매매 타이밍 알람 -->
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Notifications
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
+              <div class="dropdown-header">매매 타이밍 알람
               </div>
+
+              <!-- Start 알림 메세지 -->
               <div class="dropdown-list-content dropdown-list-icons">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-icon bg-primary text-white">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Template update is available now!
-                    <div class="time text-primary">2 Min Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="far fa-user"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
+
+                <!-- 매수할 때 b태그, div태그의 time 수정 -->
                 <a href="#" class="dropdown-item">
                   <div class="dropdown-item-icon bg-success text-white">
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                    <div class="time">12 Hours Ago</div>
+                    <b>00종목을 매수하세요!</b>
+                    <div class="time">12분 전</div>
                   </div>
                 </a>
+
+                <!-- 매도할 때 b태그 글이랑 div태그 time 수정 (나머지는 i태그, 색 때문에 그대로 가야함) -->
                 <a href="#" class="dropdown-item">
                   <div class="dropdown-item-icon bg-danger text-white">
                     <i class="fas fa-exclamation-triangle"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Low disk space. Let's clean it!
-                    <div class="time">17 Hours Ago</div>
+                    <b>00 종목을 매도하세요 !</b>
+                    <div class="time">17시간 전</div>
                   </div>
                 </a>
+
+                <!-- 매수-->
                 <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
+                  <div class="dropdown-item-icon bg-success text-white">
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
-                    <div class="time">Yesterday</div>
+                    <b>00종목을 매수하세요!</b>
+                    <div class="time">12분 전</div>
                   </div>
                 </a>
+
+                <!-- 매도 -->
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>00 종목을 매도하세요 !</b>
+                    <div class="time">17시간 전</div>
+                  </div>
+                </a>
+
+                <!-- 매수-->
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>00종목을 매수하세요!</b>
+                    <div class="time">12분 전</div>
+                  </div>
+                </a>
+
+                <!-- 매도 -->
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>00 종목을 매도하세요 !</b>
+                    <div class="time">17시간 전</div>
+                  </div>
+                </a>
+                
               </div>
+              <!-- End 알림메세지  -->
+
               <div class="dropdown-footer text-center">
                 <a href="#">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </li>
+
+
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+            <div class="d-sm-none d-lg-inline-block">Hi, <%=member.getName() %></div></a>
             <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in 5 min ago</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
+              <div class="dropdown-title">
+                <b>000님</b> 환영합니다
+              </div>
+              <!-- <a href="features-profile.html" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
+              </a> -->
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> 보유종목
               </a>
-              <a href="Update.jsp" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> 회원정보수정
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
+              <a href="Mypage.jsp" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> 회원정보수정
               </a>
               <div class="dropdown-divider"></div>
-              <%if(member != null){ %>
               <a href="Logout.jsp" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
+                <i class="fas fa-sign-out-alt"></i> 로그아웃
               </a>
-              <%}else{ %>
-                 <a href="Login.jsp" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Login
-              </a>
-              <%} %>
             </div>
           </li>
         </ul>
+   
       </nav>
 
 
