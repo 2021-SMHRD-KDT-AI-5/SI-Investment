@@ -41,7 +41,7 @@
           <ul class="sidebar-menu">
               <li class="menu-header">Menu</li>
               <li class="nav-item dropdown">
-                <a href="Main.jsp" class="nav-link"> <span>홈</span></a>
+                <a href="Main_2.jsp" class="nav-link"> <span>홈</span></a>
               </li>
               <li class="menu-header">Stock Prediction</li>
               <li class="nav-item dropdown">
@@ -50,7 +50,7 @@
               </li>
               <li class="menu-header">Information</li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link"> <span>시장정보</span></a>
+                <a href="Marketinfro.jsp" class="nav-link"> <span>시장정보</span></a>
                 <a href="StockTerms.jsp" class="nav-link"> <span>주식용어</span></a>
               </li>
               <li class="menu-header">myPages</li>
