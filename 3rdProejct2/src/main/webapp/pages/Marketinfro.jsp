@@ -150,7 +150,7 @@ list= dao.select();
                   </ul>
                   <div class="card-body p-0">
                     <div class="tickets-list">
-                      <a href="트렌드 분석(sns).html" class="ticket-item ticket-more">
+                      <a href="Sns.jsp" class="ticket-item ticket-more">
                         View All <i class="fas fa-chevron-right"></i>
                       </a>
                     </div>
