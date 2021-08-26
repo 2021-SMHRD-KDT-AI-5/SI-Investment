@@ -119,14 +119,14 @@ drop table UserPredict;
 
 //종목코드,코스피/코스닥,종목명
 create table UserPredict
-(jongMokCode number(20) NOT NULL,
+(jongMokCode varchar2(20) NOT NULL,
 kos varchar2(20) NOT NULL,
 JongMokName varchar2(30) NOT NULL,
 constraint JongMokCode_pk primary key(JongMokCode)
 );
 
 //테스트를 위해 임시로 데이터 저장
-insert into UserPredict values('1111','코스피','스마트인재개발원');
+insert into UserPredict values('1112','KOSPI','Kakao');
 
 select * from UserPredict;
 
@@ -135,7 +135,7 @@ drop table soaring_table;
 
 //종목코드,종목명,급등률
 create table soaring_table
-(jongmokCode number(20) NOT NULL,
+(jongmokCode varchar2(20) NOT NULL,
 jongmokName varchar2(20) NOT NULL,
 soaringRate number(20) NOT NULL,
 constraint soaring_pk primary key(JongMokCode)
