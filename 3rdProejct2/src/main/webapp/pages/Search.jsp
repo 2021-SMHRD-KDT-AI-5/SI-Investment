@@ -10,9 +10,7 @@
 //String searchtext = (String)application.getAttribute("searchtext");
 //String searchtext = "은행";
 StockSearchListDAO dao = new StockSearchListDAO();
-StockSearchListDTO searchtext = (StockSearchListDTO)application.getAttribute("searchtext");
-ArrayList<StockSearchListDTO> list = new ArrayList<StockSearchListDTO>();
-/* list=dao.select(searchtext); */
+
 %>
 <html>
 <head>
