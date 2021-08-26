@@ -36,7 +36,7 @@ public class StockSearchListCon implements Command{//
 			
 			System.out.println("검색 성공");
 			
-			moveURL= "search.jsp";
+			moveURL= "Search.jsp";
 			
 			
 		}else {

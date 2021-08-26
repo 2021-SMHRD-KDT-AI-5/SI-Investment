@@ -8,9 +8,9 @@
 <!-- member불러오기 -->
 <% 
 //String searchtext = (String)application.getAttribute("searchtext");
-//String searchtext = "은행";
+String searchtext = "은행";
 StockSearchListDAO dao = new StockSearchListDAO();
-ArrayList<StockSearchListDTO> list = (ArrayList<StockSearchListDTO>)application.getAttribute("selectList");
+ArrayList<StockSearchListDTO> list = dao.select(searchtext);
 %>
 <html>
 <head>
