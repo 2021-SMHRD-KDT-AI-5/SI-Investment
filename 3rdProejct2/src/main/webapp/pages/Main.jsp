@@ -105,6 +105,7 @@ predictList = dao.predictJongMok_select();
                       <h4><%=predictList.get(i).getKos()%> <%=predictList.get(i).getJongmokCode() %></h4>
                     </div>
                     <div class="card-body">
+                    <div class="card-body">
                       <%=predictList.get(i).getJongMokName() %>
                     </div>
                   </div>
