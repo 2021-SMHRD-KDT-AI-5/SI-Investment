@@ -35,7 +35,7 @@ public class loginCon implements Command{//로그인 콘트롤러
 			
 		}else {
 			System.out.println("로그인 전송실패");
-			moveURL = "Main.jsp";
+			moveURL = "Login.jsp";
 		}
 		
 		return moveURL;
