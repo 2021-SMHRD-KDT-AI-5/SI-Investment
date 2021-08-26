@@ -31,7 +31,7 @@ public class UpdateCon implements Command{//회원정보수정 컨트롤러
 		 //DB에 변경된다고 해도 서버에 세션이 변경되는 건 아니다 서로다른 기술이기 때문이다.
 			System.out.println("회원정보수정 성공");
 			session.setAttribute("member", member2);
-			moveURL = "Main.jsp";
+			moveURL = "Main_2.jsp";
 		}else {
 			System.out.println("회원정보수정 실패");
 			moveURL = "Update.jsp";

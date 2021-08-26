@@ -30,7 +30,7 @@ public class loginCon implements Command{//로그인 콘트롤러
 			
 			System.out.println("로그인 성공");
 			
-			moveURL= "Main.jsp";
+			moveURL= "Main_2.jsp";
 			
 			
 		}else {

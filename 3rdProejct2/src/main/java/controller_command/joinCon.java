@@ -26,10 +26,10 @@ public class joinCon implements Command{//회원가입 컨트롤러
 		
 		if(cnt>0) {
 			System.out.println("회원가입 성공");
-			moveURL = "Main.jsp";
+			moveURL = "Main_2.jsp";
 		}else {
 			System.out.println("회원가입 실패");
-			moveURL = "Main.jsp";
+			moveURL = "Join.jsp";
 		}
 		return moveURL;
 	}
