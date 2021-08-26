@@ -78,7 +78,7 @@ predictList = dao.predictJongMok_select();
                   </div>
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
-                  <img id ="img" src="/assets/img/posco.png" width="60px" height="60px">
+                  <img id ="img" src="../assets/img/posco.png" width="60px" height="60px">
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
@@ -129,7 +129,7 @@ predictList = dao.predictJongMok_select();
                 </div>
               </div> -->
               
-              /* 플라스크 데이터 가져오는 곳 */
+               <!-- 플라스크 데이터 가져오는 곳 --> 
             
               <form action="" method="post">
               <div class="col-lg-6 col-md-6 col-12">
