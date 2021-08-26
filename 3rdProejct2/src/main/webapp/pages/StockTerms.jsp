@@ -52,17 +52,12 @@ list=dao.select();
         <section class="section">
           <div class="section-header">
             <h1>주식용어정리</h1>
-            <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Bootstrap Components</a></div>
-              <div class="breadcrumb-item">Collapse</div>
-            </div>
           </div>
 
           <div class="section-body">
             <h2 class="section-title">주식 용어 정리</h2>
             <p class="section-lead">
-              주린이도 이해하기 쉽게 주식 용어를 풀어서 설명해드려요 어쩌구 ~ 
+              주린이도 이해하기 쉽게 주식 용어를 풀어서 설명해드려요
             </p>
 
             <div class="row">
