@@ -184,7 +184,7 @@ predictList = dao.predictJongMok_select();
                       data-content="커스텀에 대한 설명">
                         ?
                     </button>
-                    <div class="card-header-action dropdown">
+                    <div class="card-header-action dropdown" style="padding-left:140px;">
                       <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">급등률</a>
                       <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                         <!-- <li class="dropdown-title">????</li> -->
