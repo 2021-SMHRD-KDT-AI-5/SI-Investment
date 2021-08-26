@@ -59,17 +59,18 @@ predictList = dao.predictJongMok_select();
       <div class="main-content">
         <section class="section">
           <div class="row">
+          <form action="" method="post">
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
                 <div class="card-stats">
                   <div class="card-stats-title">AI추천 종목
                   </div>
                   <div class="card-icon shadow-primary bg-primary">
-                    <img src="/assets/img/naver.png" width="60px" height="60px">
+                    <img src="/assets/img/naver.png" width="60px" height="60px"> 
                   </div>
                   <div class="card-wrap">
                     <div class="card-header">
-                    <div class="text-muted text-small"><span class="text-primary"><i class="fas fa-caret-down"></i></span> 48%</div>
+                    <div class="text-muted text-small"><span class="text-primary"><i class="fas fa-caret-down"></i></span>48%</div>
                     </div>
                     <div class="card-body">
                       네이버
@@ -81,7 +82,7 @@ predictList = dao.predictJongMok_select();
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <div class="text-muted text-small"><span class="text-danger"><i class="fas fa-caret-up"></i></span> 14%</div>
+                    <div class="text-muted text-small"><span class="text-danger"><i class="fas fa-caret-up"></i></span>14%  </div>
                   </div>
                   <div class="card-body">
                     포스코
@@ -89,6 +90,7 @@ predictList = dao.predictJongMok_select();
                 </div>
               </div>
             </div>
+            </form>
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
                 <div class="card-stats">
@@ -125,6 +127,10 @@ predictList = dao.predictJongMok_select();
                 <div class="card-wrap">
                 </div>
               </div> -->
+              
+              /* 플라스크 데이터 가져오는 곳 */
+            
+              <form action="" method="post">
               <div class="col-lg-6 col-md-6 col-12">
                 <div class="card">
                   <div class="card-header">
@@ -187,6 +193,7 @@ predictList = dao.predictJongMok_select();
                   </div>
                 </div>
               </div>
+              </form>
               <div id="best" class="col-md-6">
                 <div class="card">
                   <div class="card-header">

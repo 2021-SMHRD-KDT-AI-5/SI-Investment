@@ -2,10 +2,10 @@
 drop table member_table
 
 create table member_table
-(name varchar2(20)NOT NULL,
-email varchar2(50)NOT NULL,
-pw varchar2(50)NOT NULL,
-tel varchar2(50),
+(name varchar2(20) NOT NULL,
+email varchar2(50) NOT NULL,
+pw varchar2(50) NOT NULL,
+tel varchar2(50) NOT NULL,
 constraint member_table_id_pk primary key(email)
 );
 
@@ -110,12 +110,12 @@ personalVolume varchar2(20) NOT NULL,
 foreignerVolume varchar2(20) NOT NULL,
 agencyVolume varchar2(20) NOT NULL
 );
+//테스트를 위해 임시로 데이터 저장 
 insert into volume_table values('2021-08-25','3,000','4,000','5,000');
 
-insert into vol
 //사용자 최근 예측 종목 테이블 생성
 
-drop table predictJongMok_table;
+drop table UserPredict;
 
 //종목코드,코스피/코스닥,종목명
 create table UserPredict
@@ -124,6 +124,11 @@ kos varchar2(20) NOT NULL,
 JongMokName varchar2(30) NOT NULL,
 constraint JongMokCode_pk primary key(JongMokCode)
 );
+
+//테스트를 위해 임시로 데이터 저장
+insert into UserPredict values('1111','코스피','스마트인재개발원');
+
+select * from UserPredict;
 
 //예측 급등률 테이블 생성 
 drop table soaring_table;
