@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <!-- 국내 종목 BEST 불러오기 -->
 <% 
-StockBestDTO best = (StockBestDTO)application.getAttribute("juga");
+
 StockBestDAO dao = new StockBestDAO();
 ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
 list= dao.select();

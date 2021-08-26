@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import command.Command;
 import controller_command.StockBestCon;
+import controller_command.StockSearchListCon;
 import controller_command.StockTermsCon;
 import controller_command.UpdateCon;
 import controller_command.joinCon;
@@ -65,6 +66,8 @@ public class frontcontroller extends HttpServlet {
 			
 		}else if(resultURI.equals("UpdateCon.do")) {//회원정보수정
 			command = new UpdateCon();
+		}else if(resultURI.equals("StockSearchListCon.do")) {//검색
+			command= new StockSearchListCon();
 		}
 		
 		//어떠한 조건이든 moveURL로 이동하겠끔 
