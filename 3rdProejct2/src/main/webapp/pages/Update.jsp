@@ -1,5 +1,7 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% MemberDTO member = (MemberDTO)session.getAttribute("member"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,19 +37,19 @@
               <div class="card-header"><h4>회원정보수정</h4></div>
 
               <div class="card-body">
-                <form method="POST">
+                <form method="POST" action="UpdateCon.do" id="MForm">
 
                   <div class="form-group">
                     <label for="email">이메일</label>
                     <!-- 사용자 이메일 고정 -->
-                    <input id="email" type="email" class="form-control" name="email"  readonly="">
+                    <input id="email" type="email" class="form-control" name="email"  readonly value=<%=member.getEmail() %>>
                     <div class="invalid-feedback">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="phone">전화번호</label>
-                    <input id="phone" type="text" class="form-control" name="phone">
+                    <input id="phone" type="text" class="form-control" name="tel">
                     <div class="invalid-feedback">
                     </div>
                   </div>
@@ -55,7 +57,7 @@
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="password" class="d-block">비밀번호</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
+                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="pw">
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
