@@ -1,6 +1,15 @@
+<%@page import="model.StockBestDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.StockBestDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!-- 국내 종목 BEST 불러오기 -->
+<%
+StockBestDAO dao = new StockBestDAO();
+ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
+list= dao.select();
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -227,16 +236,20 @@
                 <div id="test" class="card-body">
                   <table class="table">
                     <tbody>
+                       <%
+                        for(int i=0; i<list.size();i++){
+                      %>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                        </td>
+                         <th id=best scope="row"><%=i+1 %></th>
+                        <td id=best><%=list.get(i).getJongMokName() %></td>
+                        <td id=best><%=list.get(i).getNowPrice() %></td>
+                       <td id=best>
+                            <%=list.get(i).getUpDownRate()%>%
+                            <div class="text-small text-muted"><%=list.get(i).getUpDown() %> <i class="fas fa-caret-down text-danger"></i></div>
+                          </td>
                       </tr>
-                      <tr>
+                        <%} %>
+                     <!--  <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
@@ -271,7 +284,7 @@
                           1.91%
                           <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
                         </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
                 </div>
