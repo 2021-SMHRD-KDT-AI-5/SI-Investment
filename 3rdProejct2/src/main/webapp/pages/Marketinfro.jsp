@@ -99,46 +99,52 @@
               <div class="card">
                 <div class="card-header">
                   <h4>SNS 트렌드 분석</h4>
+                  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
+                      data-content="커스텀에 대한 설명">
+                        ?
+                    </button>
                 </div>
                 <div class="card-body">
                   <ul class="list-unstyled list-unstyled-border">
                     <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-1.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/Kakao.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right text-primary">Now</div>
-                        <div class="media-title">Farhan A Mujib</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                        <div class="float-right text-primary"><img src="../assets/img/감정분석/매우좋음.png"></div>
+                        <div class="media-title">카카오</div>
+                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
                     </li>
                     <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-2.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right">12m</div>
-                        <div class="media-title">Ujang Maman</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                        <div class="float-right"><img src="../assets/img/감정분석/좋음.png"></div>
+                        <div class="media-title">POSCO</div>
+                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
                     </li>
                     <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-3.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/samsung.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right">17m</div>
-                        <div class="media-title">Rizal Fakhri</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                        <div class="float-right"><img src="../assets/img/감정분석/보통.png"></div>
+                        <div class="media-title">삼성전자</div>
+                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
                     </li>
                     <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-4.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/kakaobank.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right">21m</div>
-                        <div class="media-title">Alfa Zulkarnain</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                        <div class="float-right"><img src="../assets/img/감정분석/하.png"></div>
+                        <div class="media-title">카카오뱅크</div>
+                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
                     </li>
                   </ul>
-                  <div class="text-center pt-1 pb-1">
-                    <a href="#" class="btn btn-primary btn-lg btn-round">
-                      View All
-                    </a>
+                  <div class="card-body p-0">
+                    <div class="tickets-list">
+                      <a href="트렌드 분석(sns).html" class="ticket-item ticket-more">
+                        View All <i class="fas fa-chevron-right"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,6 +153,10 @@
               <div class="card">
                 <div class="card-header">
                   <h4>업종별 주가 예측</h4>
+                  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
+                      data-content="커스텀에 대한 설명">
+                        ?
+                    </button>
                 </div>
                 <div class="card-body">
                   <ul class="nav nav-tabs">
@@ -209,6 +219,10 @@
               <div class="card">
                 <div class="card-header">
                   <h4>국내 종목 실시간 Best</h4>
+                  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
+                      data-content="커스텀에 대한 설명">
+                        ?
+                    </button>
                 </div>
                 <div id="test" class="card-body">
                   <table class="table">
@@ -263,7 +277,7 @@
                 </div>
                 <div class="card-body p-0">
                   <div class="tickets-list">
-                    <a href="종목 best.html" class="ticket-item ticket-more">
+                    <a href="StockBest.jsp" class="ticket-item ticket-more">
                       View All <i class="fas fa-chevron-right"></i>
                     </a>
                   </div>
