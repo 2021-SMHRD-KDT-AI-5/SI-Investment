@@ -44,8 +44,8 @@ StockSearchListDAO dao = new StockSearchListDAO();
       <%@ include file = "Header.jsp"%>
       
       <!-- Sidebar -->
-		<%@ include file = "Sidebar.jsp"%>
-		
+      <%@ include file = "Sidebar.jsp"%>
+      
 
       <!-- Main Content -->
       <div class="main-content">
@@ -66,10 +66,10 @@ StockSearchListDAO dao = new StockSearchListDAO();
                           <td>종목코드</td>
                           <td>현재가</td>
                         </tr>  
-                      	<%
-                      	/* if(list != null){ */
-                      	for (int i = 0; i < list.size(); i++) {
-							System.out.println("listNO : "+i+1);%>   
+                         <%
+                         /* if(list != null){ */
+                         for (int i = 0; i < list.size(); i++) {
+                     System.out.println("listNO : "+i+1);%>   
                         <tr>
                           <th scope="row"><%=i%></th>
                           <td><%=list.get(i).getJongmokName()%></td>
@@ -96,9 +96,9 @@ StockSearchListDAO dao = new StockSearchListDAO();
           </div>
         </section>
       </div>
-      	    
-      	<!-- Footer -->
-		<%@ include file = "Footer.jsp"%>
+             
+         <!-- Footer -->
+      <%@ include file = "Footer.jsp"%>
 
     </div>
   </div>
@@ -128,14 +128,14 @@ StockSearchListDAO dao = new StockSearchListDAO();
     <!-- ajax로 실시간 주가 API데이터 요청 -->
   <script type="text/javascript">
      function (){
-    	 $.ajax({
-    		 type:
-    		 data: 
-    		 url: 
-    		 dataType:
-    	     sucess:
-    	     error:
-    	 })
+        $.ajax({
+           type:
+           data: 
+           url: 
+           dataType:
+            sucess:
+            error:
+        })
      }
 </body>
 </html>
