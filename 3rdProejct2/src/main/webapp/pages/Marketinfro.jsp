@@ -62,10 +62,10 @@ list= dao.select();
                 <div class="card-body">
                   <ul class="nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">현재가</a>
+                      <a class="nav-link active" href="#" data-tab="tab1">현재가</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">1일 후</a>
+                      <a class="nav-link" href="#" data-tab="tab2">1일 후</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">1주 후</a>
@@ -76,7 +76,7 @@ list= dao.select();
                   </ul>
                   <div class="card-body">
                     <!-- <canvas id="myChart" height="182"></canvas> -->
-                    <div class="statistic-details mt-sm-4">
+                    <div class="statistic-details mt-sm-4" >
                       <div class="statistic-details-item">
                         <div class="detail-value">코스피</div>
                         <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>8.15 / 0.27%</span>
@@ -101,6 +101,10 @@ list= dao.select();
                       </div> -->
                     </div>
                   </div>
+            
+                  
+                  
+                  
                 </div>
               </div>
             </div>
@@ -329,6 +333,7 @@ list= dao.select();
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index-0.js"></script>
+
 
 </body>
 </html>

@@ -307,28 +307,29 @@ predictList = dao.predictJongMok_select();
                   <div class="card-body">
                     <ul class="nav nav-tabs">
                       <li class="nav-item">
-                        <a class="nav-link active" href="#">어제</a>
+                        <a class="nav-link active current" href="#" data-tab="tab-1">어제</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">1달전</a>
+                        <a class="nav-link" href="#" data-tab="tab-2">1달전</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">3달전</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">1년전</a>
+                        <a class="nav-link" href="#" >1년전</a>
                       </li>
                     </ul>
-                  </div>
-                  <div class="card-body">
+                
+                  <!-- 어제 -->
+                  <div class="card-bodyy current" id="tab-1">
                     <div class="summary">
-                      <div class="summary-item">
+                      <div class="summary-item" >
                         <ul class="list-unstyled list-unstyled-border">
                           <li class="media">
                             <a href="#">
                               <img class="mr-3 rounded" width="50" src="../assets/img/kakaobank.png" alt="product">
                             </a>
-                            <div class="media-body">
+                            <div class="media-body" >
                               <div class="media-right">+5.23%</div>
                               <div class="media-title"><a href="#">카카오뱅크</a></div>
                             </div>
@@ -355,6 +356,46 @@ predictList = dao.predictJongMok_select();
                       </div>
                     </div>
                   </div>
+                  <!-- 1달전 -->
+                    <div class="card-bodyy" id="tab-2">
+                    <div class="summary">
+                      <div class="summary-item" >
+                        <ul class="list-unstyled list-unstyled-border">
+                          <li class="media">
+                            <a href="#">
+                              <img class="mr-3 rounded" width="50" src="../assets/img/kakaobank.png" alt="product">
+                            </a>
+                            <div class="media-body" >
+                              <div class="media-right">+5.23%</div>
+                              <div class="media-title"><a href="#">카카오뱅크</a></div>
+                            </div>
+                          </li>
+                          <li class="media">
+                            <a href="#">
+                              <img class="mr-3 rounded" width="50" src="../assets/img/posco.png" alt="product">
+                            </a>
+                            <div class="media-body">
+                              <div class="media-right">+4.3%</div>
+                              <div class="media-title"><a href="#">POSCO</a></div>
+                            </div>
+                          </li>
+                          <li class="media">
+                            <a href="#">
+                              <img class="mr-3 rounded" width="50" src="../assets/img/HMM.png" alt="product">
+                            </a>
+                            <div class="media-body">
+                              <div class="media-right">+4.52%</div>
+                              <div class="media-title"><a href="#">HMM</a></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  </div> <!-- card-body ul -->
+                  
+                  
                 </div>
               </div>
           </class>
@@ -391,6 +432,22 @@ predictList = dao.predictJongMok_select();
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index.js"></script>
+  
+  <script type="text/javascript">
+  $(document).ready(function(){
+		
+		$('ul.nav-tabs a').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.nav-tabs a').removeClass('current');
+			$('.card-bodyy').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		})
+
+	});
+  </script>
 
 </body>
 </html>

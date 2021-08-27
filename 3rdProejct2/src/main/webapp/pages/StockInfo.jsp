@@ -422,7 +422,9 @@ list=dao.select();
   }
   
   </script>
+  <script type="text/javascript">
   
+  </script>
   
 </body>
 </html>

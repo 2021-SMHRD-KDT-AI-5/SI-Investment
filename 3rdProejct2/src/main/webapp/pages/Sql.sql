@@ -112,6 +112,12 @@ agencyVolume varchar2(20) NOT NULL
 );
 //테스트를 위해 임시로 데이터 저장 
 insert into volume_table values('2021-08-25','3,000','4,000','5,000');
+insert into volume_table values('2021-08-26','4,000','2,000','1,000');
+insert into volume_table values('2021-08-27','5,000','3,000','1,000');
+insert into volume_table values('2021-08-21','6,000','1,000','2,000');
+insert into volume_table values('2021-03-12','6,000','2,200','1,555');
+insert into volume_table values('2021-02-22','1,234','3,000','2,222');
+insert into volume_table values('2021-03-23','2,344','1,245','2,345');
 
 //사용자 최근 예측 종목 테이블 생성
 
