@@ -86,13 +86,13 @@ public ArrayList<statDataDTO> select(){//투자별 거래량
 			//여러번 확인해야 하기 때문에 while
 			while(rs.next()) {
 				//컬럼인덱스는 1부터 시작
-				String getDate = rs.getString(1);
-				String getPersonalVolume = rs.getString(2);
-				String getforeignerVolum = rs.getString(3);
-				String getAgencyVolum = rs.getString(4);
+				String getStockTime = rs.getString(1);
+				int getPersonalVolume = rs.getInt(2);
+				int getforeignerVolum = rs.getInt(3);
+				int getAgencyVolum = rs.getInt(4);
 				
 				
-				volume = new statDataDTO(getDate,getPersonalVolume,getforeignerVolum,getAgencyVolum);
+				volume = new statDataDTO(getStockTime,getPersonalVolume,getforeignerVolum,getAgencyVolum);
 				//list안에 각각의 국내종목실시간BEST 정보가 담겨있는 juga 추가
 				list.add(volume);
 				
@@ -137,9 +137,9 @@ public ArrayList<statDataDTO> soaringRate_select(){//예측급등률
 		//여러번 확인해야 하기 때문에 while
 		while(rs.next()) {
 			//컬럼인덱스는 1부터 시작
-			int getJongmokCode = rs.getInt(1);
+			String getJongmokCode = rs.getString(1);
 			String getJongmokName = rs.getString(2);
-			int getSoaringRate = rs.getInt(3);
+			double getSoaringRate = rs.getDouble(3);
 			
 			
 		    soaring = new statDataDTO(getJongmokCode,getJongmokName,getSoaringRate);
@@ -161,6 +161,45 @@ public ArrayList<statDataDTO> soaringRate_select(){//예측급등률
 	
 }
 
+public ArrayList<statDataDTO> select(String searchtext){//종목전체검색
+	
+	//ArrayList생성
+    ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
+	
+    statDataDTO jongmok = null;
+    try {
+		connection();
+		 
+		
+		String sql = "select * from jongmok_list_table where jongmokName like '%"+searchtext+"%'";
+		System.out.println(sql);
+		psmt = conn.prepareStatement(sql);
+		rs = psmt.executeQuery();
+		
+		
+			while(rs.next()) {
+				String getJongmokCode = rs.getString(1);
+				String getJongmokName = rs.getString(2);
+
+				jongmok = new statDataDTO(getJongmokCode,getJongmokName);
+				list.add(jongmok);
+			
+			}
+			
+		
+		
+	} catch (SQLException e) {
+		System.out.println("커넥오류");
+		e.printStackTrace();
+	} finally {
+		close();
+	} // 셀렉트캐치문end
+	
+	return list;
+	}//셀렉트end
 
 
 }
+
+
+

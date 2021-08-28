@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import command.Command;
-import model.StockSearchListDAO;
-import model.StockSearchListDTO;
+import model.statDataDAO;
+import model.statDataDTO;
+
 
 public class StockSearchListCon implements Command{//
 
@@ -21,8 +22,8 @@ public class StockSearchListCon implements Command{//
 		String searchtext = request.getParameter("searchtext");
 		System.out.println("searchtext : "+searchtext);
 		
-		StockSearchListDAO dao = new StockSearchListDAO(); //DAO생성
-		ArrayList<StockSearchListDTO> selectList = dao.select(searchtext);//검색메소드 불러오기 
+		statDataDAO dao = new statDataDAO(); //DAO생성
+		ArrayList<statDataDTO> selectList = dao.select(searchtext);//검색메소드 불러오기 
 		
 		
 		if(selectList != null) {

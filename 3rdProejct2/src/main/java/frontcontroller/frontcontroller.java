@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import command.Command;
-import controller_command.StockBestCon;
+import controller_command.JugadataCon;
 import controller_command.StockSearchListCon;
 import controller_command.StockTermsCon;
 import controller_command.UpdateCon;
@@ -55,7 +55,7 @@ public class frontcontroller extends HttpServlet {
 			command = new loginCon();
 			
 		}else if(resultURI.equals("StockBestCon.do")) {//국내종목 실시간BEST
-			command = new StockBestCon();
+			command = new JugadataCon();
 		}else if(resultURI.equals("StockTermsCon.do")) {//주식용어사전
 			command = new StockTermsCon();
 		}else if(resultURI.equals("snsDataCon.do")) {//sns데이터
