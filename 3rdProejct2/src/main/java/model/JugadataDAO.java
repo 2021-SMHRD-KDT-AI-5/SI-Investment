@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
+public class JugadataDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 	
 	private Connection conn = null;
 	private PreparedStatement psmt = null;
@@ -58,12 +58,12 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 		
 	}
 	
-	public ArrayList<StockBestDTO> select(){//국내 종목 실시간 BEST
+	public ArrayList<JugadataDTO> select(){//국내 종목 실시간 BEST
 	
 	//ArrayList생성
-    ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
+    ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
 	
-	StockBestDTO juga = null;
+    JugadataDTO juga = null;
 	
 	try {
 		//DB연결 가능
@@ -84,12 +84,11 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 		while(rs.next()) {
 			//컬럼인덱스는 1부터 시작
 			String getJongMokName = rs.getString(1);
-			String getNowPrice = rs.getString(2);
-			String getUpDown = rs.getString(3);
-			String getUpDownRate = rs.getString(4);
+			int getNowPrice = rs.getInt(2);
+		
 			
 			
-		    juga = new StockBestDTO(getJongMokName,getNowPrice,getUpDown,getUpDownRate);
+		    juga = new JugadataDTO(getJongMokName,getNowPrice);
 			//list안에 각각의 국내종목실시간BEST 정보가 담겨있는 juga 추가
 			list.add(juga);
 			
@@ -106,12 +105,12 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
 	return list;
 	}
 
-    public ArrayList<StockBestDTO> predictJongMok_select(){//사용자 최근 예측 종목 
+    public ArrayList<JugadataDTO> predictJongMok_select(){//사용자 최근 예측 종목 
     
     	//ArrayList생성
-        ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
+        ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
         
-        StockBestDTO predictJongMok = null;
+        JugadataDTO predictJongMok = null;
     	
     	try {
     		//DB연결 가능
@@ -131,12 +130,12 @@ public class StockBestDAO {//국내 종목 실시간 BEST,사용자 최근 예측종목
     		//여러번 확인해야 하기 때문에 while
     		while(rs.next()) {
     			//컬럼인덱스는 1부터 시작
-    			int getJongmokCode = rs.getInt(1);
+    			String getJongmokCode = rs.getString(1);
     			String getKos = rs.getString(2);
     			String getJongMokName= rs.getString(3);
     			
     			
-    			predictJongMok = new StockBestDTO(getJongmokCode,getKos,getJongMokName);
+    			predictJongMok = new JugadataDTO(getJongmokCode,getKos,getJongMokName);
     			//list안에 각각의 사용자 최근 예측 정보가 담겨있는 juga 추가
     			list.add(predictJongMok);
     			

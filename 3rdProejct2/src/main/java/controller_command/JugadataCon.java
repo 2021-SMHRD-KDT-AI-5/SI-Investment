@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import command.Command;
-import model.StockBestDAO;
-import model.StockBestDTO;
+import model.JugadataDAO;
+import model.JugadataDTO;
 
-public class StockBestCon implements Command{//국내종목 실시간BEST 컨트롤러
+
+public class JugadataCon implements Command{//국내종목 실시간BEST 컨트롤러
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
@@ -19,11 +20,11 @@ public class StockBestCon implements Command{//국내종목 실시간BEST 컨트롤러
 		String moveURL = null;
 		
 		//종목명 변수에 저장
-		String jongMokName = request.getParameter("jongmokCode");
+		String jongMokName = request.getParameter("jongmokName");
 		
 		
-		StockBestDAO dao = new StockBestDAO();
-		ArrayList<StockBestDTO> juga = dao.select();//주가데이터 띄우기
+		JugadataDAO dao = new JugadataDAO();
+		ArrayList<JugadataDTO> juga = dao.select();//주가데이터 띄우기
 		
 		if(juga !=null) {//DB에 주가데이터가 있다면
 	
