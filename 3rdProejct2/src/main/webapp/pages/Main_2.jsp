@@ -13,7 +13,18 @@ predictList = dao.predictJongMok_select();
 
 %>
 
-%>
+<style>
+
+.tab-content{
+display: none;
+}
+
+.tab-content.current{
+display:inherit;
+}
+
+</style>
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -184,6 +195,7 @@ predictList = dao.predictJongMok_select();
                       data-content="커스텀에 대한 설명">
                         ?
                     </button>
+                    
                     <div class="card-header-action dropdown" style="padding-left:140px;">
                       <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">급등률</a>
                       <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
@@ -306,8 +318,8 @@ predictList = dao.predictJongMok_select();
                   </div>
                   <div class="card-body">
                     <ul class="nav nav-tabs">
-                      <li class="nav-item">
-                        <a class="nav-link active current" href="#" data-tab="tab-1">어제</a>
+                      <li class="nav-item current">
+                        <a class="nav-link active" href="#" data-tab="tab-1">어제</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#" data-tab="tab-2">1달전</a>
@@ -320,10 +332,9 @@ predictList = dao.predictJongMok_select();
                       </li>
                     </ul>
                 
-                  <!-- 어제 -->
-                  <div class="card-bodyy current" id="tab-1">
-                    <div class="summary">
-                      <div class="summary-item" >
+                  <div class="card-body tab-content current"  id="tab-1" >
+                    <div class="summary" >
+                      <div class="summary-item">
                         <ul class="list-unstyled list-unstyled-border">
                           <li class="media">
                             <a href="#">
@@ -357,9 +368,9 @@ predictList = dao.predictJongMok_select();
                     </div>
                   </div>
                   <!-- 1달전 -->
-                    <div class="card-bodyy" id="tab-2">
+                    <!-- <div class="card-body tab-content" id="tab-2" >
                     <div class="summary">
-                      <div class="summary-item" >
+                      <div class="summary-item"  >
                         <ul class="list-unstyled list-unstyled-border">
                           <li class="media">
                             <a href="#">
@@ -391,7 +402,7 @@ predictList = dao.predictJongMok_select();
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   
                   </div> <!-- card-body ul -->
                   
@@ -436,17 +447,23 @@ predictList = dao.predictJongMok_select();
   <script type="text/javascript">
   $(document).ready(function(){
 		
-		$('ul.nav-tabs a').click(function(){
+		$('ul.nav-tabs li').click(function(){
 			var tab_id = $(this).attr('data-tab');
-
-			$('ul.nav-tabs a').removeClass('current');
-			$('.card-bodyy').removeClass('current');
+             
+			$('ul.nav-tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
 
 			$(this).addClass('current');
 			$("#"+tab_id).addClass('current');
 		})
 
 	});
+/*   .attr()은 요소(element)의 속성(attribute)의 값을 가져오거나 속성을 추가합니다.
+
+  .removeClass()로 선택한 요소에서 클래스 값을 제거할 수 있습니다.
+
+  .addClass()로 선택한 요소에 클래스 값을 추가할 수 있습니다. */
+
   </script>
 
 </body>
