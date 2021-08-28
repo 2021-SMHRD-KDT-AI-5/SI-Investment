@@ -54,60 +54,6 @@ list= dao.select();
           <!-- <div class="row">
           </div> -->
           <div class="row">
-            <div class="col-lg-8 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>코스피/코스닥 예측</h4>
-                </div>
-                <div class="card-body">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#" data-tab="tab1">현재가</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#" data-tab="tab2">1일 후</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">1주 후</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link disabled" href="#">Disabled</a>
-                    </li> -->
-                  </ul>
-                  <div class="card-body">
-                    <!-- <canvas id="myChart" height="182"></canvas> -->
-                    <div class="statistic-details mt-sm-4" >
-                      <div class="statistic-details-item">
-                        <div class="detail-value">코스피</div>
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>8.15 / 0.27%</span>
-                        <div class="detail-value">3,146.81</div>
-                        <div class="detail-name">(단위: 백만원)</div>
-                      </div>
-                      <div class="statistic-details-item">
-                        <div class="detail-value">코스닥</div>
-                        <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span>4.60 / 0.45%</span>
-                        <div class="detail-value">1,017.78</div>
-                        <div class="detail-name">(단위: 백만원)</div>
-                      </div>
-                      <!-- <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
-                        <div class="detail-value">$12,821</div>
-                        <div class="detail-name">This Month's Sales</div>
-                      </div>
-                      <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
-                        <div class="detail-value">$92,142</div>
-                        <div class="detail-name">This Year's Sales</div>
-                      </div> -->
-                    </div>
-                  </div>
-            
-                  
-                  
-                  
-                </div>
-              </div>
-            </div>
             <div class="col-lg-4 col-md-12 col-12 col-sm-12">
               <div class="card">
                 <div class="card-header">

@@ -8,8 +8,8 @@
 //사용자 최근 예측 종목 불러오기
 statDataDAO dao = new statDataDAO();
 ArrayList<statDataDTO> predictList = new ArrayList<statDataDTO>();
+predictList = dao.select();
 predictList = dao.predictJongMok_select();
-
 
 %>
 
@@ -67,6 +67,9 @@ display:inherit;
               <div class="card">
                 <div class="card-header">
                   <h4>보유종목</h4>
+                  <div class="badges" style="margin-left: 265px; margin-top: 10px;">
+                    <a href="보유종목추가.html" class="badge badge-success">+</a>
+                  </div>
                 </div>
                 <div class="card-body">
                   <div class="summary">
