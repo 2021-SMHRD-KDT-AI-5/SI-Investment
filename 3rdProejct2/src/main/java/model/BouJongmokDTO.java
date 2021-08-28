@@ -3,7 +3,7 @@ package model;
 public class BouJongmokDTO {//회원별 보유 종목
 	
 	private String id ;//아이디
-	private int jongmokCode; // 종목코드
+	private String jongmokCode; // 종목코드
 	private String bouJu; //보유 주 
 	private int stockC_Price; //체결가격
 	private int purchasePrice; //매입 금액 
@@ -11,7 +11,7 @@ public class BouJongmokDTO {//회원별 보유 종목
 
 	
 	//생성자메소드
-	public BouJongmokDTO(String id, int jongmokCode, String bouJu, int stockC_Price, int purchasePrice,
+	public BouJongmokDTO(String id, String jongmokCode, String bouJu, int stockC_Price, int purchasePrice,
 			String stockC_Date, double profitLossRate) {
 		this.id = id;
 		this.jongmokCode = jongmokCode;
@@ -26,10 +26,10 @@ public class BouJongmokDTO {//회원별 보유 종목
 	public void setId(String id) {
 		this.id = id;
 	}
-	public int getJongmokCode() {//종목코드
+	public String getJongmokCode() {//종목코드
 		return jongmokCode;
 	}
-	public void setJongmokCode(int jongmokCode) {
+	public void setJongmokCode(String jongmokCode) {
 		this.jongmokCode = jongmokCode;
 	}
 	public String getBouJu() {//보유주

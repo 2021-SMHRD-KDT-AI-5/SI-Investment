@@ -208,7 +208,7 @@ public ArrayList<statDataDTO> soaringRate_select(){//예측급등률
 	
 }
 
-public ArrayList<statDataDTO> select(String searchtext){//종목전체검색
+public ArrayList<statDataDTO> select(String searchtext){//종목검색
 	
 	//ArrayList생성
     ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
@@ -218,7 +218,7 @@ public ArrayList<statDataDTO> select(String searchtext){//종목전체검색
 		connection();
 		 
 		
-		String sql = "select * from jongmok_list_table where jongmokName like '%"+searchtext+"%'";
+		String sql = "select * from statdata where jongmokName like '%"+searchtext+"%'";
 		System.out.println(sql);
 		psmt = conn.prepareStatement(sql);
 		rs = psmt.executeQuery();
@@ -243,7 +243,45 @@ public ArrayList<statDataDTO> select(String searchtext){//종목전체검색
 	} // 셀렉트캐치문end
 	
 	return list;
-	}//셀렉트end
+	}//종목검색end
+
+public ArrayList<statDataDTO> selectAll(){//종목전체검색
+	
+	//ArrayList생성
+    ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
+	
+    statDataDTO jongmok = null;
+    try {
+		connection();
+		 
+		
+		String sql = "select * from statdata";
+		System.out.println(sql);
+		psmt = conn.prepareStatement(sql);
+		rs = psmt.executeQuery();
+		
+		
+			while(rs.next()) {
+				String getJongmokCode = rs.getString(1);
+				String getJongmokName = rs.getString(2);
+
+				jongmok = new statDataDTO(getJongmokCode,getJongmokName);
+				list.add(jongmok);
+			
+			}
+			
+		
+		
+	} catch (SQLException e) {
+		System.out.println("커넥오류");
+		e.printStackTrace();
+	} finally {
+		close();
+	} // 셀렉트캐치문end
+	
+	return list;
+	}//전체검색end
+
 
 
 }

@@ -1,15 +1,14 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="model.StockSearchListDAO"%>
-<%@page import="model.StockSearchListDTO"%>
+<%@page import="model.statDataDTO"%>
+<%@page import="model.statDataDAO"%>
 <%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- member불러오기 -->
 <% 
-ArrayList<StockSearchListDTO> list = (ArrayList<StockSearchListDTO>)session.getAttribute("selectList");
-//String searchtext = "은행";
-StockSearchListDAO dao = new StockSearchListDAO();
+ArrayList<statDataDTO> list = (ArrayList<statDataDTO>)session.getAttribute("selectList");
+statDataDAO dao = new statDataDAO();
 
 %>
 <html>
