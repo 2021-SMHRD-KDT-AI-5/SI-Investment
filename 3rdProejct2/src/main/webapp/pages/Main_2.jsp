@@ -1,14 +1,14 @@
-<%@page import="model.StockBestDTO"%>
-<%@page import="model.StockBestDAO"%>
+<%@page import="model.statDataDTO"%>
+<%@page import="model.statDataDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
 //사용자 최근 예측 종목 불러오기
-StockBestDAO dao = new StockBestDAO();
-ArrayList<StockBestDTO> predictList = new ArrayList<StockBestDTO>();
-predictList = dao.predictJongMok_select();
+statDataDAO dao = new statDataDAO();
+ArrayList<statDataDTO> predictList = new ArrayList<statDataDTO>();
+predictList = dao.select();
 
 
 %>
