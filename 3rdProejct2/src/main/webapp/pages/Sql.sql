@@ -9,6 +9,11 @@ tel varchar2(50) NOT NULL,
 constraint member_table_id_pk primary key(email)
 );
 
+
+
+
+
+
 select * from member_table;
 
 insert into member_table values ('aaa','aaa@aaa.com','1111','010-1111-1111');
@@ -16,6 +21,8 @@ insert into member_table values('bbb','bbb@bbb.com','2222','010-2222-2222');
 insert into member_table values('ccc','ccc@ccc.com','3333','010-3333-3333');
 insert into member_table values('ddd','ddd@ddd.com','4444','010-4444-4444');
 
+
+SELECT * FROM StockTerms
 
 -주식용어사전정리 테이블 생성-
 drop table StockTerms;
@@ -25,7 +32,7 @@ create table StockTerms
  commentary VARCHAR2(1000) NOT NULL,
  constraint term_pk primary key(term)
  );
- 
+
 
 insert into StockTerms values('코스피와 코스닥','보통 사람들이 주식한다고 했을 때 거래하는 코피와 코스닥을 소개할려고 해요.
 -코스피(KOSPI): 대기업 등 *우량주가 거래되는 시장을 말해요 그리고 주식 가격을 표시한 지수를 말하기도 해요.
