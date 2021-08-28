@@ -16,7 +16,7 @@ insert into member_table values('bbb','bbb@bbb.com','2222','010-2222-2222');
 insert into member_table values('ccc','ccc@ccc.com','3333','010-3333-3333');
 insert into member_table values('ddd','ddd@ddd.com','4444','010-4444-4444');
 
-
+SELECT * FROM StockTerms
 -주식용어사전정리 테이블 생성-
 drop table StockTerms;
 
