@@ -38,12 +38,13 @@ create table statdata
 (jongmokCode varchar2(50) NOT NULL,
 jongmokName varchar2(50) NOT NULL,
 totalVolume NUMBER(10) NOT NULL,
-profitRate NUMBER(3) NOT NULL,
-soaringRate NUMBER(3) NOT NULL,
+profitRate FLOAT(3) NOT NULL,
+soaringRate FLOAT(3) NOT NULL,
 personalVolume NUMBER(10) NOT NULL,
 agencyVolume NUMBER(10) NOT NULL,
 foreignerVolume NUMBER(10) NOT NULL,
-predictRate NUMBER(3) NOT NULL,
+predictRate FLOAT(3) NOT NULL,
+typecode NUMBER(5) NOT NULL,
 constraint statdata_jongmokCode_pk primary key(jongmokCode)
 );
 
