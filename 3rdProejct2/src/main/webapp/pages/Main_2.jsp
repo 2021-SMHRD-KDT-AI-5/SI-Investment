@@ -1,5 +1,8 @@
 <%@page import="model.statDataDTO"%>
 <%@page import="model.statDataDAO"%>
+<%@page import="model.MemberDTO"%>
+<%@page import="model.BouJongmokDTO"%>
+<%@page import="model.BouJongmokDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -10,7 +13,11 @@ statDataDAO dao = new statDataDAO();
 ArrayList<statDataDTO> predictList = new ArrayList<statDataDTO>();
 predictList = dao.select();
 predictList = dao.predictJongMok_select();
-
+//사용자 보유 종목 불러오기
+BouJongmokDAO dao2 = new BouJongmokDAO();
+ArrayList<BouJongmokDTO> bouList = new ArrayList<BouJongmokDTO>();
+String email = (String)session.getAttribute("email");
+bouList = dao2.select(email);
 %>
 
 <style>
@@ -68,23 +75,14 @@ display:inherit;
                 <div class="card-header">
                   <h4>보유종목</h4>
                   <div class="badges" style="margin-left: 265px; margin-top: 10px;">
-                    <a href="보유종목추가.html" class="badge badge-success">+</a>
+                    <a href="Stockplus.jsp" class="badge badge-success">+</a>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="summary">
                     <div class="summary-item">
                       <ul class="list-unstyled list-unstyled-border">
-                        <li class="media">
-                          <a href="#">
-                            <img class="mr-3 rounded" width="50" src="../assets/img/kakaobank.png" alt="product">
-                          </a>
-                          <div class="media-body">
-                            <div class="media-right">88,000 원</div>
-                            <div class="media-title"><a href="#">카카오뱅크</a></div>
-                            <div class="text-muted text-small">10주<div class="bullet"></div> -18,000 (-2.21%)</div>
-                          </div>
-                        </li>
+                      <!-- 예시  시작 -->
                         <li class="media">
                           <a href="#">
                             <img class="mr-3 rounded" width="50" src="../assets/img/posco.png" alt="product">
@@ -95,16 +93,36 @@ display:inherit;
                             <div class="text-muted text-small">20주<div class="bullet"></div> +110,000 (1.62%)</div>
                           </div>
                         </li>
+                        <!-- 예시 종료 -->
+                        <!-- 보유종목 for문 시작 -->
+                        <!-- 테이블수정으로 코드오ㅠ나면 주석처리 부탁드립니다. -->
+                         <%
+                          if(bouList != null){ 
+                         for (int i = 0; i < bouList.size(); i++) {
+                     System.out.println(i+1+"번째 bouList");%>   
                         <li class="media">
                           <a href="#">
-                            <img class="mr-3 rounded" width="50" src="../assets/img/HMM.png" alt="product">
+                            <img class="mr-3 rounded" width="50" src="../assets/img/posco.png" alt="product">
                           </a>
                           <div class="media-body">
-                            <div class="media-right">39,200 원</div>
-                            <div class="media-title"><a href="#">HMM</a></div>
-                            <div class="text-muted text-small">30주<div class="bullet"></div> +55,000 (4.5%)</div>
+                            <div class="media-right">종목코드별 API실시간가격</div>
+                            <div class="media-title"><a href="#"><%=bouList.get(i).getJongmokCode()%></a></div>
+                            <div class="text-muted text-small"><%=bouList.get(i).getBouJu()%>주<div class="bullet">
+                            </div>
+                            <%int StockC_Price =  bouList.get(i).getStockC_Price();%>
+                            <%=StockC_Price%>
+                            ±API실시간가격(
+                            
+                            <%=StockC_Price%>
+                            ±API실시간가격백분율
+                            
+                            )
+                            <%}}%>
+                            
+                            </div>
                           </div>
                         </li>
+                        <!-- 보유종목 for문 종료 -->
                       </ul>
                     </div>
                   </div>
