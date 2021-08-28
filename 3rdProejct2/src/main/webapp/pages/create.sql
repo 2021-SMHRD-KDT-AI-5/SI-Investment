@@ -14,14 +14,12 @@ drop table boujongmok CASCADE CONSTRAINT;
 drop table StockTerms CASCADE CONSTRAINT;
 drop table custom CASCADE CONSTRAINT;
 
-
-
 create table member_table
 (name varchar2(20) NOT NULL,
 email varchar2(50) NOT NULL,
 pw varchar2(20) NOT NULL,
 tel varchar2(20) NOT NULL,
-constraint member_table_email_pk primary key(email)
+constraint member_table_id_pk primary key(email)
 );
 
 create table jugadata
@@ -32,20 +30,19 @@ closePrice NUMBER(8) NOT NULL,
 highPrice NUMBER(8) NOT NULL,
 lowPrice NUMBER(8) NOT NULL,
 kos NUMBER(8),
+totalvolume NUMBER(10) NOT NULL,
+personalvolume NUMBER(10) NOT NULL,
+agencyvolume NUMBER(10) NOT NULL,
+foreignervolume NUMBER(10) NOT NULL,
+perdictrate FLOAT(10) NOT NULL,
 constraint  jugadata_jongmokCode_pk primary key(jongmokCode)
 );
 
 create table statdata
 (jongmokCode varchar2(50) NOT NULL,
-jongmokName varchar2(50) NOT NULL,
-totalVolume NUMBER(10) NOT NULL,
-profitRate FLOAT(3) NOT NULL,
-soaringRate FLOAT(3) NOT NULL,
-personalVolume NUMBER(10) NOT NULL,
-agencyVolume NUMBER(10) NOT NULL,
-foreignerVolume NUMBER(10) NOT NULL,
-predictRate FLOAT(3) NOT NULL,
+jongmokName varchar2(100) NOT NULL,
 typecode NUMBER(5) NOT NULL,
+predict NUMBER(1) NOT NULL,
 constraint statdata_jongmokCode_pk primary key(jongmokCode)
 );
 
@@ -58,14 +55,14 @@ constraint snsdata_jongmokCode_pk primary key(jongmokCode)
 );
 
 create table boujongmok
-(id varchar2(30) NOT NULL,
+(email varchar2(30) NOT NULL,
 jongmokCode varchar2(50),
 bouJu number(10),
 stockC_Price number(8),
 purchasePrice number(8),
 stockC_Date Date,
 holdingStock varchar2(10),
-constraint boujongmok_id_pk primary key(id)
+constraint boujongmok_email_pk primary key(email)
 );
 
 create table StockTerms
@@ -75,11 +72,11 @@ altrnTerm VARCHAR2(60),
  constraint StockTerms_term_pk primary key(term)
  );
  
- create table custom
-(id VARCHAR2(30) NOT NULL,
+create table custom
+(email VARCHAR2(30) NOT NULL,
 changeVar VARCHAR2(30),
 changeContent VARCHAR2(30),
- constraint custom_id_pk primary key(id)
+ constraint custom_email_pk primary key(email)
  );
 
 

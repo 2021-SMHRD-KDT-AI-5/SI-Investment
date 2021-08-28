@@ -318,7 +318,7 @@ list=dao.select();
                       <%for(int i=0;i<list.size();i++){ %>
                       <tr>
                         <td><%=i+1 %></td>
-                        <td><%=list.get(i).getDate() %></td>
+                        <td><%=list.get(i).getStockTime() %></td>
                         <td><%=list.get(i).getPersonalVolume()%></td>
                         <td><%=list.get(i).getForeignerVolume() %></td>
                         <td><%=list.get(i).getAgencyVolume() %></td>
