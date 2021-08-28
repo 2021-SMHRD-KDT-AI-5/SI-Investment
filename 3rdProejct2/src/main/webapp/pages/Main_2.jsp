@@ -1,13 +1,13 @@
-<%@page import="model.StockBestDTO"%>
-<%@page import="model.StockBestDAO"%>
+<%@page import="model.statDataDTO"%>
+<%@page import="model.statDataDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
 //사용자 최근 예측 종목 불러오기
-StockBestDAO dao = new StockBestDAO();
-ArrayList<StockBestDTO> predictList = new ArrayList<StockBestDTO>();
+statDataDAO dao = new statDataDAO();
+ArrayList<statDataDTO> predictList = new ArrayList<statDataDTO>();
 predictList = dao.predictJongMok_select();
 
 
@@ -159,14 +159,14 @@ display:inherit;
                     <!-- <div class="card-stats-title">사용자 최근 예측 종목</div> -->
                     <%for(int i=0;i<predictList.size();i++){ %>
                     <div class="card-icon shadow-primary bg-primary">
-                      <img src="../assets/img/<%=predictList.get(i).getJongMokName() %>.png" width="60px" height="60px">
+                      <img src="../assets/img/<%=predictList.get(i).getJongmokName() %>.png" width="60px" height="60px">
                     </div>
                     <div class="card-wrap">
                       <div class="card-header">
-                        <h4><%=predictList.get(i).getKos()%> <%=predictList.get(i).getJongmokCode() %></h4>
+                        <h4><%=predictList.get(i).getJongmokCode() %></h4>
                       </div>
                       <div class="card-body">
-                        <%=predictList.get(i).getJongMokName() %>
+                        <%=predictList.get(i).getJongmokName() %>
                       </div>
                     </div>
                     <div class="card-wrap">

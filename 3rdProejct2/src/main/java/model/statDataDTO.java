@@ -3,37 +3,30 @@ package model;
 public class statDataDTO {//종목별 통계 데이터 
 	
 	private String jongmokCode; // 종목코드
-	private String jongmokName; //종목명
-	private int totalVolume; //종 거래량
-	private double profitRate; //수익율
-	private double soaringRate; //급등률
-	private int personalVolume; // 개인 거래량
-	private int agencyVolume; //기관 거래량
-	private int foreignerVolume; //외국인 거래량
-	private String stockTime;//날짜
+	private String jongmokName; // 종목명
+	private String typecode; // 업종코드
+	private String predict; // 예측여부
 	
 	
-	//생성자 메소드 
-	public statDataDTO(String jongmokCode, String jongmokName, int totalVolume, double profitRate, double soaringRate,
-			int personalVolume, int agencyVolume, int foreignerVolume) {
+	
+	public statDataDTO(String jongmokCode, String jongmokName, String typecode, String predict) {
+		super();
 		this.jongmokCode = jongmokCode;
 		this.jongmokName = jongmokName;
-		this.totalVolume = totalVolume;
-		this.profitRate = profitRate;
-		this.soaringRate = soaringRate;
-		this.personalVolume = personalVolume;
-		this.agencyVolume = agencyVolume;
-		this.foreignerVolume = foreignerVolume;
+		this.typecode = typecode;
+		this.predict = predict;
 	}
 	
-	
+	// 최근 예측종목,검색 생성자
+	public statDataDTO(String jongmokCode, String jongmokName) {
+		super();
+		this.jongmokCode = jongmokCode;
+		this.jongmokName = jongmokName;
+	}
+
   //투자별 거래량 생성자 메소드
 	public statDataDTO(String StockTime,int personalVolume,int foreignerVolume, int agencyVolume) {
 		
-		this.personalVolume = personalVolume;//개인 거래량
-		this.agencyVolume = agencyVolume; //기관 거래량
-		this.foreignerVolume = foreignerVolume;//외국인 거래량
-		this.stockTime = StockTime;//날짜
 	}
 
    //예측급등률 생성자 메소드
@@ -41,91 +34,50 @@ public class statDataDTO {//종목별 통계 데이터
 		
 		this.jongmokCode = jongmokCode;
 		this.jongmokName = jongmokName;
-		this.soaringRate = soaringRate;
-	}
-	//검색 생성자 메소드
-	public statDataDTO(String jongmokCode, String jongmokName) {
-		super();
-		this.jongmokCode = jongmokCode;
-		this.jongmokName = jongmokName;
-	}
-	
-	
-
-
-	public String getStockTime() {//날짜
-		return stockTime;
 	}
 
 
-	public void setStockTime(String StockTime) {
-		this.stockTime = StockTime;
-	}
-
-
-	public String getJongmokCode() {//종목코드
+	public String getJongmokCode() {
 		return jongmokCode;
 	}
+
 
 	public void setJongmokCode(String jongmokCode) {
 		this.jongmokCode = jongmokCode;
 	}
 
-	public String getJongmokName() {//종목명
+
+	public String getJongmokName() {
 		return jongmokName;
 	}
+
 
 	public void setJongmokName(String jongmokName) {
 		this.jongmokName = jongmokName;
 	}
 
-	public int getTotalVolume() {//총 거래량
-		return totalVolume;
+
+	public String getTypecode() {
+		return typecode;
 	}
 
-	public void setTotalVolume(int totalVolume) {
-		this.totalVolume = totalVolume;
+
+	public void setTypecode(String typecode) {
+		this.typecode = typecode;
 	}
 
-	public double getProfitRate() {//수익율
-		return profitRate;
+
+	public String getPredict() {
+		return predict;
 	}
 
-	public void setProfitRate(double profitRate) {
-		this.profitRate = profitRate;
-	}
 
-	public double getSoaringRate() {//급등률
-		return soaringRate;
+	public void setPredict(String predict) {
+		this.predict = predict;
 	}
-
-	public void setSoaringRate(double soaringRate) {
-		this.soaringRate = soaringRate;
-	}
-
-	public int getPersonalVolume() {//개인거래량
-		return personalVolume;
-	}
-
-	public void setPersonalVolume(int personalVolume) {
-		this.personalVolume = personalVolume;
-	}
-
-	public int getAgencyVolume() {//기관거래량
-		return agencyVolume;
-	}
-
-	public void setAgencyVolume(int agencyVolume) {
-		this.agencyVolume = agencyVolume;
-	}
-
-	public int getForeignerVolume() {//외국인거래량
-		return foreignerVolume;
-	}
-
-	public void setForeignerVolume(int foreignerVolume) {
-		this.foreignerVolume = foreignerVolume;
-	}
+	
+	
+	
 	
    
 	

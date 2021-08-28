@@ -60,6 +60,53 @@ public class statDataDAO {//종목별 통계 데이터 DAO
 	}
 	
 	
+public ArrayList<statDataDTO> predictJongMok_select(){//투자별 거래량
+		
+		//ArrayList생성
+		ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
+		
+		statDataDTO volume = null;
+		
+		try {
+			//DB연결 가능
+		    connection();
+			//쿼리 실행
+			String sql = "select * from statdata WHERE predict=1";//임시 SQL문
+			
+			//자바 와 DB에 sql문을 실행시켜주는 역할
+			psmt = conn.prepareStatement(sql);
+			
+	        
+			//★★★★★
+			//insert,update,delete: executeUpdate() --> DB에 내용을 변경할 때
+			//select: executeQuery() --> DB에 내용을 검색할 때
+			rs = psmt.executeQuery();
+			System.out.println(sql);
+			//여러번 확인해야 하기 때문에 while
+			while(rs.next()) {
+				//컬럼인덱스는 1부터 시작
+				String getjongmokCode = rs.getString(1);
+				String getjongmokName = rs.getString(2);
+				
+				volume = new statDataDTO(getjongmokCode,getjongmokName);
+				//list안에 각각의 국내종목실시간BEST 정보가 담겨있는 juga 추가
+				list.add(volume);
+				
+			}
+		
+		}  catch( SQLException e) {
+		
+			System.out.println("sql문 오류다.");
+			e.printStackTrace();
+		} finally {
+		    close();
+		}//end
+		
+		
+		return list;
+		
+	}
+	
 
 public ArrayList<statDataDTO> select(){//투자별 거래량
 		
