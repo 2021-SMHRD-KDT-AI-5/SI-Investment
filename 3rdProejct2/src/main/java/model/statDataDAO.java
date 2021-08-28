@@ -160,4 +160,7 @@ public ArrayList<statDataDTO> soaringRate_select(){//예측급등률
 	return list;
 	
 }
+
+
+
 }
