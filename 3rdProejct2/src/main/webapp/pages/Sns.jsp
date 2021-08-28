@@ -1,6 +1,15 @@
+<%@page import="model.snsDataDTO"%>
+<%@page import="model.snsDataDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+//sns신뢰도 불러오기
+snsDataDAO dao = new snsDataDAO();
+ArrayList<snsDataDTO> snsList = new ArrayList<snsDataDTO>();
+snsList = dao.select();
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -49,28 +58,42 @@
                   </div>
                   <div class="card-body">
                     <ul class="list-unstyled list-unstyled-border">
-                      <li class="media">
+						<%
+                          if(snsList != null){ 
+                         for (int i = 0; i < snsList.size(); i++) {
+                     		System.out.println(i+1+"번째 snsList");%>
+                     <li class="media">
+                        <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
+                        <div class="media-body">
+                        
+                          <div class="float-right"><img src="../assets/img/감정분석/<%=snsList.get(i).getEmotion() %>.png"></div>
+                          <div class="media-title"><%=snsList.get(i).getJongmokCode() %></div>
+                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                        </div>
+                      </li>
+                     <%}}%> 
+                     <!--  <li class="media">
                         <img class="mr-3 rounded-circle" width="50" src="../assets/img/Kakao.png" alt="avatar">
                         <div class="media-body">
-                          <div class="float-right text-primary"><img src="../assets/img/감정분석/매우좋음.png"></div>
+                          <div class="float-right text-primary"><img src="../assets/img/감정분석/최상.png"></div>
                           <div class="media-title">카카오</div>
-                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                          <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
                         </div>
                       </li>
                       <li class="media">
                         <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
                         <div class="media-body">
-                          <div class="float-right"><img src="../assets/img/감정분석/좋음.png"></div>
+                          <div class="float-right"><img src="../assets/img/감정분석/상.png"></div>
                           <div class="media-title">POSCO</div>
-                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                          <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
                         </div>
                       </li>
                       <li class="media">
                         <img class="mr-3 rounded-circle" width="50" src="../assets/img/samsung.png" alt="avatar">
                         <div class="media-body">
-                          <div class="float-right"><img src="../assets/img/감정분석/보통.png"></div>
+                          <div class="float-right"><img src="../assets/img/감정분석/중.png"></div>
                           <div class="media-title">삼성전자</div>
-                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                          <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
                         </div>
                       </li>
                       <li class="media">
@@ -78,9 +101,19 @@
                         <div class="media-body">
                           <div class="float-right"><img src="../assets/img/감정분석/하.png"></div>
                           <div class="media-title">카카오뱅크</div>
-                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                          <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
                         </div>
                       </li>
+                    
+                    <li class="media">
+                        <img class="mr-3 rounded-circle" width="50" src="../assets/img/kakaobank.png" alt="avatar">
+                        <div class="media-body">
+                          <div class="float-right"><img src="../assets/img/감정분석/최하.png"></div>
+                          <div class="media-title">카카오뱅크</div>
+                          <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                        </div>
+                      </li> -->
+                      
                     </ul>
                     <!-- <div class="card-body p-0">
                       <div class="tickets-list">

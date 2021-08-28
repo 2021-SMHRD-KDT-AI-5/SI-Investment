@@ -71,7 +71,7 @@ double upDownRate = 1.5;
                     <li class="media">
                       <img class="mr-3 rounded-circle" width="50" src="../assets/img/Kakao.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right text-primary"><img src="../assets/img/감정분석/매우좋음.png"></div>
+                        <div class="float-right text-primary"><img src="../assets/img/감정분석/최상.png"></div>
                         <div class="media-title">카카오</div>
                         <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
@@ -79,7 +79,7 @@ double upDownRate = 1.5;
                     <li class="media">
                       <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right"><img src="../assets/img/감정분석/좋음.png"></div>
+                        <div class="float-right"><img src="../assets/img/감정분석/상.png"></div>
                         <div class="media-title">POSCO</div>
                         <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
@@ -87,7 +87,7 @@ double upDownRate = 1.5;
                     <li class="media">
                       <img class="mr-3 rounded-circle" width="50" src="../assets/img/samsung.png" alt="avatar">
                       <div class="media-body">
-                        <div class="float-right"><img src="../assets/img/감정분석/보통.png"></div>
+                        <div class="float-right"><img src="../assets/img/감정분석/중.png"></div>
                         <div class="media-title">삼성전자</div>
                         <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
                       </div>
