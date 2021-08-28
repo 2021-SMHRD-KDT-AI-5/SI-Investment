@@ -68,7 +68,7 @@ display:inherit;
                 <div class="card-header">
                   <h4>보유종목</h4>
                   <div class="badges" style="margin-left: 265px; margin-top: 10px;">
-                    <a href="보유종목추가.html" class="badge badge-success">+</a>
+                    <a href="Stockplus.jsp" class="badge badge-success">+</a>
                   </div>
                 </div>
                 <div class="card-body">
