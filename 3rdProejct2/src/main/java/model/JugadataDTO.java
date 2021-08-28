@@ -7,75 +7,56 @@ public class JugadataDTO {//국내종목 실시간 BEST,사용자예측종목,
 	private int firstPrice; //시가
 	private int highPrice; //고가
 	private int lowPrice; //저가
-	private String kos; //코스피/코스닥
-	private String JongMokName; //종목명
-	private int NowPrice; //현재가
+	private int closePrice; //종가
+	private int totalVolume; // 총 거래량
+	private int personalVolume; // 개인 순매수
+	private int agencyVolume; // 기관 순매수
+	private int foreignerVolume; // 외국인 순매수
+	private double predictRate; // 예측 적중률
 
-	
-	
-
-	public JugadataDTO(String jongmokCode, String stockTime, int firstPrice, int highPrice, int lowPrice, String kos,
-			String jongMokName, int nowPrice) {
-		super();
+	public JugadataDTO(String jongmokCode, String stockTime, int firstPrice, int highPrice, int lowPrice,
+			int closePrice, int totalVolume, int personalVolume, int agencyVolume, int foreignerVolume,
+			double predictRate) {
 		this.jongmokCode = jongmokCode;
 		this.stockTime = stockTime;
 		this.firstPrice = firstPrice;
 		this.highPrice = highPrice;
 		this.lowPrice = lowPrice;
-		this.kos = kos;
-		JongMokName = jongMokName;
-		NowPrice = nowPrice;
+		this.closePrice = closePrice;
+		this.totalVolume = totalVolume;
+		this.personalVolume = personalVolume;
+		this.agencyVolume = agencyVolume;
+		this.foreignerVolume = foreignerVolume;
+		this.predictRate = predictRate;
 	}
 
 	//국내 종목 실시간 BEST 생성자매소드
 	public JugadataDTO(String jongMokName, int nowPrice) {
-		this.JongMokName = jongMokName;
-		this.NowPrice = nowPrice;
 
 	}
     
 	//사용자 최근 예측 종목 생성자 메소드 
 	public JugadataDTO(String jongmokCode, String kos, String jongMokName) {
 	this.jongmokCode = jongmokCode; //종목코드
-	this.kos = kos; //코스피,코스닥
-	this.JongMokName = jongMokName; //종목명
 }
-	
-	
 
-	public String getJongMokName() {//종목명
-		return JongMokName;
-	}
-
-	public void setJongMokName(String jongMokName) {
-		JongMokName = jongMokName;
-	}
-
-	public int getNowPrice() {//현재가
-		return NowPrice;
-	}
-
-	public void setNowPrice(int nowPrice) {
-		NowPrice = nowPrice;
-	}
-
-
-	public String getJongmokCode() {//종목코드
+	public String getJongmokCode() {
 		return jongmokCode;
 	}
 
 	public void setJongmokCode(String jongmokCode) {
-		this.jongmokCode = jongmokCode;	}
+		this.jongmokCode = jongmokCode;
+	}
 
-	public String getStockTime() {//날짜
+	public String getStockTime() {
 		return stockTime;
 	}
 
-	public void setStockTime(String StockTime) {
-		this.stockTime = StockTime;
+	public void setStockTime(String stockTime) {
+		this.stockTime = stockTime;
 	}
 
-	public int getFirstPrice() {//시가
+	public int getFirstPrice() {
 		return firstPrice;
 	}
 
@@ -83,7 +64,7 @@ public class JugadataDTO {//국내종목 실시간 BEST,사용자예측종목,
 		this.firstPrice = firstPrice;
 	}
 
-	public int getHighPrice() {//고가
+	public int getHighPrice() {
 		return highPrice;
 	}
 
@@ -91,7 +72,7 @@ public class JugadataDTO {//국내종목 실시간 BEST,사용자예측종목,
 		this.highPrice = highPrice;
 	}
 
-	public int getLowPrice() {//저가
+	public int getLowPrice() {
 		return lowPrice;
 	}
 
@@ -99,18 +80,52 @@ public class JugadataDTO {//국내종목 실시간 BEST,사용자예측종목,
 		this.lowPrice = lowPrice;
 	}
 
-	public String getKos() {//코스피,코스닥
-		return kos;
+	public int getClosePrice() {
+		return closePrice;
 	}
 
-	public void setKos(String kos) {
-		this.kos = kos;
+	public void setClosePrice(int closePrice) {
+		this.closePrice = closePrice;
 	}
-	
-	
 
-	
+	public int getTotalVolume() {
+		return totalVolume;
+	}
 
-	
+	public void setTotalVolume(int totalVolume) {
+		this.totalVolume = totalVolume;
+	}
+
+	public int getPersonalVolume() {
+		return personalVolume;
+	}
+
+	public void setPersonalVolume(int personalVolume) {
+		this.personalVolume = personalVolume;
+	}
+
+	public int getAgencyVolume() {
+		return agencyVolume;
+	}
+
+	public void setAgencyVolume(int agencyVolume) {
+		this.agencyVolume = agencyVolume;
+	}
+
+	public int getForeignerVolume() {
+		return foreignerVolume;
+	}
+
+	public void setForeignerVolume(int foreignerVolume) {
+		this.foreignerVolume = foreignerVolume;
+	}
+
+	public double getPredictRate() {
+		return predictRate;
+	}
+
+	public void setPredictRate(double predictRate) {
+		this.predictRate = predictRate;
+	}
 
 }

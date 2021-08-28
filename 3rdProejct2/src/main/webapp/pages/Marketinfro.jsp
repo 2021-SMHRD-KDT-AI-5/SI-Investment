@@ -1,14 +1,17 @@
-<%@page import="model.StockBestDTO"%>
+<%@page import="model.statDataDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="model.StockBestDAO"%>
+<%@page import="model.statDataDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- 국내 종목 BEST 불러오기 -->
 <%
-StockBestDAO dao = new StockBestDAO();
-ArrayList<StockBestDTO> list = new ArrayList<StockBestDTO>();
+statDataDAO dao = new statDataDAO();
+ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
 list= dao.select();
+int nowPrice = 3000;
+int upDown = 160;
+double upDownRate = 1.5;
 %>
 <html>
 <head>
@@ -191,11 +194,11 @@ list= dao.select();
                       %>
                       <tr>
                          <th id=best scope="row"><%=i+1 %></th>
-                        <td id=best><%=list.get(i).getJongMokName() %></td>
-                        <td id=best><%=list.get(i).getNowPrice() %></td>
+                        <td id=best><%=list.get(i).getJongmokName() %></td>
+                        <td id=best><%=nowPrice %></td>
                        <td id=best>
-                            <%=list.get(i).getUpDownRate()%>%
-                            <div class="text-small text-muted"><%=list.get(i).getUpDown() %> <i class="fas fa-caret-down text-danger"></i></div>
+                            <%=upDownRate %>%
+                            <div class="text-small text-muted"><%=upDown %> <i class="fas fa-caret-down text-danger"></i></div>
                           </td>
                       </tr>
                         <%} %>

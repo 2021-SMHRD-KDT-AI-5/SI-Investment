@@ -1,14 +1,14 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="model.statDataDAO"%>
-<%@page import="model.statDataDTO"%>
+<%@page import="model.JugadataDAO"%>
+<%@page import="model.JugadataDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
 <%
 
-statDataDAO dao = new statDataDAO();
-ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
+JugadataDAO dao = new JugadataDAO();
+ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
 list=dao.select();
 %>
 
