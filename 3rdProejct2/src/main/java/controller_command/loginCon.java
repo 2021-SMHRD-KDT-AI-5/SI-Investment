@@ -27,6 +27,7 @@ public class loginCon implements Command{//로그인 콘트롤러
 			//세션에 저장하기!
 			HttpSession session = request.getSession();
 			session.setAttribute("member", member);
+			session.setAttribute("email", email);
 			
 			System.out.println("로그인 성공");
 			

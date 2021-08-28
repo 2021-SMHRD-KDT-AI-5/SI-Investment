@@ -21,7 +21,7 @@ public class bouJonmokCon implements Command{//국내종목 실시간BEST 컨트롤러
 		String moveURL = null;
 		
 		//종목명 변수에 저장
-		String jongMokName = request.getParameter("jongmokName");
+		//String jongMokName = request.getParameter("jongmokName");
 		HttpSession session = request.getSession();
 		MemberDTO member = (MemberDTO)session.getAttribute("member");
 		String id = member.getEmail();
