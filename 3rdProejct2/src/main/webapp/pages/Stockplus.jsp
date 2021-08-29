@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	String email = (String)session.getAttribute("email");
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -44,26 +47,28 @@
                   <div class="col-12 col-md-6 col-lg-6">
                     <div class="card">
                       <div class="card-body">
+                      <form action="">
                         <div class="form-group">
                           <label>종목명</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="jonkmokName" class="form-control">
                         </div>
                         <div class="form-group">
                           <label>구매 날짜</label>
-                          <input type="date" class="form-control">
+                          <input type="date" name="stocktime" class="form-control">
                         </div>
                         <div class="form-group">
-                          <label>잔고</label>
-                          <input type="number" class="form-control">
+                          <label>보유량</label>
+                          <input type="number" name="bou" class="form-control">
                         </div>
                         <div class="form-group">
                           <label>매입가</label>
-                          <input type="number" class="form-control">
+                          <input type="number" name="price" class="form-control">
                         </div>
                       <div class="card-footer text-right">
                         <button class="btn btn-primary mr-1" type="submit">OK</button>
                         <button class="btn btn-secondary" type="reset">Reset</button>
                       </div>
+                      </form>
                     </div>
                   </div>
                 </div>

@@ -56,13 +56,13 @@ constraint snsdata_jongmokCode_pk primary key(jongmokCode)
 
 create table boujongmok
 (email varchar2(30) NOT NULL,
-jongmokCode varchar2(50),
+jongmokName varchar2(100) NOT NULL,
 bouJu number(10),
 stockC_Price number(8),
 purchasePrice number(8),
 stockC_Date Date,
-holdingStock varchar2(10),
-constraint boujongmok_email_pk primary key(email)
+constraint boujongmok_email_fk foreign key(email) references member_table(email),
+CONSTRAINT boujongmok_UN UNIQUE(email,jongmokName)
 );
 
 create table StockTerms

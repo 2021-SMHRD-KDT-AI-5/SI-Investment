@@ -76,7 +76,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              계정이 없으신가요? <a href="auth-register.html">회원가입</a>
+              계정이 없으신가요? <a href="Join.jsp">회원가입</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Stisla 2018
