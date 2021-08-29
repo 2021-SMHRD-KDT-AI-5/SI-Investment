@@ -319,7 +319,7 @@ display:inherit;
                   <div class="card-footer pt-3 d-flex justify-content-center">
                     <div class="budget-price justify-content-center">
                       <div class="budget-price-square bg-primary" data-width="20"></div>
-                      <div class="budget-price-label">현재가</div>
+                      <div class="budget-price-label">전일가</div>
                     </div>
                     <div class="budget-price justify-content-center">
                       <div class="budget-price-square bg-danger" data-width="20"></div>
