@@ -1,18 +1,26 @@
 <%@page import="model.statDataDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.statDataDAO"%>
+<%@page import="model.snsDataDTO"%>
+<%@page import="model.snsDataDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!-- 국내 종목 BEST 불러오기 -->
 <%
+//국내 종목 BEST 불러오기
 statDataDAO dao = new statDataDAO();
 ArrayList<statDataDTO> list = new ArrayList<statDataDTO>();
 list= dao.select();
 int nowPrice = 3000;
 int upDown = 160;
 double upDownRate = 1.5;
+
+//sns신뢰도 불러오기
+snsDataDAO snsdao = new snsDataDAO();
+ArrayList<snsDataDTO> snsList = new ArrayList<snsDataDTO>();
+snsList = snsdao.select();
 %>
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -62,44 +70,26 @@ double upDownRate = 1.5;
                 <div class="card-header">
                   <h4>SNS 트렌드 분석</h4>
                   <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
-                      data-content="커스텀에 대한 설명">
+                      data-content="SNS데이터를 기반으로 소비자들이 가지는 기업신뢰도를 5단계로 표시해줍니다.">
                         ?
                     </button>
                 </div>
                 <div class="card-body">
                   <ul class="list-unstyled list-unstyled-border">
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/Kakao.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right text-primary"><img src="../assets/img/감정분석/최상.png"></div>
-                        <div class="media-title">카카오</div>
-                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right"><img src="../assets/img/감정분석/상.png"></div>
-                        <div class="media-title">POSCO</div>
-                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/samsung.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right"><img src="../assets/img/감정분석/중.png"></div>
-                        <div class="media-title">삼성전자</div>
-                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/kakaobank.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right"><img src="../assets/img/감정분석/하.png"></div>
-                        <div class="media-title">카카오뱅크</div>
-                        <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
-                      </div>
-                    </li>
+                    <%
+                          if(snsList != null && snsList.size() > 3){ 
+                         for (int i = 0; i < 4; i++) {
+                     		System.out.println(i+1+"번째 snsList");%>
+                     <li class="media">
+                        <img class="mr-3 rounded-circle" width="50" src="../assets/img/posco.png" alt="avatar">
+                        <div class="media-body">
+                        
+                          <div class="float-right"><img src="../assets/img/감정분석/<%=snsList.get(i).getEmotion() %>.png"></div>
+                          <div class="media-title"><%=snsList.get(i).getJongmokCode() %></div>
+                          <!-- <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span> -->
+                        </div>
+                      </li>
+                     <%}}%> 
                   </ul>
                   <div class="card-body p-0">
                     <div class="tickets-list">
@@ -176,8 +166,7 @@ double upDownRate = 1.5;
               </div>
             </div>
           </div>
-          <div class="row">
-            <div id="best" class="col-md-6">
+          <div class="col-lg-4 col-md-12 col-12 col-sm-12">
               <div class="card">
                 <div class="card-header">
                   <h4>국내 종목 실시간 Best</h4>
@@ -186,61 +175,64 @@ double upDownRate = 1.5;
                         ?
                     </button>
                 </div>
-                <div id="test" class="card-body">
-                  <table class="table">
-                    <tbody>
-                       <%
-                        for(int i=0; i<list.size();i++){
+                
+                <!--국내 변경 best table시작 -->
+                <div id="best" class="card-body">
+                    <table class="table">
+                      <thead>
+                        <tr class="best_font">
+                          <th scope="col">순위</th>
+                          <th scope="col">종목명</th>
+                          <th scope="col">현재가</th>
+                          <th scope="col">등락</th>
+                          <th scope="col">등락률</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <%
+                         for(int i=0; i<list.size();i++){
                       %>
-                      <tr>
-                         <th id=best scope="row"><%=i+1 %></th>
-                        <td id=best><%=list.get(i).getJongmokName() %></td>
-                        <td id=best><%=nowPrice %></td>
-                       <td id=best>
-                            <%=upDownRate %>%
-                            <div class="text-small text-muted"><%=upDown %> <i class="fas fa-caret-down text-danger"></i></div>
-                          </td>
-                      </tr>
+                        <tr>
+                          <th scope="row"><%=i+1 %></th>
+                          <td><%=list.get(i).getJongmokName() %></td>
+                          <td><%=nowPrice %></td>
+                          <td><div class="text-small text-muted"><%=upDown %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%=upDownRate%>%</td>
+                        </tr>
                         <%} %>
-                     <!--  <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>
-                          1.91%
-                          <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                        </td>
-                      </tr> -->
-                    </tbody>
-                  </table>
-                </div>
+                     <!--     <tr>
+                          <th scope="row">2</th>
+                          <td>aaa</td>
+                          <td>aaa</td>
+                          <td><div class="text-small text-muted">11 <i class="fas fa-caret-up text-danger"></i></div></td>
+                          <td>123</td>
+                        </tr> -->
+                        <%-- <tr>
+                          <th scope="row">3</th>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %><i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td><%= %></td>
+                          <td><%= %></td>
+                          <td><div class="text-small text-muted"><%= %> <i class="fas fa-caret-down text-danger"></i></div></td>
+                          <td><%= %></td>
+                        </tr>  --%>
+                      </tbody>
+                    </table>
+                  </div> 
+                <!--국내 변경 best table종료 -->
+                
                 <div class="card-body p-0">
                   <div class="tickets-list">
                     <a href="StockBest.jsp" class="ticket-item ticket-more">

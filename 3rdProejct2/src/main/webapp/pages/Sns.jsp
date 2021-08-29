@@ -52,7 +52,7 @@ snsList = dao.select();
                   <div class="card-header">
                     <h4>SNS 트렌드 분석</h4>
                     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
-                      data-content="커스텀에 대한 설명">
+                      data-content="SNS데이터를 기반으로 소비자들이 가지는 기업신뢰도를 5단계로 표시해줍니다.">
                         ?
                     </button>
                   </div>
