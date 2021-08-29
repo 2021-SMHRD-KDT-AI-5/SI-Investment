@@ -38,7 +38,10 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>회원정보</h1>
+            <h1>회원정보 및 수정</h1>
+            <div class="badges" style="margin-left: 265px; margin-top: 10px;">
+                    <a href="Update.jsp" class="badge badge-success">수정</a>
+                  </div>
           </div>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
