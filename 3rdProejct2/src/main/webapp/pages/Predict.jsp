@@ -147,36 +147,14 @@
                               </tr>
                             </thead>
                             <tbody>
+                            <%
+                            	// int price = Integer.parseInt((String)request.getAttribute("predict"));
+                            	int price = 1000;
+                            %>
                               <tr>
                                 <th scope="row">2020.08.15</th>
-                                <td>123,456</td>
-                                <td>123,456</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2020.8.16</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-
-                              <tr>
-                                <th scope="row">2020.8.16</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2020.8.16</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2020.8.16</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2020.8.16</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
+                                <td>123,456 {{userid}}</td>
+                                <td><%=price %></td>
                               </tr>
 
                             </tbody>
