@@ -101,5 +101,35 @@ public class BouJongmokDAO {//회원별 보유 종목DAO
 		
 		return list;
 		}//종목검색end
+	
+	public int stockPlus(String email, String jonkmokname, String stocktime, int bou, int price){// 보유종목 입력
+		
+		//ArrayList생성
+		int cnt = 0;
+		
+		BouJongmokDTO boujongmok = null;
+	    try {
+			connection();
+			 
+			String sql = "INSERT INTO boujongmok VALUES(?,?,?, NULL,?,?)";
+			System.out.println(sql);
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, email);
+			psmt.setString(2, jonkmokname);
+			psmt.setInt(3, bou);
+			psmt.setInt(4, price);
+			psmt.setString(5, stocktime);
+			
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			System.out.println("커넥오류");
+			e.printStackTrace();
+		} finally {
+			close();
+		} // 셀렉트캐치문end
+		
+		return cnt;
+		}//종목검색end
 
 }

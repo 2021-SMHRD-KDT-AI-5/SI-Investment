@@ -79,7 +79,7 @@ list=dao.select();
 
                       <div class="card-body">
                         <h4>Netflix</h4>
-                        <h4>123,456</h4> <span>▼ 2.3%</span>
+                        <h4 id="realtime">123,456</h4> <span id="realtime">▼ 2.3%</span>
                         <p>General settings such as, site title, site description, address and so on.</p>
                         <a href="features-setting-detail.html" class="card-cta">
                           <!-- <a href="2Predict.html" class="card-cta"></a> -->

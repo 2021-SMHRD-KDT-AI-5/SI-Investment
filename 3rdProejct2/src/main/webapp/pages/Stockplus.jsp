@@ -47,7 +47,7 @@
                   <div class="col-12 col-md-6 col-lg-6">
                     <div class="card">
                       <div class="card-body">
-                      <form action="">
+                      <form action="StockPlusCon.do">
                         <div class="form-group">
                           <label>종목명</label>
                           <input type="text" name="jonkmokName" class="form-control">
