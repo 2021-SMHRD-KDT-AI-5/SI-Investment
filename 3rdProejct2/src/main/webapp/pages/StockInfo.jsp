@@ -6,9 +6,7 @@
 <!DOCTYPE html>
 <!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
 <%
-// String jongmokName = request.getParameter("jongmokName");
-String test = request.getParameter("realtime");
-String jongmokName = "Netflix";
+
 JugadataDAO dao = new JugadataDAO();
 ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
 list=dao.select();
@@ -65,7 +63,6 @@ list=dao.select();
                 <h2 class="section-title">Stock Information</h2>
                 <p class="section-lead">
                   주가정보를 알려주고 주가 예측 변수를 입력하는 페이지
-                  <%=test %>
                 </p>
     
                 <div class="row">
@@ -81,7 +78,7 @@ list=dao.select();
                       </div>
 
                       <div class="card-body">
-                        <h4 id="jonkmok"><%=jongmokName %></h4>
+                        <h4>Netflix</h4>
                         <h3 id="realtime">123,456</h3> <span id="realtime">▼ 2.3%</span>
                         <p>General settings such as, site title, site description, address and so on.</p>
                         <a href="features-setting-detail.html" class="card-cta">
@@ -379,9 +376,7 @@ list=dao.select();
   
   <!-- 투자별 거래량 API데이터를 Ajax로 가져오기-->
   <script type="text/javascript">
-  $(function (){
-	  timer = setInterval( function () {
-		  let jongmokName = $("h4#realtime").text()
+  function (){
  	 $.ajax({
  		 type: "post",
  		 data: 
