@@ -6,6 +6,9 @@
 <!DOCTYPE html>
 <!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
 <%
+//String jongmokName = request.getParameter("jongmokName");
+String test = request.getParameter("realtime");
+String jongmokName = "Netflix";
 
 JugadataDAO dao = new JugadataDAO();
 ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
@@ -78,7 +81,7 @@ list=dao.select();
                       </div>
 
                       <div class="card-body">
-                        <h4>Netflix</h4>
+                        <h4 id="jonkmok"><%=jongmokName %></h4>
                         <h3 id="realtime">123,456</h3> <span id="realtime">▼ 2.3%</span>
                         <p>General settings such as, site title, site description, address and so on.</p>
                         <a href="features-setting-detail.html" class="card-cta">
@@ -376,16 +379,20 @@ list=dao.select();
   
   <!-- 투자별 거래량 API데이터를 Ajax로 가져오기-->
   <script type="text/javascript">
-  function (){
+  $(function (){
+	  timer = setInterval( function () {
+		  let jongmokName = $("h4#realtime").text()
  	 $.ajax({
- 		 type: "post",
- 		 data: 
- 		 url: 
- 		 dataType:
- 	     sucess:
- 	     error:
- 	 })
-  }
+ 		 type: "get",
+ 		 data: {"jonkmokname":jongmokName},
+ 		 url: "http://127.0.0.1:5005/realtime",
+ 		 dataType: "text",
+ 	     success:function(data){
+ 	    	 $("h4#realtime").text(data)
+ 	     }
+ 	 });
+  },1000);
+ });
   
   </script>
   <script type="text/javascript">
