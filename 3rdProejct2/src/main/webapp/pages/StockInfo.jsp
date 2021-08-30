@@ -6,7 +6,9 @@
 <!DOCTYPE html>
 <!-- 투자별거래량 DAO,DTO,ArrayList생성 -->
 <%
-
+// String jongmokName = request.getParameter("jongmokName");
+String test = request.getParameter("realtime");
+String jongmokName = "Netflix";
 JugadataDAO dao = new JugadataDAO();
 ArrayList<JugadataDTO> list = new ArrayList<JugadataDTO>();
 list=dao.select();
@@ -63,6 +65,7 @@ list=dao.select();
                 <h2 class="section-title">Stock Information</h2>
                 <p class="section-lead">
                   주가정보를 알려주고 주가 예측 변수를 입력하는 페이지
+                  <%=test %>
                 </p>
     
                 <div class="row">
@@ -78,8 +81,8 @@ list=dao.select();
                       </div>
 
                       <div class="card-body">
-                        <h4>Netflix</h4>
-                        <h4 id="realtime">123,456</h4> <span id="realtime">▼ 2.3%</span>
+                        <h4 id="jonkmok"><%=jongmokName %></h4>
+                        <h3 id="realtime">123,456</h3> <span id="realtime">▼ 2.3%</span>
                         <p>General settings such as, site title, site description, address and so on.</p>
                         <a href="features-setting-detail.html" class="card-cta">
                           <!-- <a href="2Predict.html" class="card-cta"></a> -->
@@ -119,15 +122,14 @@ list=dao.select();
             <!-- End 차트부분 끝 -->
 
           <!-- Start 사용자 커스텀 -->
-          <!-- <class class="section-body"> -->
-            
+          
             <div class="row">
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
                     <h4>사용자 커스텀하는 공간</h4>
                     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" 
-                      data-content="사용자 커스텀에 대한 설명 작성">
+                      data-content="커스텀에 대한 설명">
                         ?
                       </button>
                   </div>
@@ -140,65 +142,32 @@ list=dao.select();
                     </div> -->
 
                     <div class="form-group">
-                      <label>변수추가하기</label>
+                      <label>항목 값</label>
                       <input type="text" class="form-control">
                     </div>
+
                     <div class="form-group">
-                      <label>Select</label>
-                      <select class="form-control">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                      </select>
+                      <label>항목 이름</label>
+                      <input type="text" class="form-control">
                     </div>
+
                     <div class="form-group">
-                      <label>Select Multiple</label>
-                      <select class="form-control" multiple="" data-height="100%">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                        <option>Option 3</option>
-                      </select>
+                      <label>시작날짜</label>
+                      <input type="date" class="form-control">
                     </div>
+
                     <div class="form-group">
-                      <label class="d-block">Checkbox</label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                          Checkbox 1
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="defaultCheck3">
-                        <label class="form-check-label" for="defaultCheck3">
-                          Checkbox 2
-                        </label>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label class="d-block">Radio</label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                          Radio 1
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                          Radio 2
-                        </label>
-                      </div>
+                      <label>종료날짜</label>
+                      <input type="date" class="form-control">
                     </div>
 
                       <div style="text-align: center;">
-                        <a href="Predict.jsp" class="btn btn-primary mt-4">예측결과보기</a><br><br>
+                        <a href="2Predict.html" class="btn btn-primary mt-4">결과 보러가기</a><br><br>
                         <a href="#" class="mt-4 bb">Need Help?</a>
                       </div>
                   </div>
-
                 </div>
+          
           <!-- End 사용자 커스텀 -->
 
 
@@ -410,7 +379,9 @@ list=dao.select();
   
   <!-- 투자별 거래량 API데이터를 Ajax로 가져오기-->
   <script type="text/javascript">
-  function (){
+  $(function (){
+	  timer = setInterval( function () {
+		  let jongmokName = $("h4#realtime").text()
  	 $.ajax({
  		 type: "post",
  		 data: 
