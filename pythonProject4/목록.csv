@@ -1,0 +1,264 @@
+,0,1
+0,[거래량/거래대금 상위종목] CpSysDib.CpSvr7049,"object.SetInputValue(type,value)"
+1,[주식선물 6주간] CpSysDib.FutStockWeek,"object.SetInputValue(type,value)"
+2,[주식선물 종목 실시간 현재가] CpSysDib.FutStockCurS,"object.SetInputValue(type,value)"
+3,[주식선물 종목 현재가] CpSysDib.FutStockMst,"object.SetInputValue(type,value)"
+4,[업종별 투자자 매매현황 실시간] CpSysDib.CpSvrNew7221S,설명: 업종별 투자자 매매현황 실시간 시세수신을 등록하고 데이터를 수신한다.
+5,[파생상품 예상체결가] DsCbo1.CpSvr9027,"object.SetInputValue(type,value)"
+6,[체결기준 주식 당일매매손익] cptrade.CpTd6032," 설명: 체결기준 주식 당일매매손익 데이터를 요청하고 수신한다
+ 통신종류: Request/Reply
+ 모듈위치: CpTrade.dll"
+7,[종목별 프로그램매매 추이 리스트(일자별)] DsCbo1.CpSvrNew8119Day,"object.SetInputValue(type,value)"
+8,[종목별 프로그램매매 추이 (실시간)] CpSysDib.CpSvr8119S,"object.SetInputValue(type,value)"
+9,[종목별 프로그램매매 추이 차트(시간대별)] DsCbo1.CpSvrNew8119Chart,"object.SetInputValue(type,value)"
+10,[종목별 프로그램매매 추이 리스트(시간대별)] DsCbo1.CpSvrNew8119,"object.SetInputValue(type,value)"
+11,[종목 시간별 잠정데이터] CpSysDib.CpSvr7210T,0 - (string)종목코드
+12,[종목별 투자자 매매동향(잠정)데이터] CpSysDib.CpSvr7210d,"0 - (string)시장구분
+'0' : 전체"
+13,"[ETF(NAV), ETN(IIV) 시간대별 실시간 데이터] CpSysDib.CpSvrNew7244S","object.SetInputValue(type,value)"
+14,[해외선물 실시간 주문체결 수신] CpForeDib.OvFutConclusion,해외선물 주문의의 체결수신을 등록하고 데이터를 수신한다.
+15,[해외선물 실시간 잔고수신] CpForeDib.OvFutBalance,
+16,[해외선물 실시간 주문 접수수신] CpForeDib.OvFutOrdReceive,
+17,[해외선물 예수금] CpForeTrade.OvfDepositRecInq,
+18,[해외선물 미결제] CpForeTrade.OvfNotPaymentInq,해외선물의 미결제내역을 요청하고 수신한다.
+19,[해외선물 미체결] CpForeTrade.OvFutNotConInq,해외선물의 미체결 내역을 요청하고 수신한다.
+20,[해외선물 체결내역] CpForeTrade.OvFutConInq,
+21,[해외선물 주문] CpForeTrade.OvFutOrder,"해외선물의 매수, 매도, 정정, 취소 주문을 요청하고 결과를 수신한다."
+22,[해외선물 실시간 호가잔량] CpForeDib.OvFutBid,
+23,[해외선물 실시간 현재가] CpForeDib.OvFutCur,해외파생 선물의 체결 시세수신을 등록하고 데이터를 수신한다.
+24,[해외선물차트] CpForeDib.OvFutureChart,
+25,[해외선물 현재가] CpForeDib.OvFutMst,설명: 해외파생 선물의 현재가 데이터를 요청하고 수신한다.
+26,[회원사별 종목 매매동향] Dscbo1.CpSvr8412, 
+27,[시장조치사항] CpSysDib.CpSvr9619S,
+28,[매매입체분석] CpSysDib.CpSvr7254,"object.SetInputValue(type,value)"
+29,[종목검색 실시간 신호] CpSysDib.CssAlert,"object.SetInputValue(type,value)"
+30,[종목검색 전략 감시 시작/중지] CpSysDib.CssWatchStgControl,
+31,[종목검색 전략 감시 일련번호] CpSysDib.CssWatchStgSubscribe,"object.SetInputValue(type,value)"
+32,[종목검색 검색 종목 리스트] CpSysDib.CssStgFind,"object.SetInputValue(type,value)"
+33,"[종목검색 전략명, 전략ID 리스트] CpSysDib.CssStgList","object.SetInputValue(type,value)"
+34,CpIndexes.CpIndex,Return:(int)해당차트 지표명의 차트지표 인덱스값
+35,CpIndexes.CpSeries,GetLow(long)
+36,[ETN(IIV) 일자별] Dscbo1.CpSvr7719,"object.SetInputValue(type,value)"
+37,[ETN(IIV) 시간대별] Dscbo1.CpSvr7718,"object.SetInputValue(type,value)"
+38,[ETF(NAV) 일자별] Dscbo1.CpSvr7246,"object.SetInputValue(type,value)"
+39,[ETF(NAV) 시간대별] Dscbo1.CpSvr7244,"object.SetInputValue(type,value)"
+40,[일자별 대차거래] CpSysDib.CpSvr7240,"object.SetInputValue(type,value)"
+41,[융자 주식 및 대금의 변동] CpSysDib.CpSvr7151,"object.SetInputValue(type,value)"
+42,CybosPlus FAQ,CybosPlus는뭔가요?
+43,[종목별 공매도 추이] CpSysDib.CpSvr7238,
+44,[주식 체결 금액대별 매매비중] CpSysDib.CpSvr7236,"object.SetInputValue(type,value)"
+45,[매수체결비중 상위종목] CpSysDib.CpSvr7034,
+46,[주식 가격대별 매매비중] CpSysDib.CpSvr7033,"object.SetInputValue(type,value)"
+47,CybosPlus Etc,- CYBOS Code규칙
+48,CybosPlus Interface,Method
+49,CybosPlus Communication,대신증권의통신은Request/Reply ( RQ/RP ) 방식과Subscribe/Publish (SB/PB) 방식으로
+50,CybosPlus Development,"COM Object 라이브러리를사용할수있는, 어떤개발환경이든가능합니다.
+익스플로러같은웹브라우저에서동작하는형태이거나,
+비주얼베이직이나비주얼 C++로작성된응용프로그램일수있습니다.
+또는 Excel과같은 Office 프로그램으로작성하실수도있습니다."
+51,CybosPlus Agreement,"<CybosPlus 오브젝트사용동의방법>
+▶ CybosPlus를사용하기위해서는CybosPlus 오브젝트사용동의를하셔야이용이가능합니다.
+CybosPlus로연결한후사용동의를하지않은고객에게는아래와같은동의화면이나타나게됩니다.
+아래동의를하시기위해서는공인인증으로접속하셔야정상적으로동의가가능합니다."
+52,CybosPlus Connection,"<CybosPlus 접속방법>
+▶ U-CYBOS Global 로그인화면에서하단에 CybosPlus를선택하여접속합니다.
+(설정버튼을클릭하여모의투자sys.을선택하여접속하면모의투자로도이용이가능합니다.)"
+53,CybosPlus Inst,
+54,"[EUREX 매수/매도,정정,취소 주문] CpTrade.EurexOrder","설명: EUREX 매수/매도,정정,취소주문데이터를요청하고수신한다"
+55,"[CME 매수/매도,정정,취소 주문] CpTrade.CmeOrder","  설명: CME 매수/매도,정정,취소주문데이터를요청하고수신한다"
+56,[EUREX 일자별 주문체결] CpTrade.EurexConclusionDay,  설명: EUREX 일자별주문체결조회데이터를요청하고수신한다.
+57,[EUREX 금일 주문체결] CpTrade.EurexConclusion,  설명: EUREX 금일주문체결조회데이터를요청하고수신한다.
+58,[EUREX 미체결잔량] CpTrade.EurexNoConclusion,설명: EUREX미체결잔량조회데이터를요청하고수신한다.
+59,[EUREX 실시간 계좌평가손익] CpTrade.EurexBalance,설명: EUREX실시간계좌평가손익데이터를요청하고수신한다.
+60,[CME 일자별 주문체결] CpTrade.CmeConclusionDay,  설명: CME 일자별주문체결조회데이터를요청하고수신한다.
+61,[CME 금일 주문체결] CpTrade.CmeConclusion,설명: CME 금일주문체결조회데이터를요청하고수신한다.
+62,[CME 미체결잔량] CpTrade.CmeNoConclusion,설명: CME 미체결잔량조회데이터를요청하고수신한다.
+63,[CME 실시간 계좌평가손익] CpTrade.CmeBalance,설명: CME 실시간계좌평가손익데이터를요청하고수신한다.
+64,[선물/옵션 예약주문현황] CpTrade.CpTd9085,  설명: 선물/옵션종목의예약주문현황데이터를요청하고수신한다
+65,[선물/옵션 예약취소 주문] CpTrade.CpTd9082,  설명: 선물/옵션종목의예약취소주문데이터를요청하고수신한다
+66,[선물/옵션 예약 주문] CpTrade.CpTd9081,  설명: 선물/옵션종목의예약주문데이터를요청하고수신한다
+67,[선물/옵션 신규주문 가능수량] CpTrade.CpTd6722,  설명: 선물/옵션신규주문가능수량조회데이터를요청하고수신한다
+68,[선물/옵션 당일매매손익] CpTrade.CpTd6197,  설명: 선물옵션당일매매손익조회
+69,[선물/옵션 계좌별 체결합산] CpTrade.CpTd5372,  설명: 선물/옵션계좌별체결합산내역조회데이터를요청하고수신한다
+70,[선물/옵션 주문 주문체결 및 미체결잔량 내역] CpTrade.CpTd5371,"  설명: 선물/옵션계좌주문/체결조회,미체결잔량조회데이터를요청하고수신한다"
+71,[선물/옵션 실시간 계좌평가손익] CpTrade.CpTd0723,  설명: 선물/옵션실시간계좌평가손익데이터를요청하고수신한다
+72,[선물옵션 결제기준잔고] CpTrade.CpTd0721F,  설명: 선물옵션결제기준잔고데이터를요청하고수신한다
+73,[선물스프레드 취소주문] CpTrade.CpTd6843,  설명: 선물스프레드취소주문데이터를요청하고수신한다
+74,[선물스프레드 정정주문] CpTrade.CpTd6842,  설명: 선물스프레드정정주문데이터를요청하고수신한다
+75,[선물스프레드 정상주문] CpTrade.CpTd6841,  설명: 선물스프레드정상주문데이터를요청하고수신한다
+76,[선물/옵션/개별주식옵션 취소주문] CpTrade.CpTd6833,  설명: 선물/옵션/개별주식옵션취소주문데이터를요청하고수신한다
+77,[선물/옵션/개별주식옵션 정정주문] CpTrade.CpTd6832,  설명: 선물/옵션/개별주식옵션정정주문데이터를요청하고수신한다
+78,[선물/옵션/개별주식옵션 정상주문] CpTrade.CpTd6831,  설명: 선물/옵션/개별주식옵션정상주문데이터를요청하고수신한다
+79,[주식 예약주문현황] CpTrade.CpTd9065,  설명: 주식종목의예약주문현황데이터를요청하고수신한다
+80,[주식 예약취소주문] CpTrade.CpTdNew9064,  설명: 주식종목의예약취소주문데이터를요청하고수신한다
+81,[주식 예약주문] CpTrade.CpTdNew9061,  설명: 주식종목의예약주문(신용예약주문)데이터를요청하고수신한다
+82,[주식 시간외단일가 정정주문] CpTrade.CpTd0389,  설명: 주식종목의시간외단일가정정주문데이터를요청하고수신한다
+83,[주식 시간외단일가 신용주문] CpTrade.CpTd0388,  설명: 주식시간외단일가신용주문데이터를요청하고수신한다
+84,[주식 시간외단일가 취소주문] CpTrade.CpTd0387,  설명: 주식종목의시간외단일가취소주문데이터를요청하고수신한다
+85,[주식 시간외단일가 주문] CpTrade.CpTd0386,  설명: 주식종목의시간외단일가주문데이터를요청하고수신한다
+86,[거래소/코스닥 시간외종가 취소주문] CpTrade.CpTd0326,  설명: 거래소/코스닥시간외종가취소주문데이터를요청하고수신한다
+87,[거래소/코스닥 시간외종가 신용주문] CpTrade.CpTd0323,  설명: 거래소/코스닥시간외종가신용주문데이터를요청하고수신한다
+88,[거래소/코스닥 시간외종가 주문] CpTrade.CpTd0322,"  설명: 거래소/코스닥시간외종가(매도,매수)주문데이터를요청하고수신한다"
+89,[계좌별 잔고 평가현황] CpTrade.CpTd6033, 설명: 계좌별잔고및주문체결평가현황데이터를요청하고수신한다
+90,[금일/전일 체결기준 내역] CpTrade.CpTd5342,  설명: 종목별금일/전일체결기준내역조회
+91,[국내 주식 주문 주문체결 내역] CpTrade.CpTd5341,설명: 금일계좌별주문/체결내역조회데이터를요청하고수신한다
+92,[계좌별 미체결잔량] CpTrade.CpTd5339,  설명: 계좌별미체결잔량데이터를요청하고수신한다
+93,[계좌별 매도 가능수량] CpTrade.CpTdNew5331B,  설명: 계좌별매도주문가능수량데이터를요청하고수신한다
+94,[계좌별 매수 가능금액/수량] CpTrade.CpTdNew5331A,  설명: 계좌별매수주문가능금액/수량데이터를요청하고수신한다
+95,[주식 결제예정예수금 가계산] CpTrade.CpTd0732,  설명: 주식결제예정예수금가계산데이터를요청하고수신한다
+96,[장내/코스닥 주식 유형 정정주문] CpTrade.CpTd0303,설명: 장내/코스닥주식주문관리 (매매유형정정주문) 데이터를요청하고수신한다
+97,[장내주식/코스닥주식/ELW 취소주문] CpTrade.CpTd0314,설명: 장내주식/코스닥주식/ELW주문관리 (취소주문) 데이터를요청하고수신한다
+98,[장내주식/코스닥주식/ELW 가격 정정주문] CpTrade.CpTd0313,설명: 장내주식/코스닥주식/ELW주문관리 (가격정정주문) 데이터를요청하고수신한다
+99,[장내주식/코스닥주식 신용주문] CpTrade.CpTd0312,설명: 장내주식/코스닥주식신용주문데이터를요청하고수신한다
+100,[장내주식/코스닥주식/ELW 현금주문] CpTrade.CpTd0311,설명: 장내주식/코스닥주식/ELW주문(현금주문) 데이터를요청하고수신한다
+101,[EUREX 주문체결내역] Dscbo1.EurexConclusionRt,"object.SetInputValue(type,value)"
+102,[CME 주문체결내역] Dscbo1.CmeConclusionRt,"object.SetInputValue(type,value)"
+103,[파생상품 체결 실시간] Dscbo1.CpFConclusion,"object.SetInputValue(type,value)"
+104,[주식 체결 실시간] Dscbo1.CpConclusion,"object.SetInputValue(type,value)"
+105,CpTrade.CpTdUtil,설명 :주문오브젝트를사용하기위해필요한초기화과정들을수행한다
+106,[주식 장운영정보] CpSysDib.StockOpenSb,"object.SetInputValue(type,value)"
+107,[시간외단일가 등락현황] CpSysDib.CpSvr7326,"object.SetInputValue(type,value)"
+108,[투자주체별종목비교] CpSysDib.CpSvr9842S,"object.SetInputValue(type,value)"
+109,[투자주체별종목비교] CpSysDib.CpSvr9842,"object.SetInputValue(type,value)"
+110,[시가총액비중] CpSysDib.CpSvr8548,"object.SetInputValue(type,value)"
+111,[프로그램 사전공시] CpSysDib.CpSvr8114,"object.SetInputValue(type,value)"
+112,[일별 투자자매매추이] CpSysDib.CpSvrNew7224,"object.SetInputValue(type,value)"
+113,[시간대별 투자자매매추이] CpSysDib.CpSvrNew7222,"object.SetInputValue(type,value)"
+114,[투자자별 매매종합] CpSysDib.CpSvrNew7221,설명: 투자자들의 매매동향 데이터를 요청하고수신합니다
+115,[기관/외국인 매매추이] CpSysDib.CpSvrNew7216,"object.SetInputValue(type,value)"
+116,CpSysDib.CpSvrNew7215B,"object.SetInputValue(type,value)"
+117,[투자자별 매매상위] CpSysDib.CpSvrNew7215A,"object.SetInputValue(type,value)"
+118,[기간별 투자자매매현황] CpSysDib.CpSvrNew7212,"object.SetInputValue(type,value)"
+119,[장시작전 예상체결분석] CpSysDib.CpSvr7068,"object.SetInputValue(type,value)"
+120,[잔량추이] CpSysDib.CpSvr7066,"object.SetInputValue(type,value)"
+121,[장마감 예상체결가분석] CpSysDib.CpSvr7063,"object.SetInputValue(type,value)"
+122,"[거래소,코스닥 등락현황] CpSysDib.CpSvrNew7043","object.SetInputValue(type,value)"
+123,"[거래소,코스닥 등락현황] CpSysDib.CpSvr7043","설명: 거래소,코스닥등락현황(상한,하한,상승,하락등등)데이터를요청하고수신합니다."
+124,[주요지수 시간대별예상체결] CpSysDib.CpSvr7037,"object.SetInputValue(type,value)"
+125,CpSysDib.CpSvr3744,"object.SetInputValue(type,value)"
+126,[해외지수 및 환율] CpSysDib.WorldCur,"object.SetInputValue(type,value)"
+127,CpSysDib.MarketEye,"object.SetInputValue(type,value)"
+128,[예상체결지수] CpSysDib.K200Expect,"object.SetInputValue(type,value)"
+129,[Eurex 일자별] CpSysDib.EurexDaily,"object.SetInputValue(type,value)"
+130,[Eurex 시간대별체결] CpSysDib.EurexBid,"object.SetInputValue(type,value)"
+131,[Eurex 호가잔량] CpSysDib.EurexJpbid,"object.SetInputValue(type,value)"
+132,[Eurex 현재가] CpSysDib.EurexCurOnly,"object.SetInputValue(type,value)"
+133,[Eurex 데이타] CpSysDib.EurexMst,"object.SetInputValue(type,value)"
+134,[CME 미결제약정] CpSysDib.CmeMo,"object.SetInputValue(type,value)"
+135,[CME 1차호가] CpSysDib.CmeBidOnly,"object.SetInputValue(type,value)"
+136,[CME 현재가] CpSysDib.CmeCurr,"object.SetInputValue(type,value)"
+137,[CME 일자별] CpSysDib.CmeDaily,"object.SetInputValue(type,value)"
+138,[CME 시간대별체결] CpSysDib.CmeBid,"object.SetInputValue(type,value)"
+139,[CME 데이터] CpSysDib.CmeMst,"object.SetInputValue(type,value)"
+140,[ELW 시장일별추이] CpSysDib.CpSvr7748,"object.SetInputValue(type,value)"
+141,[ELW 일별등락추이] CpSysDib.CpSvr7726,"object.SetInputValue(type,value)"
+142,[ELW 실시간] CpSysDib.ElwUnderCur,"object.SetInputValue(type,value)"
+143,[ELW 주기] CpSysDib.ElwInvest,"object.SetInputValue(type,value)"
+144,[ELW 호가] CpSysDib.ElwJpBid2,"object.SetInputValue(type,value)"
+145,[ELW 발행정보] CpSysDib.ElwAll,"object.SetInputValue(type,value)"
+146,[ELW 기본] CpSysDib.Elw,"object.SetInputValue(type,value)"
+147,[선물옵션/주식옵션 예상체결가] CpSysDib.FOExpectCur,"object.SetInputValue(type,value)"
+148,"[옵션종목 호가,호가잔량] CpSysDib.OptionJpBid","object.SetInputValue(type,value)"
+149,"[선물 호가,호가잔량] CpSysDib.FutureJpBid","object.SetInputValue(type,value)"
+150,[선물옵션 이론가] CpSysDib.CpFutOptTheoVal,"object.SetInputValue(type,value)"
+151,[옵션 체결] CpSysDib.OptionCurOnly,"object.SetInputValue(type,value)"
+152,[선물옵션 차트] CpSysDib.FutOptChart,"object.SetInputValue(type,value)"
+153,[특징주 포착] CpSysDib.CpMarketWatchS,"object.SetInputValue(type,value)"
+154,[특징주 포착] CpSysDib.CpMarketWatch,"object.SetInputValue(type,value)"
+155,"[주식, 업종, ELW 차트] CpSysDib.StockChart","object.SetInputValue(type,value)"
+156,[시간외 단일가 시간대별] CpSysDib.StockUniBid,"object.SetInputValue(type,value)"
+157,"[시간외 단일가 호가, 호가잔량] CpSysDib.StockUniJpBid","object.SetInputValue(type,value)"
+158,[시간외 단일가 일자별] CpSysDib.StockUniWeek,"object.SetInputValue(type,value)"
+159,[주식/업종 시간외단일가 실시간 시세] CpSysDib.StockUniCur,설명: 주식종목의 시간외단일가 현재가를 요청하고수신합니다.
+160,[시간외 단일가 현재가] CpSysDib.StockUniMst,"object.SetInputValue(type,value)"
+161,[주식 일자별권리정보] CpSysDib.StockAdj,"object.SetInputValue(type,value)"
+162,[상승율 상위테마] Dscbo1.CpSvr8563,"object.SetInputValue(type,value)"
+163,[종목별 테마] Dscbo1.CpSvr8562,"object.SetInputValue(type,value)"
+164,[테마별 종목] Dscbo1.CpSvr8561T,"object.SetInputValue(type,value)"
+165,[테마별 데이터] Dscbo1.CpSvr8561,"object.SetInputValue(type,value)"
+166,[주요 세계의증시 지수] Dscbo1.CpFore8312,"object.SetInputValue(type,value)"
+167,"[국가별, 대륙별 지수] Dscbo1.CpFore8311","object.SetInputValue(type,value)"
+168,[해외지수 과거] Dscbo1.CpSvr8300,"object.SetInputValue(type,value)"
+169,[프로그램매매 일별매매종합] Dscbo1.CpSvr8116,"object.SetInputValue(type,value)"
+170,[종합시간대별 프로그램매매동향] Dscbo1.PgaTime8112,"object.SetInputValue(type,value)"
+171,[코스닥 프로그램매매 종합매매현황] Dscbo1.CpSvr8111KS,"object.SetInputValue(type,value)"
+172,[거래소 프로그램매매 종합매매현황] Dscbo1.CpSvr8111S,"object.SetInputValue(type,value)"
+173,[프로그램매매 종합매매현황] Dscbo1.CpSvr8111,"object.SetInputValue(type,value)"
+174,[특징주 포착데이터] Dscbo1.CpSvr8092S,"object.SetInputValue(type,value)"
+175,[회원별 매매동향] Dscbo1.CpSvr8091S,"object.SetInputValue(type,value)"
+176,[회원별 매매동향] Dscbo1.CpSvr8091,"object.SetInputValue(type,value)"
+177,"[종목/업종 ,선물 시간대별 체결강도추이] Dscbo1.CpSvr8083","object.SetInputValue(type,value)"
+178,[종목/업종별 일별체결강도] Dscbo1.CpSvr8082,"object.SetInputValue(type,value)"
+179,[종목별체결강도] Dscbo1.CpSvr8081,"object.SetInputValue(type,value)"
+180,[증시자금동향 차트] Dscbo1.CpSvr7819C,"object.SetInputValue(type,value)"
+181,[증시자금동향] Dscbo1.CpSvr7819,"object.SetInputValue(type,value)"
+182,[금리지표 차트] Dscbo1.CpSvr7818C,"object.SetInputValue(type,value)"
+183,[금리지표] Dscbo1.CpSvr7818,"object.SetInputValue(type,value)"
+184,[투자자 시장매매] Dscbo1.CpSvr7225,
+185,[업종별 투자자 매매현황] Dscbo1.CpSvr7223,"object.SetInputValue(type,value)"
+186,[거래소/코스닥 동시호가 예상업종지수] Dscbo1.ExpectIndexS,Method
+187,[거래소/코스닥 동시호가 예상업종지수] Dscbo1.ExpectIndexR,Method
+188,[개별주식옵션 월물] Dscbo1.SOptionCallPut,"object.SetInputValue(type,value)"
+189,[개별주식옵션종목 6주간] Dscbo1.SOptionWeek,"object.SetInputValue(type,value)"
+190,[개별주식옵션 시간대별호가] Dscbo1.SOptionBid,"object.SetInputValue(type,value)"
+191,[개별주식옵션 현재가] Dscbo1.SoptionCur,"object.SetInputValue(type,value)"
+192,[개별주식옵션 데이터] Dscbo1.SOptionMst,"object.SetInputValue(type,value)"
+193,[옵션 이론가산출변수] Dscbo1.OptionTv,"object.SetInputValue(type,value)"
+194,[옵션 기본정보] Dscbo1.OptionInfo,"object.SetInputValue(type,value)"
+195,[옵션 ATM] Dscbo1.OptionAtm,"object.SetInputValue(type,value)"
+196,[옵션 월물] Dscbo1.OptionCallPut,"object.SetInputValue(type,value)"
+197,[옵션 Greek factor] Dscbo1.OptionGreek,"object.SetInputValue(type,value)"
+198,[옵션 민감도분석지표] Dscbo1.OptionGen,"object.SetInputValue(type,value)"
+199,[옵션 일간차트] Dscbo1.OptionGr1,"object.SetInputValue(type,value)"
+200,"[옵션 분,틱차트] Dscbo1.OptionFtu","object.SetInputValue(type,value)"
+201,[옵션 6주간] Dscbo1.OptionWeek,
+202,[옵션 시간대별체결] Dscbo1.OptionBid,"object.SetInputValue(type,value)"
+203,[옵션 미결제약정] Dscbo1.OptionMo,"object.SetInputValue(type,value)"
+204,[옵션 데이터] Dscbo1.OptionMst,"object.SetInputValue(type,value)"
+205,[선물옵션 장운영] Dscbo1.FutureOptionStatPb,"지원이 종료된 서비스이며 더 이상 사용하실 수 없습니다.
+
+[시장조치사항] CpSysDib.CpSvr9619S 사용하시기바랍니다."
+206,[선물옵션 장운영] Dscbo1.FutureOptionStat,
+207,[kospi 200 지수] Dscbo1.FutureIndexI,"object.SetInputValue(type,value)"
+208,[kospi 200 지수] Dscbo1.FutureIndexh,"object.SetInputValue(type,value)"
+209,[선물 일간차트] Dscbo1.FutureGr1,"object.SetInputValue(type,value)"
+210,"[선물 분,틱차트] Dscbo1.FutureFtu",Method
+211,[선물옵션 잔량추이] Dscbo1.FutOptRest,Method
+212,[선물 6주간] Dscbo1.FutureWeek1,"object.SetInputValue(type,value)"
+213,[선물 체결리스트] Dscbo1.FutureBid1,"object.SetInputValue(type,value)"
+214,[선물 이론선물지수] Dscbo1.FutureK200,"object.SetInputValue(type,value)"
+215,[선물 미결제약정] Dscbo1.FutureMo1,"object.SetInputValue(type,value)"
+216,[선물 체결] Dscbo1.FutureCurOnly,"object.SetInputValue(type,value)"
+217,"[선물 (기준가,상한가,하한가,CB 상한가,CB 하한가] Dscbo1.FutureWide","object.SetInputValue(type,value)"
+218,[장전 시간외 현재가] Dscbo1.StockOutCur,"object.SetInputValue(type,value)"
+219,[CB(circuit breaker)] Dscbo1.StockCbChk,Method
+220,[코스닥 등락현황] Dscbo1.StockAdKS,"object.SetInputValue(type,value)"
+221,[코스닥 등락현황] Dscbo1.StockAdKR,
+222,[거래소 등락현황] Dscbo1.StockAdS,"object.SetInputValue(type,value)"
+223,[거래소 등락현황] Dscbo1.StockAdR,Method
+224,"[업종 지수,업종명,거래량,거래대금] Dscbo1.StockIndexIS",Method
+225,"[업종 지수,업종명,거래량,거래대금] Dscbo1.StockIndexIChart",
+226,"[업종 지수,업종명,거래량,거래대금] Dscbo1.StockIndexIR",Method
+227,Dscbo1.CbGraph1,주의) 종목코드와업종코드에관한과거데이터를수신합니다.
+228,[주식 일자별] Dscbo1.StockWeek,Method
+229,[주식 시간대별체결] Dscbo1.StockBid,Method
+230,"[주식/ETF/ELW 호가, 호가잔량] Dscbo1.StockJpBid",Method
+231,"[주식 호가 , 호가잔량] Dscbo1.StockJpBid2",Method
+232,[주식 거래원] Dscbo1.StockMember,
+233,[주식 거래원] Dscbo1.StockMember1,Method
+234,Dscbo1.StockFrnOrd,Method
+235,[주식/업종/ELW시세] Dscbo1.StockCur,
+236,[주식 복수종목 일괄조회] Dscbo1.StockMst2,"object.SetInputValue(type,value)"
+237,[주식 복수종목 일괄조회] Dscbo1.StockMstM,Method
+238,CpUtil.CpCalcOptGreeks,설명: 옵션 Greeks 값들을계산
+239,CpUtil.CpUsCode,설명: 해외종목코드조회
+240,CpUtil.CpCodeMgr,설명: 각종코드정보및코드리스트를얻을수있습니다.
+241,CpUtil.CpElwCode,설명: 주식워런트증권(Elw)코드조회
+242,CpUtil.CpKFutureCode,설명:   코스닥150 지수선물 작업을 함.
+243,CpUtil.CpSOptionCode,설명: CYBOS에서사용되는개별주식옵션코드조회작업을함.
+244,CpUtil.CpOptionCode,설명: CYBOS에서사용되는옵션코드조회작업을함.
+245,CpUtil.CpFutureCode,설명: CYBOS에서사용되는선물코드조회작업을함.
+246,CpUtil.CpStockCode,설명: CYBOS에서사용되는주식코드조회작업을함.
+247,[선물 데이터] Dscbo1.FutureMst,"object.SetInputValue(type,value)"
+248,[주식 종목 현재가 ] Dscbo1.StockMst, 
+249,CpUtil.CpCybos,설명: CYBOS의각종상태를확인할수있음.
